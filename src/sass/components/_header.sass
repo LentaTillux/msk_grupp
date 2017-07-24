@@ -3,7 +3,23 @@
 	&__container
 		display: flex
 		align-items: center
-		
+	&__block
+		display: flex
+		flex-direction: column
+		flex: 1 1 100%
+		margin-left: 35px
+		padding-left: 35px
+		border-left: 1px solid #e8e9ed
+	&__logo
+		flex: 1 0 160px
+	&__contact-info
+		padding: 10px 0
+	&__nav
+		display: inline-flex
+		padding: 10px 0
+	&__action-bar
+		display: inline-flex
+	
 	h1
 		position: absolute
 		clip: rect(0, 0, 0, 0)
@@ -12,6 +28,8 @@
 		margin: -1px
 		+hide-text
 		
+/* logo
+	----------------------------------- */
 .logo
 	display: block
 	&_white
@@ -23,6 +41,7 @@
 	&__list
 		display: flex
 		justify-content: space-between
+		flex: 1 1 765px
 		&-item
 			border-bottom: 1px solid transparent
 			line-height: 1
@@ -48,3 +67,28 @@
 			font-size: 15px
 			line-height: 25px
 			color: $blue-dark
+
+/* action-bar
+	----------------------------------- */
+.action-bar
+	&__btn
+		height: 30px
+		width: 30px
+		background: $aqua-dark
+		border-radius: 50%
+		text-align: center
+		line-height: 30px
+		transition: background .3s
+		&:not(:first-child)
+			margin-left: 5px
+		+hover
+			background: $white
+		.no-touch &:hover &-icon
+			fill: $aqua-dark
+		&-icon
+			fill: $white
+			transition:  fill .3s
+			&.icon-search
+				font-size: 12px
+			&.icon-mail
+				font-size: 11px

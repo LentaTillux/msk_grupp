@@ -22,7 +22,7 @@
 					+icon('icon-mail', 'contact-info__link-icon')
 					+e.SPAN.link-text sales@mskgr.ru
 
-			+b.NAV.nav
+			+b.NAV.nav.header__nav
 				+e.UL.list
 					-var navList = ['о компании', 'каталог услуг', 'новости', 'полезная информация', 'партнерам', 'контакты'];
 					for navLink, index in navList
@@ -30,7 +30,7 @@
 						+e.LI.list-item(class= index === activeIndex -1 ? 'is-active' : '')
 							+e.A.list-link(href='#!')= navLink
 
-			+b.action-bar
+			+b.action-bar.header__action-bar
 				+e.A.btn(href='#!')
 					+icon('icon-search', 'action-bar__btn-icon')
 				+e.A.btn(href='#!')
