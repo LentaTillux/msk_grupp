@@ -1,0 +1,100 @@
+// basic styles
+body
+	min-width: 320px
+	+f('pn-400', 16)
+	line-height: 30px
+	color: $black
+	//&.is-locked
+	//	position: fixed
+	//	top: 0
+	//	left: 0
+	//	right: 0
+	//	height: 100%
+	//	overflow: hidden
+
+*
+	-webkit-tap-highlight-color: transparent
+
+h1, h2, h3, h4, h5, h6
+	font-weight: normal
+
+a
+	color: inherit
+	text-decoration: none
+	&:hover, &:focus
+		text-decoration: none
+		
+button
+	background-color: transparent
+
+h1, h2, h3, h4, h5, h6, p, a, span, div, img, mark, ul, li
+	&::selection
+		color: $white
+		background-color: $aqua
+
+img
+	vertical-align: top
+	max-width: 100%
+	
+::-ms-clear,
+::-ms-reveal
+	display: none
+	width: 0
+	height: 0
+
+input:invalid
+	box-shadow: none
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button
+	-webkit-appearance: none
+	margin: 0
+
+video::-webkit-media-controls-start-playback-button
+	display: none !important
+	
+.obj-fit
+	width: 100%
+	height: 100%
+	object-fit: cover
+	font-family: 'object-fit: cover;'
+
+.out
+	overflow: hidden
+	
+.container
+	max-width: 1140px
+	margin: 0 auto
+	padding: 0 15px
+
+.btn
+	padding: 11px 42px
+	box-shadow: 2px 3px 2px rgba(0, 0, 0, 0.1)
+	border-radius: 26px
+	text-transform: uppercase
+	color: $blue-dark
+	+f('pn-700', 15)
+	line-height: 30px
+	transition: background .3s ease-in-out, color .3s ease-in-out
+	&_white
+		background: $white
+		+hover
+			background: $aqua
+			color: $white
+			
+.title-lg
+	+f('pn-700', 45)
+	line-height: 50px
+	text-shadow: 2px 3px 2px rgba(0, 0, 0, 0.1)
+	text-transform: uppercase
+	color: $white
+	
+.title-md
+	+f('pn-700', 40)
+	color: $blue-dark
+	line-height: 50px
+	text-transform: uppercase
+	
+.title-sm
+	@extend .title-md
+	font-size: 30px
+	line-height: 35px

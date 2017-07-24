@@ -1,0 +1,79 @@
+$icons: (0:0)
+$icons: map-merge($icons,('dev': (X: 0px, Y:-101px, W: 16px, H: 20px, TW: 160px, TH: 147px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('fb': (X: 0px, Y:-131px, W: 7px, H: 16px, TW: 160px, TH: 147px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('logo-color': (X: 0px, Y:0px, W: 160px, H: 41px, TW: 160px, TH: 147px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('logo': (X: 0px, Y:-51px, W: 160px, H: 40px, TW: 160px, TH: 147px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('tw': (X: -26px, Y:-101px, W: 17px, H: 13px, TW: 160px, TH: 147px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('yt': (X: -53px, Y:-101px, W: 16px, H: 11px, TW: 160px, TH: 147px, IMG: '../img/sprite.png')))
+
+
+// Gets an attribute from the sass map
+@function icon-attr($icon, $attr)
+  $icon: map-get($icons, $icon)
+  @return map-get($icon, $attr)
+
+@mixin sprite($iconName)
+  background-image: url(icon-attr($iconName, IMG))
+  width: icon-attr($iconName, W)
+  height: icon-attr($iconName, H)
+  background-position: icon-attr($iconName, X) icon-attr($iconName, Y)
+@mixin sprite-position($iconName)
+  background-position: icon-attr($iconName, X) icon-attr($iconName, Y)
+@mixin sprite-retina($iconName)
+  background-image: url(icon-attr($iconName, IMG))
+  $width: icon-attr($iconName, W)
+  $height: icon-attr($iconName, H)
+  width: $width/2
+  height: $height/2
+  $x: icon-attr($iconName, X)
+  $y: icon-attr($iconName, Y)
+  background-position: $x/2 $y/2
+  $tw: icon-attr($iconName, TW)   
+  $th: icon-attr($iconName, TH)
+  background-size: $tw/2 $th/2    
+
+
+@mixin s($i)
+  +sprite($i)
+@mixin sp($i)
+  +sprite-position($i)
+@mixin sr($i)
+  +sprite-retina($i)  
+
+//
+//.icon-dev
+//  width: 16px
+//  height: 20px
+//  background-image: url('../img/sprite.png')
+//  background-position: 0px -101px
+//
+//.icon-fb
+//  width: 7px
+//  height: 16px
+//  background-image: url('../img/sprite.png')
+//  background-position: 0px -131px
+//
+//.icon-logo-color
+//  width: 160px
+//  height: 41px
+//  background-image: url('../img/sprite.png')
+//  background-position: 0px 0px
+//
+//.icon-logo
+//  width: 160px
+//  height: 40px
+//  background-image: url('../img/sprite.png')
+//  background-position: 0px -51px
+//
+//.icon-tw
+//  width: 17px
+//  height: 13px
+//  background-image: url('../img/sprite.png')
+//  background-position: -26px -101px
+//
+//.icon-yt
+//  width: 16px
+//  height: 11px
+//  background-image: url('../img/sprite.png')
+//  background-position: -53px -101px
+//
