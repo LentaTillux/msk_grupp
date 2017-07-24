@@ -1,4 +1,18 @@
+import svg4everybody from 'svg4everybody';
+import objectFitImages from 'object-fit-images';
 import dotdotdot from 'dotdotdot';
+import particles from 'particles.js';
+
+// load canvas for screen
+particlesJS.load('js-screen-canvas', '../assets/particlesjs-config.json');
+
+// SVG for all
+svg4everybody();
+
+// polyfill for img
+const objFitImg = $('.obj-fit');
+objectFitImages(objFitImg);
+
 // clear placeholder
 (function() {
   const el = $('input, textarea');
@@ -11,5 +25,6 @@ import dotdotdot from 'dotdotdot';
   });
 }());
 
+// dot.js
 const $textOverflow = $('.js-dot');
 $textOverflow.dotdotdot();

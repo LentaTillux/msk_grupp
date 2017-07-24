@@ -2,14 +2,20 @@ if screen ? screen : screen = []
 
 //begin screen
 +b.SECTION.screen(class= screenClass ? screenClass : '')
-	+e.slider
-		mixin sliderItem(item)
-			+e.slider-item
-				+e.H2.slider-title= item.title
-				+e.slider-text
-					+e.P= item.descrFirst
-					+e.P= item.descrSecond
-				+e.slider-btn= item.btn
-		each item in sliderList
-			+sliderItem(item)
+	+e.container.container
+		+e.slider.js-screen-slider
+			mixin sliderItem(item)
+				+e.slider-item
+					+e.slider-text
+						+e.H2.slider-title.title-lg= item.title
+						+e.slider-descr
+							+e.P= item.descrFirst
+							+e.P= item.descrSecond
+						+e.A.slider-btn.btn._white(href='#!')= item.btn
+					+e.slider-img(style='background-image: url(img/content/screen-girl.jpg)')
+
+			each item in sliderList
+				+sliderItem(item)
+
+	+e.canvas#js-screen-canvas
 //end screen

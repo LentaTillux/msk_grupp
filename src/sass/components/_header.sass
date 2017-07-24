@@ -1,11 +1,13 @@
 .header
-	background: green
+	padding: 22px 0
+	background: $white
 	&__container
 		display: flex
 		align-items: center
 	&__block
 		display: flex
-		flex-direction: column
+		flex-wrap: wrap
+		align-items: center
 		flex: 1 1 100%
 		margin-left: 35px
 		padding-left: 35px
@@ -13,12 +15,15 @@
 	&__logo
 		flex: 1 0 160px
 	&__contact-info
+		flex: 1 1 100%
 		padding: 10px 0
 	&__nav
 		display: inline-flex
-		padding: 10px 0
+		flex: 1 1 auto
+		padding: 15px 0 0
 	&__action-bar
 		display: inline-flex
+		flex: 0 0 65px
 	
 	h1
 		position: absolute
@@ -28,6 +33,28 @@
 		margin: -1px
 		+hide-text
 		
+	&_home
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		z-index: 2
+		padding: 52px 0
+		background: transparent
+		.contact-info__link-text,
+		.nav__list-link
+			color: $white
+		.contact-info__link-icon
+			fill: #b3fcff
+		.nav__list-item.is-active
+			border-bottom-color: transparentize(#85c8cf, .5)
+		.action-bar__btn
+			background: $white
+		.action-bar__btn-icon
+			fill: $blue-dark
+		.header__block
+			border-left-color: transparentize($white, .8)
+			
 /* logo
 	----------------------------------- */
 .logo
@@ -40,23 +67,35 @@
 .nav
 	&__list
 		display: flex
+		flex: 0 1 764px
 		justify-content: space-between
-		flex: 1 1 765px
 		&-item
+			padding-bottom: 9px
 			border-bottom: 1px solid transparent
 			line-height: 1
 			&.is-active
-				border-bottom-color: #c9c9c9
+				border-bottom-color: transparentize($white, .8)
 		&-link
-			+f('pn-600', 13)
+			+f('pn-600', 14)
 			text-transform: uppercase
 			color: $blue-dark
 			
 /* contact-info
 	----------------------------------- */
 .contact-info
+	font-size: 0
 	&__link
+		display: inline-block
+		vertical-align: top
+		font-size: 0
+		&:first-child
+			margin-right: 10px
+		&:not(:first-child)
+			margin-left: 43px
 		&-icon
+			display: inline-block
+			vertical-align: middle
+			margin-right: 10px
 			fill: $aqua
 			font-size: 20px
 			&.icon-balloon
@@ -64,8 +103,10 @@
 			&.icon-mail
 				font-size: 16px
 		&-text
+			display: inline-block
+			vertical-align: middle
 			font-size: 15px
-			line-height: 25px
+			line-height: 1
 			color: $blue-dark
 
 /* action-bar
@@ -77,7 +118,7 @@
 		background: $aqua-dark
 		border-radius: 50%
 		text-align: center
-		line-height: 30px
+		line-height: 32px
 		transition: background .3s
 		&:not(:first-child)
 			margin-left: 5px
@@ -91,4 +132,5 @@
 			&.icon-search
 				font-size: 12px
 			&.icon-mail
+				position: relative
 				font-size: 11px
