@@ -72,15 +72,31 @@ video::-webkit-media-controls-start-playback-button
 	box-shadow: 2px 3px 2px rgba(0, 0, 0, 0.1)
 	border-radius: 26px
 	text-transform: uppercase
-	color: $blue-dark
 	+f('pn-700', 15)
 	line-height: 30px
-	transition: background .3s ease-in-out, color .3s ease-in-out
+	transition: background .3s ease-in-out, color .3s ease-in-out, transform .1s ease-in-out, box-shadow .1s ease-in-out
 	&_white
 		background: $white
 		+hover
 			background: $aqua
 			color: $white
+	&_aqua
+		background: $aqua
+		color: $white
+		+hover
+			background: $aqua-dark
+	&_white-bordered
+		padding: 10px 46px
+		font-size: 15px
+		color: $blue-dark
+		border: 2px solid #00899a
+		background: $white
+		box-shadow: none
+		transition: background .3s ease-in-out, color .3s ease-in-out, transform .1s ease-in-out, border .3s ease-in-out
+		+hover
+			background: $aqua
+			color: $white
+			border-color: $aqua
 			
 .title-lg
 	+f('pn-700', 45)
@@ -88,6 +104,11 @@ video::-webkit-media-controls-start-playback-button
 	text-shadow: 2px 3px 2px rgba(0, 0, 0, 0.1)
 	text-transform: uppercase
 	color: $white
+	
+.title-sm-white
+	@extend .title-lg
+	font-size: 30px
+	line-height: 35px
 	
 .title-md
 	+f('pn-700', 40)
@@ -99,3 +120,13 @@ video::-webkit-media-controls-start-playback-button
 	@extend .title-md
 	font-size: 30px
 	line-height: 35px
+	
+.input
+	width: 100%
+	padding: 0 34px
+	height: 53px
+	line-height: 53px
+	border-radius: 26px
+	border: 2px solid #c9c9c9
+	+f('pn-400', 15)
+	color: $blue-dark

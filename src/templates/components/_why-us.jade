@@ -1,0 +1,17 @@
+if whyUs ? whyUs : whyUs = []
+
+//begin why-us
++b.SECTION.why-us(class= whyUs.classMod ? whyUs.classMod : '')
+	+e.container.container
+		+e.H3.title.title-md= whyUs.title
+		+e.inner
+			mixin whyUsItem(item)
+				+e.item
+					+e.item-img(class=`_${item.imgMod}`)
+					+e.item-count(class= item.countMod ? item.countMod : '')= item.count
+					+e.P.item-descr= item.descr
+			each item in whyUsList
+				+whyUsItem(item)
+
+		+e.A.btn.btn._white-bordered(href='#!')= whyUs.btn
+//end why-us

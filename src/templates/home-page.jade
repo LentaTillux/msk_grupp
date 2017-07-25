@@ -25,8 +25,27 @@ block content
 	include components/_screen
 
 	//begin main
-	+b.MAIN
+	+b.DIV.main._home
 		//- services
-		-var servicesClass = '_default';
-			include components/_services
+		include components/_services-block
+
+		//-teaser
+		-teaserClass = '_default'
+			include components/_teaser
+
+		//-partners
+		-partners = {classMod: '_default'}
+			include components/_partners
+
+		//-partners
+		-whyUs = {classMod: '_default', title: 'почему мск-групп?', btn: 'ДОПОЛНИТЕЛЬНАЯ ИНФОРМАЦИЯ'}
+		-whyUsList = [{imgMod: 1, count: 10, descr: 'Более 10 лет на рынке'}, {imgMod: 2, count: 100, descr: 'Профессионалов своего дела'}, {imgMod: 3, count: 100, descr: 'Более 100 реализованных проектов'}, {imgMod: 4, count: 150, descr: 'Более 150 постоянных клиентов'}, {imgMod: 5, count: 1, countMod: '_wide', descr: 'Одна из ТОП компаний по Самарской области'}]
+			include components/_why-us
+
+		//-news
+		-newsBlock = {classMod: '_default'}
+			include components/_news-block
+
+		//-subscribe
+		include components/_subscribe
 	//end main

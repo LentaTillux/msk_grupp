@@ -1,0 +1,15 @@
+if servicesBlock ? servicesBlock : servicesBlock = []
+-var servicesBlockList = [{title: 'Разработка комплексных решений', img: '1'}, {title: 'Корпоративное и розничное сервисное обслуживание', img: '2'}, {title: 'Строительство и модернизация ИТ инфраструктуры', img: '3'}, {title: 'Комплексное проектирование, строительство', img: '4'}, {title: 'Осуществление научно-иследовательской работы', img: '5'}]
+
+//begin services-block
++b.SECTION.services-block(class= servicesBlockClass ? servicesBlockClass : '')
+	+e.container.container
+		mixin servicesBlockItem(item)
+			+e.A.item(href='#!')
+				+e.inner
+					+e.H6.title= item.title
+					+e.P.descr Богатый опыт в проектировании типовых и индивидуальных проектов позволяет учитывать индивидуальные особенности Заказчика, гарантирует качество, сокращает сроки внедрения, делает решение масштабируемым и экономичным.
+				+icon(`icon-services-${item.img}`, 'services-block__img')
+		each item in servicesBlockList
+			+servicesBlockItem(item)
+//end services-block

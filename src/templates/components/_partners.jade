@@ -1,0 +1,13 @@
+if partners ? partners : partners = []
+if partners.title ? partners.title : partners.title = 'Партнеры'
+
+//begin partners
++b.SECTION.partners(class= partners.classMod ? partners.classMod : '')
+	+e.container.container
+		+e.H3.title.title-md= partners.title
+		+e.list
+			-var partnersList = [1, 2, 3]
+			each partnersImg in partnersList
+				+e.list-item
+					+e.IMG(src=`img/content/partners-${partnersImg}.png` alt='img')
+//end partners

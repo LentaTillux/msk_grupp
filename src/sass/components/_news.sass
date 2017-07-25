@@ -1,0 +1,88 @@
+/* ===================================
+	 news-block
+	 =================================== */
+.news-block
+	&__actions
+		display: flex
+		align-items: center
+		margin-bottom: 50px
+		&-btn
+			margin-right: 28px
+		&-link
+			+f('pn-700', 15)
+			line-height: 18px
+			color: $blue-dark
+			text-transform: uppercase
+			border-bottom: 1px solid rgba($blue-dark, .3)
+			+tr(border-color .3s)
+			+hover
+				border-bottom-color: transparent
+	&__slider
+		padding-bottom: 80px
+		display: none
+		&.slick-initialized
+			display: block
+		.slick-list
+			margin: 0 -15px
+		&-item
+			margin: 0 15px
+		.slick-dots
+			display: flex
+			position: absolute
+			left: 50%
+			bottom: 20px
+			z-index: 2
+			transform: translateX(-50%)
+			li
+				position: relative
+				width: 14px
+				height: 14px
+				border: 3px solid transparent
+				border-radius: 50%
+				cursor: pointer
+				transition: border-color .7s ease-in-out
+				&:not(:first-child)
+					margin-left: 3px
+				&.slick-active
+					border-color: #26b2b5
+			li.slick-active button
+				background: transparent
+			button
+				+vcenter
+				+hide-text
+				width: 10px
+				height: 10px
+				background: #e0f4f5
+				border-radius: 50%
+			
+	&_default
+		padding: 50px 0
+	
+/* ===================================
+	 news-article
+	 =================================== */
+.news-article
+	outline: 0
+	&__title
+		margin-bottom: 15px
+		font-size: 22px
+		line-height: 25px
+	&__descr
+		margin: 20px 0 25px
+	&__img-wrap
+		height: 210px
+	&__actions
+		display: flex
+		align-items: center
+		&-btn
+			margin-right: 9px
+			padding: 6px 27px
+		&-link
+			font-size: 0
+			line-height: 0
+			.no-touch &:hover .icon-share
+				fill: $aqua-dark
+			.icon-share
+				fill: $blue-dark
+				font-size: 20px
+				transition: fill .2s ease-in-out

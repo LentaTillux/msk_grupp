@@ -1,4 +1,4 @@
-.services
+.services-block
 	&__container
 		display: flex
 	&__item
@@ -10,37 +10,49 @@
 		border-right: 0
 		&:last-child
 			border-right: 1px solid #eeeeee
-		&:hover &-in
-			height: 480px
+	&__item:hover &__inner
+			height: 372px
+			width: 245px
 			top: 50%
 			transform: translateY(-50%)
-			transition: height 0.3s
+			transition: height .3s, width .3s
 			background-color: $aqua-dark
-		&:hover &-title,
-		&:hover &-descr
+	&__item:hover &__title,
+	&__item:hover &__descr
 			color: $white
-		&:hover &-descr
+	&__item:hover &__descr
 			visibility: visible
 			opacity: 1
-		&-in
-			position: absolute
-			right: -1px
-			left: -1px
-			height: 275px
-			z-index: 2
-			padding: 37px 40px
-		&-title
-			display: block
-			margin-bottom: 20px
-			font-size: 16px
-			line-height: 21px
-			color: $black
-		&-descr
-			display: block
-			visibility: hidden
-			opacity: 0
-			transition: opacity .8s
-			font-size: 14px
-			line-height: 18px
-		&-icon
-			font-size: 97px
+	&__item:last-child &__title
+			margin: 0 -10px 20px
+	&__inner
+		position: absolute
+		right: -1px
+		left: -1px
+		height: 318px
+		z-index: 2
+		padding: 65px 30px 30px
+	&__title
+		display: block
+		margin: 0 0 20px
+		font-size: 16px
+		line-height: 21px
+		color: $black
+		text-align: center
+	&__descr
+		display: block
+		visibility: hidden
+		opacity: 0
+		transition: opacity .8s
+		font-size: 14px
+		line-height: 18px
+	&__img
+		position: absolute
+		width: 100%
+		left: 0
+		bottom: 20px
+		font-size: 97px
+		fill: $blue-dark
+		&.icon-services-5
+			stroke: #fff
+			stroke-width: 1px

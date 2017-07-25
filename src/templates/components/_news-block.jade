@@ -1,0 +1,27 @@
+if newsBlock ? newsBlock : newsBlock = []
+if newsBlock.btn ? newsBlock.btn : newsBlock.btn = 'НОВОСТИ'
+if newsBlock.link ? newsBlock.link : newsBlock.link = 'АРХИВ НОВОСТЕЙ'
+if newsSldList ? newsSldList : newsSldList = [{title: 'IT конференция в Москве', img: 1}, {title: 'Новые решения в мире АСУ', img: 2}, {title: 'Новинки из мира ИТ', img: 3}, {title: 'IT конференция в Москве', img: 1}, {title: 'Новые решения в мире АСУ', img: 2}, {title: 'Новинки из мира ИТ', img: 3}, {title: 'IT конференция в Москве', img: 1}, {title: 'Новые решения в мире АСУ', img: 2}, {title: 'Новинки из мира ИТ', img: 3}]
+
+
+//begin news-block
++b.SECTION.news-block(class= newsBlock.classMod ? newsBlock.classMod : '')
+	+e.container.container
+		+e.actions
+			+e.A.actions-btn.btn._aqua(href='#!')= newsBlock.btn
+			+e.A.actions-link(href='#!')= newsBlock.link
+
+		+e.slider.js-news-block-slider
+			mixin newsSldItem(item)
+				+b.ARTICLE.news-article.news-block__slider-item
+					+e.H5.title= item.title
+					+e.img-wrap
+						+b.IMG.obj-fit(src=`img/content/news-${item.img}.jpg` alt='img')
+					+e.P.descr В Москве 5 июня 2017 года прошла IT конференция. Представители различных компаний были удивлены организацией...
+					+e.actions
+						+e.A.actions-btn.btn._white-bordered(href='#!') ЧИТАТЬ
+						+e.A.actions-link(href='#!')
+							+icon('icon-share')
+			each item in newsSldList
+				+newsSldItem(item)
+//end news-block

@@ -1,0 +1,51 @@
+.teaser
+	&__slider
+		display: none
+		&.slick-initialized
+			display: block
+		&-item
+			position: relative
+			height: 450px
+			cursor: default
+		&-text
+			position: relative
+			padding: 90px 20px 20px 90px
+			z-index: 3
+		&-title
+			max-width: 325px
+		&-descr
+			max-width: 920px
+			margin: 20px 0 25px
+			+f('pn-300', 18)
+			line-height: 25px
+			color: $white
+		&-img
+			height: 450px
+			position: absolute
+			top: 0
+			left: 0
+			opacity: .8
+			&::after
+				content: ''
+				+coverdiv
+				background: rgba(#08192c, .2)
+		&-arr
+			position: absolute
+			right: 0
+			bottom: 0
+			z-index: 1
+			width: 60px
+			height: 60px
+			background: $aqua
+			transition: background .3s ease
+			+vertical
+			+hover
+				background: $aqua-dark
+			&_prev
+				right: 61px
+			&-icon
+				display: inline-block
+				vertical-align: middle
+				margin-top: 3px
+				fill: $white
+				font-size: 26px
