@@ -1,12 +1,27 @@
 .subscribe
 	position: relative
-	background: url("../img/bg/subscribe_bg.png") repeat-x 50% 50%/cover, linear-gradient(to bottom, rgb(0, 138, 155) 0%, rgb(64, 176, 186) 67%, rgb(93, 192, 199) 100%)
+	padding: 32px 0
+	background-image: linear-gradient(to bottom, rgb(0, 138, 155) 0%, rgb(64, 176, 186) 67%, rgb(93, 192, 199) 100%)
+	&::after
+		content: ''
+		+coverdiv
+		background: url("../img/bg/subscribe_bg.png") repeat-x 50% 50%/cover
+		opacity: .5
 	&__container
 		position: relative
 		display: flex
 		align-items: center
 		z-index: 2
 	&__descr
-		flex: 0 0 260px
+		flex: 0 0 265px
 		margin: 0 30px
-	
+		color: $white
+	&__form
+		flex: 1 1 auto
+		&-in
+			display: flex
+		&-field
+			flex: 1 1 auto
+			margin-right: 10px
+		&-btn
+			padding: 11px 43px

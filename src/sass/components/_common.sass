@@ -78,8 +78,7 @@ video::-webkit-media-controls-start-playback-button
 	&_white
 		background: $white
 		+hover
-			background: $aqua
-			color: $white
+			color: $aqua-dark
 	&_aqua
 		background: $aqua
 		color: $white
@@ -123,10 +122,18 @@ video::-webkit-media-controls-start-playback-button
 	
 .input
 	width: 100%
-	padding: 0 34px
+	padding: 0 30px
 	height: 53px
-	line-height: 53px
 	border-radius: 26px
 	border: 2px solid #c9c9c9
 	+f('pn-400', 15)
 	color: $blue-dark
+	+placeholder-color($blue-dark)
+	&_transp
+		padding: 0 34px
+		background: transparent
+		border-color: $white
+		color: $white
+		+placeholder-color($white)
+	
+	
