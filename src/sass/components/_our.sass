@@ -1,0 +1,60 @@
+.our
+	&__container
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+	&__block
+		flex: 0 1 505px
+		min-width: 1px
+	&__title
+		max-width: 260px
+		margin-bottom: 50px
+	&__slider
+		display: none
+		background: url("../img/bg/our-block_bg.png") no-repeat 50% 50%
+		&.slick-initialized
+			display: block
+		&-btn
+			position: absolute
+			right: 170px
+			top: -100px
+			z-index: 1
+			width: 40px
+			height: 40px
+			background: $aqua
+			transition: background .3s ease
+			+vertical
+			+hover
+				background: $aqua-dark
+			&_prev
+				right: 211px
+			&_next
+				right: 170px
+			&-icon
+				display: inline-block
+				vertical-align: middle
+				fill: $white
+				font-size: 12px
+	&__item
+		&-client
+			position: relative
+			display: flex
+			flex-direction: column
+			justify-content: center
+			align-items: center
+			height: 80px
+			.no-touch &:hover .our__item-img
+				opacity: 0
+			.no-touch &:hover .our__item-img_hidden
+				opacity: 1
+		&-img
+			transition: opacity .3s ease-in-out
+			&_hidden
+				position: absolute
+				opacity: 0
+	&__btn
+		margin: 30px auto 0
+		padding: 10px 51px
+	
+	&_default
+		padding: 50px 0

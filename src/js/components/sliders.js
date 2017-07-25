@@ -30,4 +30,13 @@ $newsBlockSld.slick({
   dots: true,
   arrows: false
 });
+const $ourSld = $('.js-our-slider');
+$ourSld.slick({
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  speed: 500,
+  infinite: true,
+  prevArrow: '<button type="button" class="our__slider-btn our__slider-btn_prev"><svg class="our__slider-btn-icon icon-arr_l"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-arr_l"></use></svg></button>',
+  nextArrow: '<button type="button" class="our__slider-btn our__slider-btn_next"><svg class="our__slider-btn-icon icon-arr_r"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-arr_r"></use></svg></button>'
+});
 
