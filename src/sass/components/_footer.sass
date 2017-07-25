@@ -1,0 +1,27 @@
+.footer
+	padding: 60px 0 35px
+	background-color: #08192c
+	&__container
+		display: flex
+	&__col
+		display: flex
+		flex-wrap: wrap
+	&__title
+		flex: 1 1 100%
+		margin-bottom: 15px
+		+f('pn-700', 16)
+		text-transform: uppercase
+		color: $white
+	&__list
+		& + &
+			margin-left: 30px
+		&-item
+			&:not(:first-child)
+				margin-top: 8px
+		&-link
+			color: $white
+			+f('pn-300')
+			border-bottom: 1px solid rgba($white, .4)
+			transition: border-color .2s
+			+hover
+				border-bottom-color: transparent

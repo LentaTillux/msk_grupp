@@ -1,0 +1,33 @@
+.contact-block
+	display: flex
+	align-items: center
+	min-height: 416px
+	padding: 30px 0
+	+cover
+	&__container
+		display: flex
+		max-width: 500px
+		flex-direction: column
+		align-items: center
+	&__phone
+		margin-bottom: 10px
+	&__email
+		font-size: 35px
+		line-height: 35px
+		color: $white
+		border-bottom: 1px solid #cfebee
+		+tr(border-color .3s)
+		+hover
+			border-bottom-color: transparent
+	&__address
+		margin: 10px 0 20px
+		font-style: normal
+		font-size: 20px
+		line-height: 25px
+		color: $white
+		text-align: center
+	&__actions
+		margin: 0 -20px
+		&-btn
+			margin:  0 10px
+			padding: 11px 45px

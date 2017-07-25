@@ -14,6 +14,10 @@
 		background: url("../img/bg/our-block_bg.png") no-repeat 50% 50%
 		&.slick-initialized
 			display: block
+		&_left
+			//margin-left: -15px
+		&_right
+			//margin-right: -15px
 		&-btn
 			position: absolute
 			right: 170px
@@ -50,8 +54,10 @@
 		&-img
 			transition: opacity .3s ease-in-out
 			&_hidden
-				position: absolute
+				+coverdiv
 				opacity: 0
+				background-size: contain
+				background: no-repeat 50% 50%
 	&__btn
 		margin: 30px auto 0
 		padding: 10px 51px
