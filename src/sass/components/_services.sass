@@ -1,0 +1,46 @@
+.services
+	&__container
+		display: flex
+	&__item
+		position: relative
+		flex: 0 0 20%
+		height: 318px
+		background: $white
+		border: 1px solid #eeeeee
+		border-right: 0
+		&:last-child
+			border-right: 1px solid #eeeeee
+		&:hover &-in
+			height: 480px
+			top: 50%
+			transform: translateY(-50%)
+			transition: height 0.3s
+			background-color: $aqua-dark
+		&:hover &-title,
+		&:hover &-descr
+			color: $white
+		&:hover &-descr
+			visibility: visible
+			opacity: 1
+		&-in
+			position: absolute
+			right: -1px
+			left: -1px
+			height: 275px
+			z-index: 2
+			padding: 37px 40px
+		&-title
+			display: block
+			margin-bottom: 20px
+			font-size: 16px
+			line-height: 21px
+			color: $black
+		&-descr
+			display: block
+			visibility: hidden
+			opacity: 0
+			transition: opacity .8s
+			font-size: 14px
+			line-height: 18px
+		&-icon
+			font-size: 97px
