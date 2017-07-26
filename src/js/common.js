@@ -5,6 +5,7 @@ import particles from 'particles.js';
 
 // load canvas for screen
 particlesJS.load('js-screen-canvas', '../assets/particlesjs-config.json');
+particlesJS.load('js-footer-canvas', '../assets/footer-particles.json');
 
 // SVG for all
 svg4everybody();

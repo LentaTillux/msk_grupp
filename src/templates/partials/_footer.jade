@@ -1,49 +1,66 @@
 //begin footer
 +b.FOOTER.footer
 	+e.container.container
-		+e.col
-			+e.H6.title КОМПАНИЯ
-			+e.UL.list
-				+e.LI.list-item
-					+e.A.list-link(href='#!') Только факты
-				+e.LI.list-item
-					+e.A.list-link(href='#!') Партнеры
-				+e.LI.list-item
-					+e.A.list-link(href='#!') Наши проекты
+		+e.blocks
+			+e.block
+				+e.H6.block-title КОМПАНИЯ
+				+e.UL.list
+					+e.LI.list-item
+						+e.A.list-link(href='#!') Только факты
+					+e.LI.list-item
+						+e.A.list-link(href='#!') Партнеры
+					+e.LI.list-item
+						+e.A.list-link(href='#!') Наши проекты
 
-			+e.UL.list
-				+e.LI.list-item
-					+e.A.list-link(href='#!') Вакансии
-				+e.LI.list-item
-					+e.A.list-link(href='#!') Новости
-				+e.LI.list-item
-					+e.A.list-link(href='#!') Контакты
+				+e.UL.list
+					+e.LI.list-item
+						+e.A.list-link(href='#!') Вакансии
+					+e.LI.list-item
+						+e.A.list-link(href='#!') Новости
+					+e.LI.list-item
+						+e.A.list-link(href='#!') Контакты
 
-		+e.col
-			+e.H6.title Каталог услуг
-			+e.UL.list
-				+e.LI.list-item
-					+e.A.list-link(href='#!') Базовые ИТ-решения
-				+e.LI.list-item
-					+e.A.list-link(href='#!') Проектирование
-				+e.LI.list-item
-					+e.A.list-link(href='#!') Сложные ИТ-решения
+			+e.block
+				+e.H6.block-title Каталог услуг
+				+e.UL.list
+					+e.LI.list-item
+						+e.A.list-link(href='#!') Базовые ИТ-решения
+					+e.LI.list-item
+						+e.A.list-link(href='#!') Проектирование
+					+e.LI.list-item
+						+e.A.list-link(href='#!') Сложные ИТ-решения
 
-		+e.col
-			+e.H6.title ПАРТНЕРЫ
-			+e.UL.list
-				+e.LI.list-item
-					+e.A.list-link(href='#!') GST
-				+e.LI.list-item
-					+e.A.list-link(href='#!') NetLine
-				+e.LI.list-item
-					+e.A.list-link(href='#!') Пролайн
+			+e.block
+				+e.H6.block-title ПАРТНЕРЫ
+				+e.UL.list
+					+e.LI.list-item
+						+e.A.list-link(href='#!') GST
+					+e.LI.list-item
+						+e.A.list-link(href='#!') NetLine
+					+e.LI.list-item
+						+e.A.list-link(href='#!') Пролайн
 
-		+e.col
-			+e.H6.title Новости
-			+e.UL.list
-				+e.LI.list-item
-					+e.A.list-link(href='#!') Подписаться
-				+e.LI.list-item
-					+e.A.list-link(href='#!') Архив новостей
+			+e.block
+				+e.H6.block-title Новости
+				+e.UL.list
+					+e.LI.list-item
+						+e.A.list-link(href='#!') Подписаться
+					+e.LI.list-item
+						+e.A.list-link(href='#!') Архив новостей
+
+			+e.block
+				+e.P.block-descr По всем вопросам сотрудничества и поддержки на
+					= ' '
+					+e.A.block-link(href='mailto:sales@mskgr.ru') SALES@MSKGR.RU
+				//-soicals
+				include ../components/_socials
+			
+		+e.info
+			+e.A.logo.logo._white(href='#!')
+			+e.P.info-descr Любое использование материалов, включая копирование, допускается только с письменного разрешения администрация сайта.
+			+e.dev Создано в студии
+				= ' '
+				+e.A.dev-link(href='#!')
+					+e.SPAN “Актиком”
+	+e.canvas#js-footer-canvas
 //end footer

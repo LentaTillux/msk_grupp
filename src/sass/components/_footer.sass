@@ -1,27 +1,91 @@
 .footer
-	padding: 60px 0 35px
+	position: relative
+	padding: 52px 0 34px
 	background-color: #08192c
 	&__container
+		position: relative
+		z-index: 2
+	&__blocks
 		display: flex
-	&__col
+		align-items: flex-start
+		margin-bottom: 30px
+	&__block
 		display: flex
 		flex-wrap: wrap
-	&__title
-		flex: 1 1 100%
-		margin-bottom: 15px
-		+f('pn-700', 16)
-		text-transform: uppercase
-		color: $white
+		padding-right: 20px
+		&:nth-child(1)
+			flex: 0 0 270px
+		&:nth-child(2)
+			flex: 0 0 230px
+		&:nth-child(5)
+			flex: 0 0 265px
+		&-title
+			flex: 1 1 100%
+			margin-bottom: 8px
+			+f('pn-700', 16)
+			text-transform: uppercase
+			letter-spacing: 0.05em
+			color: $white
+		&-descr
+			margin-bottom: 22px
+			color: $white
+			+f('pn-300', 15)
+			line-height: 25px
+		&-link
+			color: #72cad0
+			border-bottom: 1px solid rgba(#72cad0, .35)
+			transition: border-color .2s
+			+hover
+				border-bottom-color: transparent
 	&__list
 		& + &
 			margin-left: 30px
 		&-item
 			&:not(:first-child)
-				margin-top: 8px
+				margin-top: 5px
 		&-link
 			color: $white
 			+f('pn-300')
-			border-bottom: 1px solid rgba($white, .4)
+			border-bottom: 1px solid rgba($white, .35)
 			transition: border-color .2s
 			+hover
 				border-bottom-color: transparent
+				
+	&__info
+		display: flex
+		align-items: center
+		padding: 30px 0 0
+		border-top: 1px dashed rgba(#eeeeee, .1)
+		&-descr
+			flex: 0 1 460px
+			font-size: 14px
+			color: #7a7f85
+			line-height: 20px
+			+f('pn-300')
+	&__logo
+		margin-right: 30px
+	&__dev
+		margin-left: auto
+		+f('pn-300')
+		line-height: 15px
+		color: $white
+		&-link
+			color: #5cbfc6
+			white-space: nowrap
+			span
+				display: inline-block
+				vertical-align: middle
+				border-bottom: 1px solid rgba(#5cbfc6, .35)
+				transition: border-color .2s
+				+hover
+					border-bottom-color: transparent
+			&::after
+				content: ''
+				display: inline-block
+				vertical-align: middle
+				margin-left: 4px
+				+s('dev')
+				
+	&__canvas
+		+coverdiv
+		z-index: 1

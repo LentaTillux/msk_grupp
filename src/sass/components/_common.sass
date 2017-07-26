@@ -104,6 +104,7 @@ video::-webkit-media-controls-start-playback-button
 	line-height: 50px
 	text-shadow: 2px 3px 2px rgba(0, 0, 0, 0.1)
 	text-transform: uppercase
+	letter-spacing: 0.025em
 	color: $white
 	
 .title-sm-white
@@ -132,9 +133,11 @@ video::-webkit-media-controls-start-playback-button
 	+f('pn-400', 15)
 	color: $blue-dark
 	+placeholder-color($blue-dark)
-	&_transp
+	&_aqua
 		padding: 0 34px
-		background: transparent
+		background: #2da6b2
 		border-color: $white
 		color: $white
-		+placeholder-color($white)
+		+placeholder
+			color: $white
+			font-style: italic

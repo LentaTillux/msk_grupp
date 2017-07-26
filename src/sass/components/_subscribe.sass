@@ -1,21 +1,14 @@
 .subscribe
-	position: relative
-	padding: 32px 0
-	background-image: linear-gradient(to bottom, rgb(0, 138, 155) 0%, rgb(64, 176, 186) 67%, rgb(93, 192, 199) 100%)
-	&::after
-		content: ''
-		+coverdiv
-		background: url("../img/bg/subscribe_bg.png") repeat-x 50% 50%/cover
-		opacity: .5
+	padding: 48px 0 45px
+	background: url("../img/bg/subscribe_bg.png") repeat-x 50% 50%/cover
 	&__container
-		position: relative
 		display: flex
 		align-items: center
-		z-index: 2
 	&__descr
 		flex: 0 0 265px
-		margin: 0 30px
+		margin: 0 25px
 		color: $white
+		line-height: 20px
 	&__form
 		flex: 1 1 auto
 		&-in
@@ -24,4 +17,4 @@
 			flex: 1 1 auto
 			margin-right: 10px
 		&-btn
-			padding: 11px 43px
+			padding: 11px 39px

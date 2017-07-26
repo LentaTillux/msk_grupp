@@ -1,0 +1,9 @@
+if socials ? socials : socials = []
+if socList ? socList : socList = ['vk', 'fb', 'yt', 'tw']
+
+//begin socials
++b.socials(class= socialsClass ? socialsClass : '')
+	for socLink in socList
+		+e.A.link(href='#!')
+			+icon(`icon-${socLink}`, 'socials__link-icon')
+//end socials
