@@ -2,6 +2,8 @@
 	position: relative
 	background: $aqua
 	&__container
+		position: relative
+		z-index: 2
 	&__slider
 		display: none
 		margin-right: -15px
@@ -12,31 +14,46 @@
 			cursor: default
 		&-text
 			position: absolute
-			top: 0
+			top: 6%
 			left: 0
 			z-index: 1
-			max-width: 502px
+			max-width: 550px
+			pointer-events: all
 		&-title
 		&-descr
 			max-width: 390px
-			margin: 35px 0 30px
+			margin: 22px 0 31px
 			color: $white
 			p
 				+f('pn-300', 18)
+				line-height: 26px
 				&:not(:first-child)
-					margin-top: 10px
+					margin-top: 8px
 		&-btn
 			display: inline-block
 		&-img
 			float: right
 			padding-top: 53.4%
-			width: percentage(792 / 1125)
+			width: 65.1%
 			+cover
-			//position: absolute
-			//top: 0
-			//right: 0
-			//z-index: -1
 			
+		&-parallax
+			position: absolute
+			&_el-1
+				top: 14.5%
+				right: 38%
+				width: 126px
+				height: 135px
+			&_el-2
+				top: 13%
+				right: 48%
+				width: 294px
+				height: 282px
+			&_el-3
+				width: 322px
+				height: 366px
+				top: 14.2%
+				right: 0.7%
 		.slick-dots
 			display: flex
 			position: absolute
@@ -44,6 +61,7 @@
 			bottom: 50px
 			z-index: 2
 			transform: translateX(-50%)
+			pointer-events: all
 			li
 				position: relative
 				width: 14px
@@ -67,6 +85,6 @@
 				border-radius: 50%
 			
 	&_home
-		padding-top: 153px
+		padding-top: 200px
 		height: 1140px
 		background-image: linear-gradient(to bottom, #008b9b 17%, #2aa5b1 40%, #5cbfc6 60%, #fff)

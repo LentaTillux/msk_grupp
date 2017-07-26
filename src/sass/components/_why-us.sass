@@ -3,14 +3,68 @@
 	background: #f2fafd
 	text-align: center
 	&__container
+	&__inner
 		position: relative
 		z-index: 2
-	&__inner
 		display: flex
 		margin: 50px auto 55px
+	&__title
+		position: relative
+		z-index: 2
+		cursor: default
 	&__item
 		position: relative
 		flex: 1 1 20%
+		&:nth-child(1) &-glow:nth-child(2)
+			top: 5%
+			left: 25%
+		&:nth-child(1) &-glow:nth-child(3)
+			top: 27%
+			right: 42%
+		&:nth-child(1) &-glow:nth-child(4)
+			top: 58%
+			left: 27%
+			
+		&:nth-child(2) &-glow:nth-child(2)
+			top: 2%
+			left: 43.5%
+		&:nth-child(2) &-glow:nth-child(3)
+			top: 41%
+			right: 54.5%
+		&:nth-child(2) &-glow:nth-child(4)
+			top: 55%
+			left: 35%
+			
+		&:nth-child(3) &-glow:nth-child(2)
+			top: 10%
+			left: 49%
+		&:nth-child(3) &-glow:nth-child(3)
+			top: 33%
+			right: 53%
+		&:nth-child(3) &-glow:nth-child(4)
+			top: 58%
+			left: 35%
+			
+		&:nth-child(4) &-glow:nth-child(2)
+			top: 18%
+			left: 32%
+		&:nth-child(4) &-glow:nth-child(3)
+			top: 18%
+			right: 35%
+		&:nth-child(4) &-glow:nth-child(4)
+			top: 58%
+			left: 36.5%
+			
+		&:nth-child(5) &-glow:nth-child(2)
+			top: 1.5%
+			left: 35%
+		&:nth-child(5) &-glow:nth-child(3)
+			top: 30%
+			right: 47%
+		&:nth-child(5) &-glow:nth-child(4)
+			top: 55%
+			left: 45.5%
+			
 		&-img
 			display: inline-block
 			vertical-align: middle
@@ -24,6 +78,11 @@
 				+s('why-us-4')
 			&_5
 				+s('why-us-5')
+		&-glow
+			position: absolute
+			z-index: 2
+		&-parallax
+			+s('glow')
 		&-count
 			position: absolute
 			right: 20px
@@ -44,6 +103,9 @@
 			margin: 0 auto
 			font-size: 20px
 			line-height: 25px
+	&__btn
+		position: relative
+		z-index: 2
 	
 	&_default
 		padding: 50px 0 40px

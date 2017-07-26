@@ -1,5 +1,6 @@
 import particles from 'particles.js';
-import { detectDevice, WINDOW } from '../helpers';
+import { detectDevice } from '../helpers';
+import Parallax from '../lib/parallax.min';
 
 let detectMob = detectDevice(767);
 
@@ -11,3 +12,9 @@ function initParticles() {
     particlesJS.load('js-gray-particles', 'assets/gray-particles.json');
   }
 }
+
+const whyUsParallax = $('#js-why-us-parallax').get(0);
+const parallax = new Parallax(whyUsParallax);
+
+const scrParallax = $('#js-screen-parallax').get(0);
+const screenParallax = new Parallax(scrParallax);

@@ -1,5 +1,7 @@
 .teaser
 	&__slider
+		position: relative
+		z-index: 3
 		display: none
 		&.slick-initialized
 			display: block
@@ -9,13 +11,13 @@
 			cursor: default
 		&-text
 			position: relative
-			padding: 90px 20px 20px 90px
+			padding: 83px 20px 20px 93px
 			z-index: 3
 		&-title
-			max-width: 325px
+			max-width: 370px
 		&-descr
-			max-width: 920px
-			margin: 20px 0 25px
+			max-width: 930px
+			margin: 20px 0 22px
 			+f('pn-300', 18)
 			line-height: 25px
 			color: $white
@@ -29,6 +31,8 @@
 				content: ''
 				+coverdiv
 				background: rgba(#08192c, .2)
+		&-btn
+			padding: 12px 40px
 		&-arr
 			position: absolute
 			right: 0

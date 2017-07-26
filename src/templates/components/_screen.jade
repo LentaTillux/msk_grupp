@@ -2,7 +2,7 @@ if screen ? screen : screen = []
 
 //begin screen
 +b.SECTION.screen(class= screenClass ? screenClass : '')
-	+e.container.container
+	+e.container.container#js-screen-parallax
 		+e.slider.js-screen-slider
 			mixin sliderItem(item)
 				+e.slider-item
@@ -10,9 +10,22 @@ if screen ? screen : screen = []
 						+e.H2.slider-title.title-lg= item.title
 						+e.slider-descr
 							+e.P= item.descrFirst
+								if item.descrFirstBR
+									+e.BR
+									= item.descrFirstBR
 							+e.P= item.descrSecond
+								if item.descrSecondBR
+									+e.BR
+									= item.descrSecondBR
 						+e.A.slider-btn.btn._white(href='#!')= item.btn
-					+e.slider-img(style='background-image: url(img/content/screen-girl.jpg)')
+					+e.slider-img(style='background-image: url(img/content/screen-girl.png)')
+					if item.parallaxElements
+						+e.slider-parallax._el-1
+							+b.IMG(class='layer' data-depth='0.07' src='img/bg/screen-circle_lg.png' alt='img')
+						+e.slider-parallax._el-2
+							+b.IMG(class='layer' data-depth='0.2' src='img/bg/screen-circle_md.png' alt='img')
+						+e.slider-parallax._el-3
+							+b.IMG(class='layer' data-depth='0.05' src='img/bg/screen-scheme.png' alt='img')
 
 			each item in sliderList
 				+sliderItem(item)

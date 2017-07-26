@@ -4,10 +4,16 @@ if whyUs ? whyUs : whyUs = []
 +b.SECTION.why-us(class= whyUs.classMod ? whyUs.classMod : '')
 	+e.container.container
 		+e.H3.title.title-md= whyUs.title
-		+e.inner
+		+e.inner#js-why-us-parallax
 			mixin whyUsItem(item)
 				+e.item
 					+e.item-img(class=`_${item.imgMod}`)
+					+e.item-glow
+						+e.item-parallax(class='layer' data-depth='0.05')
+					+e.item-glow
+						+e.item-parallax(class='layer' data-depth='0.05')
+					+e.item-glow
+						+e.item-parallax(class='layer' data-depth='0.05')
 					+e.item-count(class= item.countMod ? item.countMod : '')= item.count
 					+e.P.item-descr= item.descr
 			each item in whyUsList
