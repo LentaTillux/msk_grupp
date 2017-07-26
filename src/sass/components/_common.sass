@@ -73,6 +73,7 @@ video::-webkit-media-controls-start-playback-button
 	border-radius: 26px
 	text-transform: uppercase
 	+f('pn-700', 15)
+	letter-spacing: 0.05em
 	line-height: 30px
 	transition: background .3s ease-in-out, color .3s ease-in-out, transform .1s ease-in-out, box-shadow .1s ease-in-out
 	&_white
@@ -120,6 +121,7 @@ video::-webkit-media-controls-start-playback-button
 	@extend .title-md
 	font-size: 30px
 	line-height: 35px
+	letter-spacing: 0.025em
 	
 .input
 	width: 100%
@@ -136,5 +138,3 @@ video::-webkit-media-controls-start-playback-button
 		border-color: $white
 		color: $white
 		+placeholder-color($white)
-	
-	

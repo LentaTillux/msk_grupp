@@ -3,25 +3,27 @@
 		display: flex
 		justify-content: space-between
 		flex-wrap: wrap
+		max-width: 1190px
 	&__block
-		flex: 0 1 505px
+		flex: 0 1 560px
 		min-width: 1px
+	&__block:nth-child(2) &__title
+		margin: 0 0 25px 27px
+	&__block:nth-child(2) &__slider-btn_prev
+		right: 220px
+	&__block:nth-child(2) &__slider-btn_next
+		right: 179px
 	&__title
-		max-width: 260px
-		margin-bottom: 50px
+		max-width: 270px
+		margin: 0 0 25px 22px
 	&__slider
 		display: none
 		background: url("../img/bg/our-block_bg.png") no-repeat 50% 50%
 		&.slick-initialized
 			display: block
-		&_left
-			//margin-left: -15px
-		&_right
-			//margin-right: -15px
 		&-btn
 			position: absolute
-			right: 170px
-			top: -100px
+			top: -65px
 			z-index: 1
 			width: 40px
 			height: 40px
@@ -31,22 +33,23 @@
 			+hover
 				background: $aqua-dark
 			&_prev
-				right: 211px
+				right: 206px
 			&_next
-				right: 170px
+				right: 165px
 			&-icon
 				display: inline-block
 				vertical-align: middle
 				fill: $white
 				font-size: 12px
 	&__item
-		&-client
-			position: relative
+		&-inner
 			display: flex
 			flex-direction: column
 			justify-content: center
 			align-items: center
 			height: 80px
+		&-client
+			position: relative
 			.no-touch &:hover .our__item-img
 				opacity: 0
 			.no-touch &:hover .our__item-img_hidden
@@ -59,8 +62,8 @@
 				background-size: contain
 				background: no-repeat 50% 50%
 	&__btn
-		margin: 30px auto 0
-		padding: 10px 51px
+		margin: 45px auto 0
+		padding: 10px 43px
 	
 	&_default
-		padding: 50px 0
+		padding: 93px 0 90px
