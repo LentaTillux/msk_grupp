@@ -2,8 +2,10 @@
 	padding: 22px 0
 	background: $white
 	&__container
+		position: relative
 		display: flex
 		align-items: center
+		z-index: 2
 	&__block
 		display: flex
 		flex-wrap: wrap
@@ -36,8 +38,7 @@
 		top: 0
 		left: 0
 		right: 0
-		z-index: 2
-		padding: 52px 0
+		padding: 52px 0 10px
 		background: transparent
 		.contact-info__link-text,
 		.nav__list-link

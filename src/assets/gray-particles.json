@@ -8,7 +8,7 @@
       }
     },
     "color": {
-      "value": "#082237"
+      "value": "#e6f3f7"
     },
     "shape": {
       "type": "circle",
@@ -36,7 +36,7 @@
       }
     },
     "size": {
-      "value": 10,
+      "value": 8,
       "random": false,
       "anim": {
         "enable": false,
@@ -47,8 +47,8 @@
     },
     "line_linked": {
       "enable": true,
-      "distance": 250,
-      "color": "#082237",
+      "distance": 300,
+      "color": "#e6f3f7",
       "opacity": 1,
       "width": 2.5
     },
@@ -76,13 +76,13 @@
       },
       "onclick": {
         "enable": true,
-        "mode": "push"
+        "mode": "repulse"
       },
       "resize": true
     },
     "modes": {
       "grab": {
-        "distance": 300,
+        "distance": 350,
         "line_linked": {
           "opacity": 1
         }
