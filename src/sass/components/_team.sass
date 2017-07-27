@@ -1,0 +1,89 @@
+.team
+	padding: 30px 0 40px
+	&__title
+		text-align: center
+	&__inner
+		display: flex
+		margin: 50px 0 0
+	&__lead
+		position: relative
+		flex: 0 0 255px
+		.icon-quotes
+			position: absolute
+			right: 0
+			fill: #2ab1b4
+			opacity: .5
+			font-size: 24px
+		&-text
+	&__squad
+		display: flex
+		flex-wrap: wrap
+		flex: 1 1 auto
+		background: url("../img/bg/team_bg.png") no-repeat 50% 50%
+	&__person
+		flex: 1 1 33.33333%
+		margin: 0 0 30px
+		line-height: 25px
+		font-size: 16px
+		color: #585858
+		text-align: center
+		&-img
+		&-title
+			font-size: 22px
+			color: $black
+		&-position
+			+f('pn-600', 11)
+			color: $aqua-dark
+			text-transform: uppercase
+			letter-spacing: .05em
+		&-contacts
+			position: relative
+			margin: 10px 0 0
+			padding: 10px 0 0
+			line-height: 1
+			&::before
+				content: ''
+				position: absolute
+				top: 0
+				left: 50%
+				margin-left: -32px
+				z-index: 1
+				width: 65px
+				height: 1px
+				background: #e7e9ec
+		&-email
+			display: block
+			font-style: italic
+		&-phone
+			display: block
+		&-social
+			position: relative
+			margin: 15px 0 0
+			&::before, &::after
+				content: ''
+				display: inline-block
+				vertical-align: middle
+				width: 10px
+				height: 10px
+				background: #def0f2
+				border-radius: 50%
+				pointer-events: none
+			&::before
+				left: 10px
+			&::after
+				right: 10px
+			&-link
+				position: relative
+				display: inline-block
+				vertical-align: middle
+				width: 30px
+				height: 30px
+				margin: 0 6px
+				background: $aqua-dark
+				border-radius: 50%
+				transition: background .3s
+				+hover
+					background: $blue-dark
+			svg
+				+vcenter
+		

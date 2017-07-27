@@ -6,20 +6,22 @@ if whyUs ? whyUs : whyUs = []
 		+e.H3.title.title-md= whyUs.title
 		+e.inner#js-glow-parallax
 			mixin whyUsItem(item)
-				+e.item
+				+e.item(class= item.parallaxMod)
 					+e.item-img
 						+e.IMG(src=`img/content/why-us-${item.img}.png` alt='img')
-					+e.item-glow
-						+e.item-parallax(class='layer' data-depth='0.05')
-					+e.item-glow
-						+e.item-parallax(class='layer' data-depth='0.05')
-					+e.item-glow
-						+e.item-parallax(class='layer' data-depth='0.05')
+						+e.item-glow
+							+e.item-parallax(class='layer' data-depth='0.05')
+						+e.item-glow
+							+e.item-parallax(class='layer' data-depth='0.05')
+						+e.item-glow
+							+e.item-parallax(class='layer' data-depth='0.05')
 					+e.item-count(class= item.countMod ? item.countMod : '')= item.count
-					+e.P.item-descr= item.descr
+					+e.P.item-descr= item.descrFirst
+					if item.descrSecond
+						+e.P.item-descr= item.descrSecond
 			each item in whyUsList
 				+whyUsItem(item)
-
-		+e.A.btn.btn._white-bordered(href='#!')= whyUs.btn
+		if whyUs.btn
+			+e.A.btn.btn._white-bordered(href='#!')= whyUs.btn
 	+b.particles#js-gray-particles
 //end why-us

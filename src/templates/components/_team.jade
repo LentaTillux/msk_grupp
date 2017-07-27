@@ -1,0 +1,45 @@
+if team ? team : team = []
+if teamTitle ? teamTitle : teamTitle = 'Надежная команда - залог успеха'
+
+//begin team
++b.SECTION.team(class= teamClass ? teamClass : '')
+	+e.container.container
+		+e.H3.title.title-md= teamTitle
+		+e.inner
+			+e.lead
+				+e.person-img
+					+e.IMG(src='img/content/team-director.png' alt='img')
+				+e.person-title Иван Ивановский
+				+e.person-position Генеральный директор
+				+e.P.lead-text Уважаемые заказчики Мы ради сотрудничеству с Вами. Мы всегда готовы помочь Вам ведь мы Роман Казаченко Иванов Иван Екатерина Волошановская работаем исключительно на результат.
+				+e.P.lead-text С уважением.
+				+icon('icon-quotes')
+
+			+e.squad
+				-person = 0
+				while person < 3
+					+e.person
+						+e.person-img
+							+e.IMG(src='img/content/team-man.png' alt='img')
+						+e.person-title Иван Ивановский
+						+e.person-position Технический директор
+						+e.person-contacts
+							+e.A.person-email(href='#!') roman@yandex.ru
+							+e.A.person-phone(href='#!') +7 (846) 340-61-91
+							+e.person-social
+								+e.A.person-social-link(href='#!')
+									+icon('icon-fb')
+
+					+e.person
+						+e.person-img
+							+e.IMG(src='img/content/team-woman.png' alt='img')
+						+e.person-title Екатерина Волошанова
+						+e.person-position МАРКЕТОЛОГ
+						+e.person-contacts
+							+e.A.person-email(href='#!') volonashova@yandex.ru
+							+e.A.person-phone(href='#!') +7 (846) 340-61-91
+							+e.person-social
+								+e.A.person-social-link(href='#!')
+									+icon('icon-fb')
+					-person++
+//end team

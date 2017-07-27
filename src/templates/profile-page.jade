@@ -3,7 +3,7 @@ title: Профиль компании
 ---
 extends layouts/_layout
 block content
-
+	//begin main
 	+b.MAIN.main
 		//- page-info
 		-pageInfo = {title: 'ПРОФИЛЬ КОМПАНИИ'}
@@ -27,3 +27,5 @@ block content
 		-servicesBlockClass = '_full'
 		-servicesBlockTitle = 'наши услуги:'
 		include components/_services-block
+
+		//end main

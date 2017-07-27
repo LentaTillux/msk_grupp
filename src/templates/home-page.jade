@@ -37,7 +37,7 @@ block content
 	include components/_screen
 
 	//begin main
-	+b.DIV.main._home
+	+b.main._home
 		//- services
 		include components/_services-block
 
@@ -49,15 +49,15 @@ block content
 		-partners = {classMod: '_default'}
 			include components/_partners
 
-		//-partners
+		//-why us
 		-
 			var whyUs = {classMod: '_default', title: 'почему мск-групп?', btn: 'ДОПОЛНИТЕЛЬНАЯ ИНФОРМАЦИЯ'}
 			var whyUsList = [
-			{img: 1, count: 10, descr: 'Более 10 лет на рынке'},
-			{img: 2, count: 100, descr: 'Профессионалов своего дела'},
-			{img: 3, count: 100, descr: 'Более 100 реализованных проектов'},
-			{img: 4, count: 150, descr: 'Более 150 постоянных клиентов'},
-			{img: 5, count: 1, countMod: '_wide', descr: 'Одна из ТОП компаний по Самарской области'}]
+			{img: 1, parallaxMod: '_1', count: 10, descrFirst: 'Более 10 лет на рынке'},
+			{img: 2, parallaxMod: '_2', count: 100, descrFirst: 'Профессионалов своего дела'},
+			{img: 3, parallaxMod: '_3', count: 100, descrFirst: 'Более 100 реализованных проектов'},
+			{img: 4, parallaxMod: '_4', count: 150, descrFirst: 'Более 150 постоянных клиентов'},
+			{img: 5, parallaxMod: '_5', count: 1, countMod: '_wide', descrFirst: 'Одна из ТОП компаний по Самарской области'}]
 		include components/_why-us
 
 		//-news

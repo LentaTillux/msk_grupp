@@ -15,53 +15,53 @@
 	&__item
 		position: relative
 		flex: 1 1 20%
-		&:nth-child(1) &-glow:nth-child(2)
+		&_1 &-glow:nth-child(2)
 			top: 5%
 			left: 25%
-		&:nth-child(1) &-glow:nth-child(3)
+		&_1 &-glow:nth-child(3)
 			top: 27%
 			right: 42%
-		&:nth-child(1) &-glow:nth-child(4)
+		&_1 &-glow:nth-child(4)
 			top: 58%
-			left: 27%
+			left: 25%
 			
-		&:nth-child(2) &-glow:nth-child(2)
+		&_2 &-glow:nth-child(2)
 			top: 2%
 			left: 43.5%
-		&:nth-child(2) &-glow:nth-child(3)
-			top: 41%
-			right: 54.5%
-		&:nth-child(2) &-glow:nth-child(4)
-			top: 55%
-			left: 35%
+		&_2 &-glow:nth-child(3)
+			top: 30%
+			left: 55%
+		&_2 &-glow:nth-child(4)
+			top: 70%
+			left: 36%
 			
-		&:nth-child(3) &-glow:nth-child(2)
-			top: 10%
-			left: 49%
-		&:nth-child(3) &-glow:nth-child(3)
-			top: 33%
-			right: 53%
-		&:nth-child(3) &-glow:nth-child(4)
-			top: 58%
-			left: 41%
+		&_3 &-glow:nth-child(2)
+			top: 14%
+			left: 50%
+		&_3 &-glow:nth-child(3)
+			top: 46%
+			right: 48%
+		&_3 &-glow:nth-child(4)
+			top: 75%
+			left: 36%
 			
-		&:nth-child(4) &-glow:nth-child(2)
-			top: 18%
+		&_4 &-glow:nth-child(2)
+			top: 22%
 			left: 32%
-		&:nth-child(4) &-glow:nth-child(3)
-			top: 18%
+		&_4 &-glow:nth-child(3)
+			top: 23%
 			right: 35%
-		&:nth-child(4) &-glow:nth-child(4)
-			top: 58%
+		&_4 &-glow:nth-child(4)
+			top: 78%
 			left: 36.5%
 			
-		&:nth-child(5) &-glow:nth-child(2)
+		&_5 &-glow:nth-child(2)
 			top: 1.5%
 			left: 35%
-		&:nth-child(5) &-glow:nth-child(3)
+		&_5 &-glow:nth-child(3)
 			top: 30%
 			right: 47%
-		&:nth-child(5) &-glow:nth-child(4)
+		&_5 &-glow:nth-child(4)
 			top: 55%
 			left: 45.5%
 			
@@ -69,6 +69,9 @@
 			margin-top: 10px
 			
 		&-img
+			position: relative
+			display: inline-block
+			width: 222px
 		&-glow
 			position: absolute
 			z-index: 2
@@ -94,9 +97,25 @@
 			margin: 18px auto 0
 			font-size: 20px
 			line-height: 25px
+			color: $black
+			& + &
+				margin-top: 0!important
 	&__btn
 		position: relative
 		z-index: 2
 	
 	&_default
 		padding: 80px 0 88px
+		
+	&_short
+		padding: 80px 0 88px
+	&_short &__inner
+		justify-content: center
+		margin: 46px -20px 0
+	&_short &__item
+		flex: 1 1 33.33333%
+		margin: 0 20px
+		&-descr
+			min-width: 330px
+		&-count
+			right: 75px

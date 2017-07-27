@@ -6,3 +6,6 @@ PageList:
 
 - file: profile-page.html
   ready: 100
+
+- file: facts-page.html
+  ready: 100

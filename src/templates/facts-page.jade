@@ -1,0 +1,28 @@
+---
+title: Профиль компании
+---
+extends layouts/_layout
+block content
+	//begin main
+	+b.MAIN.main
+		//- page-info
+		-pageInfo = {title: 'МСК ГРУПП ТОЛЬКО ФАКТЫ'}
+		-breadcrumbsList = ['главная', 'О КОМПАНИИ']
+		-activeIndex = 2
+		include components/_page-info
+
+		//- about-partners
+		include components/_about-partners
+
+		//- why us
+		-
+			var whyUs = {classMod: '_short', title: 'Коротко о нас'}
+			var whyUsList = [{
+			img: 1, parallaxMod: '_1', count: 10, descrFirst: ' 10 лет в отрасли ИТ', descrSecond: 'Холдинг МСК ГРУПП на рынке ИТ услуг с 2017 года'}, {
+			img: 2, parallaxMod: '_2', count: 100, descrFirst: '100 специалистов', descrSecond: 'Профессионалов своего дела'}, {
+			img: 4, parallaxMod: '_4', count: 150, descrFirst: '150 компаний', descrSecond: 'Работают с нами на постоянной основе'}]
+		include components/_why-us
+
+		//- team
+		include components/_team
+	//end main
