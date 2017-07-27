@@ -134,7 +134,7 @@ video::-webkit-media-controls-start-playback-button
 	+f('pn-400', 15)
 	color: $blue-dark
 	+placeholder-color($blue-dark)
-	&_aqua
+	&_aqua, &_transp
 		padding: 0 34px
 		background: #2da6b2
 		border-color: $white
@@ -142,3 +142,21 @@ video::-webkit-media-controls-start-playback-button
 		+placeholder
 			color: $white
 			font-style: italic
+	&_transp
+		background: transparent
+		
+.textarea
+	display: block
+	width: 100%
+	padding: 20px
+	resize: none
+	+f('pn-300', 16)
+	line-height: 25px
+	color: $white
+	border-radius: 27px
+	border: 2px solid $white
+	+placeholder
+		color: $white
+		font-style: italic
+	&_transp
+		background: transparent

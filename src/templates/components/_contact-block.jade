@@ -3,12 +3,29 @@ if contactBlock ? contactBlock : contactBlock = []
 //begin contact-block
 +b.SECTION.contact-block(class= contactBlockClass ? contactBlockClass : '' style='background-image: url("img/bg/contact-block_bg.jpg")')
 	+e.container.container
-		+e.A.phone.title-lg(href='tel:+78463406191') +7 (846) 340-61-91
-		+e.A.email(href='mailto:sales@mskgr.ru') sales@mskgr.ru
-		+e.ADDRESS.address
-			+e.P 456455, Россия, Самара, ул. Чапаевская, дом 112А
-			+e.P пн-пт 9:00 - 18:00
-		+e.actions
-			+e.A.actions-btn.btn._white(href='#!') оставить заявку
-			+e.A.actions-btn.btn._white(href='#!') Обратный звонок
+		if contactBlockAddress
+			+e.A.phone.title-lg(href='tel:+78463406191') +7 (846) 340-61-91
+			+e.A.email(href='mailto:sales@mskgr.ru') sales@mskgr.ru
+			+e.ADDRESS.address
+				+e.P 456455, Россия, Самара, ул. Чапаевская, дом 112А
+				+e.P пн-пт 9:00 - 18:00
+			+e.actions
+				+e.A.actions-btn.btn._white(href='#!') оставить заявку
+				+e.A.actions-btn.btn._white(href='#!') Обратный звонок
+
+		if contactBlockForm
+			+b.title-sm-white= contactFormTitle
+			+e.FORM.form(action='#!')
+				+e.form-row
+					+e.form-field
+						+e.INPUT.input.input._transp(type='text' placeholder='Ваше имя')
+					+e.form-field
+						+e.INPUT.input.input._transp(type='text' placeholder='Ваш телефон')
+					+e.form-field
+						+e.INPUT.input.input._transp(type='text' placeholder='Ваш e-mail адрес')
+				+e.form-row
+					+e.TEXTAREA.textarea.textarea._transp(placeholder='Ваше сообщение')
+
+				+e.P.form-descr * Оставляя свои данные вы соглашаетесь с политикой конфедециальности
+				+e.A.form-btn.btn._white(href='#!') оставить заявку
 //end contact-block

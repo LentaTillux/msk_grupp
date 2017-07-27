@@ -1,11 +1,12 @@
 if servicesBlock ? servicesBlock : servicesBlock = []
+if servicesBlockTitle ? servicesBlockTitle : servicesBlockTitle = ''
 -var servicesBlockList = [{title: 'Разработка комплексных решений', img: '1'}, {title: 'Корпоративное и розничное сервисное обслуживание', img: '2'}, {title: 'Строительство и модернизация ИТ инфраструктуры', img: '3'}, {title: 'Комплексное проектирование, строительство', img: '4'}, {title: 'Осуществление научно-иследовательской работы', img: '5'}]
 
 //begin services-block
 +b.SECTION.services-block(class= servicesBlockClass ? servicesBlockClass : '')
 	+e.container.container
-		if servicesBlock.title
-			+e.main-title.title-md= servicesBlock.title
+		if servicesBlockTitle
+			+e.main-title.title-md= servicesBlockTitle
 		+e.row
 			mixin servicesBlockItem(item)
 				+e.A.item(href='#!')
