@@ -1,5 +1,8 @@
-ProjectTitle: МСК Групп
+ProjectTitle: МСК ГРУПП
 
 PageList:
 - file: home-page.html
+  ready: 100
+
+- file: 1-page.html
   ready: 100
