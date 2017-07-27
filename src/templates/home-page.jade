@@ -1,7 +1,12 @@
 ---
-title: Index Page
+title: Главная
 ---
 extends layouts/_layout
+
+block header
+	-headerClass = '_home'
+	include partials/_header
+
 block content
 	//- screen
 	-

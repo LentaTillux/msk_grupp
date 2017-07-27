@@ -1,0 +1,12 @@
+if pageInfo ? pageInfo : pageInfo = []
+if pageInfo.title ? pageInfo.title : 'Title'
+
+//begin pageInfo
++b.SECTION.pageInfo(class= pageInfoClass ? pageInfoClass : '')
+	+b.UL.breadcrumbs
+		for breadcrumbsLink, index in breadcrumbsList
+			+e.LI.item(class= index === activeIndex -1 ? 'is-active' : '')
+				+e.A.link(href='#!')= breadcrumbsLink
+	+e.container.container
+		+e.title.title-lg= pageInfo.title
+//end pageInfo

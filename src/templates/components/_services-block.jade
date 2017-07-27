@@ -4,12 +4,15 @@ if servicesBlock ? servicesBlock : servicesBlock = []
 //begin services-block
 +b.SECTION.services-block(class= servicesBlockClass ? servicesBlockClass : '')
 	+e.container.container
-		mixin servicesBlockItem(item)
-			+e.A.item(href='#!')
-				+e.inner
-					+e.H6.title= item.title
-					+e.P.descr Богатый опыт в проектировании типовых и индивидуальных проектов позволяет учитывать индивидуальные особенности Заказчика, гарантирует качество, сокращает сроки внедрения, делает решение масштабируемым и экономичным.
-				+icon(`icon-services-${item.img}`, 'services-block__img')
-		each item in servicesBlockList
-			+servicesBlockItem(item)
+		if servicesBlock.title
+			+e.main-title.title-md= servicesBlock.title
+		+e.row
+			mixin servicesBlockItem(item)
+				+e.A.item(href='#!')
+					+e.inner
+						+e.H6.title= item.title
+						+e.P.descr Богатый опыт в проектировании типовых и индивидуальных проектов позволяет учитывать индивидуальные особенности Заказчика, гарантирует качество, сокращает сроки внедрения, делает решение масштабируемым и экономичным.
+					+icon(`icon-services-${item.img}`, 'services-block__img')
+			each item in servicesBlockList
+				+servicesBlockItem(item)
 //end services-block

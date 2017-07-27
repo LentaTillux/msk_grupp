@@ -4,5 +4,5 @@ PageList:
 - file: home-page.html
   ready: 100
 
-- file: 1-page.html
+- file: profile-page.html
   ready: 100
