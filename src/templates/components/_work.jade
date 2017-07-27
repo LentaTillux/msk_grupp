@@ -1,0 +1,28 @@
+if work ? work : work = []
+if workTitle ? workTitle : workTitle = 'Как мы работаем?'
+
+-
+	defaultWorkList = [{
+	img: 1,
+	text: 'Консультирование по продукту или выбранной услуги. Обсуждение всех вопросов'}, {
+	img: 2,
+	text: 'Подписание договора и выполнение технических работ'}, {
+	img: 3,
+	text: 'Сдача проекта'}]
+if workList ? workList : workList = defaultWorkList
+
+//begin work
++b.SECTION.work(class= workClass ? workClass : '')
+	+e.container.container
+		+e.title.title-md= workTitle
+		+e.row
+			mixin workItem(item)
+				+e.item
+					+e.item-img
+						+e.IMG(src=`img/content/work-${item.img}.png` alt='img')
+					+e.P.item-text= item.text
+			each item in workList
+				+workItem(item)
+
+	+b.particles#js-gray-particles
+//end work

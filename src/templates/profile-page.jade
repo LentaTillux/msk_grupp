@@ -4,6 +4,15 @@ title: Профиль компании
 extends layouts/_layout
 block content
 
-	//- page-info
-	-breadcrumbsList = ['главная', 'ПРОФИЛЬ КОМПАНИИ']
-	include components/_page-info
+	+b.MAIN.main
+		//- page-info
+		-pageInfo = {title: 'ПРОФИЛЬ КОМПАНИИ'}
+		-breadcrumbsList = ['главная', 'ПРОФИЛЬ КОМПАНИИ']
+		-activeIndex = 2
+		include components/_page-info
+
+		//- designing
+		include components/_designing
+
+		//- work
+		include components/_work
