@@ -3,11 +3,11 @@ if workTitle ? workTitle : workTitle = 'Как мы работаем?'
 
 -
 	defaultWorkList = [{
-	img: 1,
+	pic: 1,
 	text: 'Консультирование по продукту или выбранной услуги. Обсуждение всех вопросов'}, {
-	img: 2,
+	pic: 2,
 	text: 'Подписание договора и выполнение технических работ'}, {
-	img: 3,
+	pic: 3,
 	text: 'Сдача проекта'}]
 if workList ? workList : workList = defaultWorkList
 
@@ -15,11 +15,15 @@ if workList ? workList : workList = defaultWorkList
 +b.SECTION.work(class= workClass ? workClass : '')
 	+e.container.container
 		+e.title.title-md= workTitle
-		+e.row
+		+e.row#js-glow-parallax
 			mixin workItem(item)
 				+e.item
-					+e.item-img
-						+e.IMG(src=`img/content/work-${item.img}.png` alt='img')
+					+e.item-pic
+						+e.IMG(src=`img/content/work-${item.pic}.png` alt='img')
+						+e.item-glow
+							+e.item-parallax(class='layer' data-depth='0.05')
+						+e.item-glow
+							+e.item-parallax(class='layer' data-depth='0.05')
 					+e.P.item-text= item.text
 			each item in workList
 				+workItem(item)

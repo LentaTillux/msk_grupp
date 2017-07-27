@@ -7,6 +7,52 @@
 		z-index: 2
 		cursor: default
 	&__row
+		position: relative
 		display: flex
+		justify-content: center
+		margin: 30px 0 0
+		&::after
+			content: ''
+			position: absolute
+			top: 30%
+			left: 50%
+			margin-left: -252px
+			z-index: 2
+			opacity: .5
+			+s('arrows_r')
 	&__title
 		text-align: center
+	&__item
+		text-align: center
+		flex: 1 1 33.33333%
+		
+		&:nth-child(1) &-glow:nth-child(2)
+			top: 34%
+			left: 41%
+		&:nth-child(1) &-glow:nth-child(3)
+			top: 79%
+			right: 51%
+		&:nth-child(2) &-glow:nth-child(2)
+			top: 25%
+			left: 42%
+		&:nth-child(2) &-glow:nth-child(3)
+			top: 79%
+			right: 56%
+		&:nth-child(3) &-glow:nth-child(2)
+			top: 25%
+			left: 42%
+		&:nth-child(3) &-glow:nth-child(3)
+			top: 78%
+			right: 48%
+			
+		&-pic
+			position: relative
+		&-text
+			max-width: 250px
+			margin: 0 auto
+			font-size: 17px
+			color: $blue-dark
+		&-glow
+			position: absolute
+		&-parallax
+			+s('glow')

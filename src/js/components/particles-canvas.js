@@ -25,8 +25,8 @@ const detectMob = detectDevice(767);
 
 // parallax init
 (function () {
-  if ($('#js-why-us-parallax').length) {
-    const whyUsParallax = $('#js-why-us-parallax').get(0);
+  if ($('#js-glow-parallax').length) {
+    const whyUsParallax = $('#js-glow-parallax').get(0);
     const parallax = new Parallax(whyUsParallax);
   }
 
