@@ -7,7 +7,7 @@
 		position: relative
 		z-index: 2
 		display: flex
-		margin: 50px auto 55px
+		margin: 46px auto 50px
 	&__title
 		position: relative
 		z-index: 2
@@ -65,6 +65,9 @@
 			top: 55%
 			left: 45.5%
 			
+		&:nth-child(2) &-descr
+			margin-top: 10px
+			
 		&-img
 			display: inline-block
 			vertical-align: middle
@@ -85,8 +88,8 @@
 			+s('glow')
 		&-count
 			position: absolute
-			right: 20px
-			top: 160px
+			right: 25px
+			top: 156px
 			height: 53px
 			padding: 0 18px
 			+f('pn-900', 35)
@@ -99,8 +102,8 @@
 				padding: 0 24px
 				
 		&-descr
-			max-width: 205px
-			margin: 0 auto
+			max-width: 198px
+			margin: 18px auto 0
 			font-size: 20px
 			line-height: 25px
 	&__btn
@@ -108,4 +111,4 @@
 		z-index: 2
 	
 	&_default
-		padding: 50px 0 40px
+		padding: 80px 0 88px
