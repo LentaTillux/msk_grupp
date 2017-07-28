@@ -1,0 +1,166 @@
+---
+title: Каталог услуг
+---
+extends layouts/_layout
+
+block content
+	//begin main
+	+b.MAIN.main
+		//- page-info
+		-pageInfo = {title: 'каталог услуг', titleClassMod: '_sm'}
+		-breadcrumbsList = ['главная', 'каталог услуг']
+		-activeIndex = 2
+		include components/_page-info
+
+	//begin catalog
+	+b.SECTION.catalog
+		+e.container.container
+			+b.accordion-menu.catalog__accordion-menu.js-accordion
+				+e.item.js-accordion-item
+					+e.title Базовые ИТ решения
+						+icon('icon-plus')
+						+icon('icon-minus')
+					+e.UL.content.js-accordion-content
+						+e.LI
+							+e.A(href='#!') Сетевая инфраструктура
+						+e.LI
+							+e.A(href='#!') Инженерная ИТ
+						+e.LI
+							+e.A(href='#!') инфраструктура
+						+e.LI
+							+e.A(href='#!') Системы безопасности
+						+e.LI
+							+e.A(href='#!') Бизнес приложения
+						+e.LI
+							+e.A(href='#!') Системы коллективной работы
+						+e.LI
+							+e.A(href='#!') Web сайты
+						+e.LI
+							+e.A(href='#!') Сервисное обслуживание
+
+				+e.item.js-accordion-item.is-active
+					+e.title Сложные ИТ решения
+						+icon('icon-plus')
+						+icon('icon-minus')
+					+e.UL.content.js-accordion-content
+						+e.LI
+							+e.A(href='#!') Сетевая инфраструктура
+						+e.LI
+							+e.A(href='#!') Инженерная ИТ инфраструктура
+						+e.LI
+							+e.A(href='#!') Системы безопасности
+						+b.LI.is-active
+							+e.A(href='#!') Бизнес приложения
+						+e.LI
+							+e.A(href='#!') Системы коллективной работы
+						+e.LI
+							+e.A(href='#!') Web сайты
+						+e.LI
+							+e.A(href='#!') Сервисное обслуживание
+
+				+e.item.js-accordion-item
+					+e.title Проектирование
+						+icon('icon-plus')
+						+icon('icon-minus')
+					+e.UL.content.js-accordion-content
+						+e.LI
+							+e.A(href='#!') Сетевая инфраструктура
+						+e.LI
+							+e.A(href='#!') Инженерная ИТ
+						+e.LI
+							+e.A(href='#!') инфраструктура
+						+e.LI
+							+e.A(href='#!') Системы безопасности
+						+e.LI
+							+e.A(href='#!') Бизнес приложения
+						+e.LI
+							+e.A(href='#!') Системы коллективной работы
+						+e.LI
+							+e.A(href='#!') Web сайты
+						+e.LI
+							+e.A(href='#!') Сервисное обслуживание
+
+			+e.product
+				+e.UL.actions
+					+e.LI.actions-item
+						+e.A.actions-link(href='#!') назад
+							+icon('icon-arr_l')
+					+e.LI.actions-item.is-active
+						+e.A.actions-link(href='#!') БИЗНЕС - ПРиложения
+
+				+e.H2.title.title-md Бизнес - приложения
+
+				+b.product-offers.catalog__product-offers.js-accordion
+					+e.item.js-accordion-item.is-active
+						+e.item-name
+							+e.item-name-in
+								+e.title.title-sm sing-easy
+								+e.P.descr Приложение позволяет легким способом подписывать документы в электронном виде.
+								+icon('icon-plus')
+								+icon('icon-minus')
+						+e.content.js-accordion-content
+							+e.text
+								+e.content-block
+									+e.H4.content-title Описание
+									+e.P.content-descr Sing Easy  простое приложение для Вашего смартфона или любого гаджета которое позволяет легким способом подписывать документы в электронном виде вне зависимости где Вы находитесь.
+								+e.content-block
+									+e.H4.content-title Как работает приложение
+									+e.UL.list
+										+e.LI.list-item
+											+e.list-item-count 1
+											+e.P Импортируем документы из любого сервиса (Email, Dropbox, Evernote, Google Drive и много других.)
+										+e.LI.list-item
+											+e.list-item-count 2
+											+e.P Ставим нашу подпись с помощью пальца или стилуса (можно нарисовать заранее и просто выставлять ее в нужные документы.)
+										+e.LI.list-item
+											+e.list-item-count 3
+											+e.P Отправляем нужный документ
+
+
+							+e.view.js-product-slider.js-parallax
+								+e.view-item
+									+e.IMG.obj-fit(src='img/content/product-phone.png' alt='img')
+									+e.view-glow
+										+e.view-parallax(class='layer' data-depth='0.05')
+									+e.view-glow
+										+e.view-parallax(class='layer' data-depth='0.05')
+									+e.view-glow
+										+e.view-parallax(class='layer' data-depth='0.05')
+
+					+e.item.js-accordion-item
+						+e.item-name
+							+e.item-name-in
+								+e.title.title-sm sing-easy
+								+e.P.descr Приложение позволяет легким способом подписывать документы в электронном виде.
+								+icon('icon-plus')
+								+icon('icon-minus')
+						+e.content.js-accordion-content
+							+e.text
+								+e.content-block
+									+e.H4.content-title Описание
+									+e.P.content-descr Sing Easy  простое приложение для Вашего смартфона или любого гаджета которое позволяет легким способом подписывать документы в электронном виде вне зависимости где Вы находитесь.
+								+e.content-block
+									+e.H4.content-title Как работает приложение
+									+e.UL.list
+										+e.LI.list-item
+											+e.list-item-count 1
+											+e.P Импортируем документы из любого сервиса (Email, Dropbox, Evernote, Google Drive и много других.)
+										+e.LI.list-item
+											+e.list-item-count 2
+											+e.P Ставим нашу подпись с помощью пальца или стилуса (можно нарисовать заранее и просто выставлять ее в нужные документы.)
+										+e.LI.list-item
+											+e.list-item-count 3
+											+e.P Отправляем нужный документ
+
+
+							+e.view.js-product-slider#js-glow-parallax
+								+e.view-item
+									+e.IMG.obj-fit(src='img/content/product-phone.png' alt='img')
+									+e.view-glow
+										+e.view-parallax(class='layer' data-depth='0.05')
+									+e.view-glow
+										+e.view-parallax(class='layer' data-depth='0.05')
+									+e.view-glow
+										+e.view-parallax(class='layer' data-depth='0.05')
+
+	//end catalog

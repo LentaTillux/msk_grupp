@@ -2,7 +2,7 @@ if screen ? screen : screen = []
 
 //begin screen
 +b.SECTION.screen(class= screenClass ? screenClass : '')
-	+e.container.container#js-screen-parallax
+	+e.container.container.js-screen-parallax
 		+e.slider.js-screen-slider
 			mixin sliderItem(item)
 				+e.slider-item

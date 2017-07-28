@@ -1,0 +1,124 @@
+.catalog
+	padding: 40px 0
+	&__container
+		display: flex
+		align-items: flex-start
+	&__accordion-menu
+		flex: 0 0 257px
+	&__product
+		flex: 1 1 auto
+		margin-left: 30px
+	&__actions
+		display: flex
+		margin-bottom: 30px
+		&-item
+			&:not(:first-child)
+				margin-left: 5px
+			&.is-active
+				pointer-events: none
+		&-item.is-active &-link
+			color: $white
+			box-shadow: 2px 3px 2px rgba(0, 0, 0, 0.1)
+			background-color: #2ab1b4
+		&-link
+			position: relative
+			display: block
+			height: 26px
+			padding: 0 24px
+			border-radius: 12px
+			background: $white
+			+f('pn-700', 11)
+			line-height: 26px
+			text-transform: uppercase
+			border: 1px solid #2ab1b4
+			color: $blue-dark
+			transition: .3s
+			+hover
+				background: $aqua-dark
+				color: $white
+				svg
+					fill: $white
+			svg
+				position: absolute
+				top: calc(50% - 4px)
+				left: 10px
+				fill: $blue-dark
+				font-size: 9px
+				transition: .3s
+				
+/* accordion-menu
+	----------------------------------- */
+.accordion-menu
+	min-width: 256px
+	border: 1px solid #eeeeee
+	background: $white
+	&__item
+	&__item.is-active &__title,
+	&__item.is-active &__content
+			background: #f2fafd
+	&__item.is-active .icon-plus
+		opacity: 0
+	&__title
+		position: relative
+		padding: 15px 40px 15px 20px
+		text-transform: uppercase
+		+f('pn-700', 15)
+		color: $blue-dark
+		cursor: pointer
+		transition: background .3s
+		svg
+			position: absolute
+			top: calc(50% - 8px)
+			right: 20px
+			font-size: 16px
+			fill: #2ab1b4
+			transition: .3s
+	&__content
+		display: none
+		padding: 20px
+		transition: background .3s
+		li.is-active a
+			color: #2ab1b4
+		a
+			font-size: 15px
+			border-bottom: 1px solid currentColor
+			transition: .15s
+			+hover
+				border-bottom-color: transparent
+				
+/* product-offers
+	----------------------------------- */
+.product-offers
+	border: 1px solid #eee
+	background-color: #fff
+	&__content
+		display: none
+		padding: 30px 40px
+		&-title
+			font-size: 22px
+			line-height: 25px
+		&-descr
+			color: #585858
+			+f('pn-300', 16)
+			line-height: 28px
+	&__item
+		&-name
+			position: relative
+			padding: 25px 2px 25px 110px
+			border-bottom: 1px solid #eee
+			cursor: pointer
+			svg
+				position: absolute
+				top: calc(50% - 16px)
+				left: 40px
+				font-size: 32px
+				fill: #2ab1b4
+				transition: .3s
+			&-in
+				padding-left: 19px
+				border-left: 1px solid #f1f1f1
+	&__title
+	&__descr
+		font-size: 17px
+		line-height: 32px
+		color: $blue-dark

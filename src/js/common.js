@@ -1,6 +1,7 @@
 import svg4everybody from 'svg4everybody';
 import objectFitImages from 'object-fit-images';
 import dotdotdot from 'dotdotdot';
+import './lib/fancybox.min';
 
 // SVG for all
 svg4everybody();
@@ -24,3 +25,7 @@ objectFitImages(objFitImg);
 // dot.js
 const $textOverflow = $('.js-dot');
 $textOverflow.dotdotdot();
+
+// img zoom
+const zoomImg = $('[data-fancybox]');
+zoomImg.fancybox();

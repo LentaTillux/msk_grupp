@@ -1,5 +1,14 @@
 import slick from 'slick-carousel';
 
+let sldDefaultOpt = {
+  useTransform: true,
+  infinite: true,
+  cssEase: 'ease',
+  speed: 500,
+  prevArrow: '<button type="button" class="slider-btn slider-btn_prev"><svg class="slider-btn__icon icon-arr_l"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-arr_l"></use></svg></button>',
+  nextArrow: '<button type="button" class="slider-btn slider-btn_next"><svg class="slider-btn__icon icon-arr_r"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-arr_r"></use></svg></button>'
+};
+
 const $screenSld = $('.js-screen-slider');
 $screenSld.slick({
   slidesToShow: 1,
@@ -30,13 +39,16 @@ $newsBlockSld.slick({
   dots: true,
   arrows: false
 });
+
 const $ourSld = $('.js-our-slider');
-$ourSld.slick({
+$ourSld.slick($.extend(true, sldDefaultOpt, {
   slidesToShow: 3,
-  slidesToScroll: 1,
-  speed: 500,
-  infinite: true,
-  prevArrow: '<button type="button" class="our__slider-btn our__slider-btn_prev"><svg class="our__slider-btn-icon icon-arr_l"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-arr_l"></use></svg></button>',
-  nextArrow: '<button type="button" class="our__slider-btn our__slider-btn_next"><svg class="our__slider-btn-icon icon-arr_r"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-arr_r"></use></svg></button>'
-});
+  slidesToScroll: 1
+}));
+
+const $awardsSld = $('.js-certif-slider');
+$awardsSld.slick($.extend({}, sldDefaultOpt, {
+  slidesToShow: 6,
+  slidesToScroll: 1
+}));
 

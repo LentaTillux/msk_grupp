@@ -1,0 +1,15 @@
+if awards ? awards : awards = []
+if awards.title ? awards.title : awards.title = 'Наши награды'
+
+//begin awards
++b.SECTION.awards(class= awards.classMod ? awards.classMod : '')
+	+e.container.container
+		+e.H3.title.title-sm= awards.title
+		+e.slider.js-certif-slider
+			-certifList = [1, 2, 3, 4, 5, 6, 5, 4, 3, 2, 1]
+			for certifItem in certifList
+				+e.A.slider-item(href='img/content/certificate-big.jpg' data-fancybox='certificates')
+					+e.IMG(src=`img/content/certificate-${certifItem}.jpg` alt='img')
+
+	+b.particles#js-gray-particles-2
+//end awards

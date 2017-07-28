@@ -1,5 +1,5 @@
 import particles from 'particles.js';
-import { detectDevice } from '../helpers';
+import {detectDevice} from '../helpers';
 import Parallax from '../lib/parallax.min';
 
 const detectMob = detectDevice(767);
@@ -9,6 +9,7 @@ const detectMob = detectDevice(767);
   const aquaParticles = $('#js-aqua-particles').length;
   const blueParticles = $('#js-blue-particles').length;
   const grayParticles = $('#js-gray-particles').length;
+  const grayParticlesSecond = $('#js-gray-particles-2').length;
 
   if (!detectMob) {
     if (aquaParticles) {
@@ -20,18 +21,29 @@ const detectMob = detectDevice(767);
     if (grayParticles) {
       particlesJS.load('js-gray-particles', 'assets/gray-particles.json');
     }
+    if (grayParticlesSecond) {
+      particlesJS.load('js-gray-particles-2', 'assets/gray-particles.json');
+    }
   }
 })();
 
 // parallax init
-(function () {
-  if ($('#js-glow-parallax').length) {
-    const whyUsParallax = $('#js-glow-parallax').get(0);
-    const parallax = new Parallax(whyUsParallax);
+(() => {
+  const $glowParallax = $('.js-glow-parallax');
+  const $screenParallax = $('.js-screen-parallax');
+
+  if ($glowParallax.length) {
+    const whyUsParallax = $glowParallax.get(0);
+    const glowParallax = new Parallax(whyUsParallax);
   }
 
-  if ($('#js-screen-parallax').length) {
-    const scrParallax = $('#js-screen-parallax').get(0);
+  if ($screenParallax.length) {
+    const scrParallax = $screenParallax.get(0);
     const screenParallax = new Parallax(scrParallax);
   }
+
+  // if ($('.js-glow-parallax').length) {
+  // const glowParallax = $('.js-glow-parallax').get(0);
+  // const glowParallaxLax = new Parallax(glowParallax);
+  // }
 })();

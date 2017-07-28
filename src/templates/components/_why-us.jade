@@ -4,7 +4,7 @@ if whyUs ? whyUs : whyUs = []
 +b.SECTION.why-us(class= whyUs.classMod ? whyUs.classMod : '')
 	+e.container.container
 		+e.H3.title.title-md= whyUs.title
-		+e.inner#js-glow-parallax
+		+e.inner.js-glow-parallax
 			mixin whyUsItem(item)
 				+e.item(class= item.parallaxMod)
 					+e.item-img
@@ -23,5 +23,6 @@ if whyUs ? whyUs : whyUs = []
 				+whyUsItem(item)
 		if whyUs.btn
 			+e.A.btn.btn._white-bordered(href='#!')= whyUs.btn
+
 	+b.particles#js-gray-particles
 //end why-us

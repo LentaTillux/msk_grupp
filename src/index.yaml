@@ -9,3 +9,6 @@ PageList:
 
 - file: facts-page.html
   ready: 100
+
+- file: catalog-page.html
+  ready: 100

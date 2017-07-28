@@ -1,5 +1,5 @@
 ---
-title: Профиль компании
+title: Только факты
 ---
 extends layouts/_layout
 block content
@@ -25,4 +25,25 @@ block content
 
 		//- team
 		include components/_team
+
+		// -awards
+		include components/_awards
+
+		// -clients
+		+b.SECTION.clients
+			+e.container.container
+				+b.title-sm Наши клиенты
+				+e.block
+					-clientList = [4, 5, 6, 7, 8, 9, 1, 2, 3, 4, 5, 6]
+					for clientImg in clientList
+						+e.item
+							+e.A.item-link(href='#!')
+								+e.IMG.item-img(src=`img/content/client-${clientImg}_gray.png` alt='img')
+								+e.DIV.item-img._hidden(style=`background-image: url(img/content/client-${clientImg}.png)`)
+
+		//-contact-block
+		-contactBlockClass = '_has-form'
+		-contactBlockForm = true
+		-contactFormLgTitle = 'Остались вопросы?'
+		include components/_contact-block
 	//end main
