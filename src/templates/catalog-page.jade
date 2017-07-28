@@ -16,10 +16,12 @@ block content
 	+b.SECTION.catalog
 		+e.container.container
 			+b.accordion-menu.catalog__accordion-menu.js-accordion
-				+e.item.js-accordion-item
-					+e.title Базовые ИТ решения
-						+icon('icon-plus')
-						+icon('icon-minus')
+				+e.item
+					+e.title
+						+e.SPAN.title-text Базовые ИТ решения
+						+e.SPAN.title-icons
+							+icon('icon-plus')
+							+icon('icon-minus')
 					+e.UL.content.js-accordion-content
 						+e.LI
 							+e.A(href='#!') Сетевая инфраструктура
@@ -38,10 +40,12 @@ block content
 						+e.LI
 							+e.A(href='#!') Сервисное обслуживание
 
-				+e.item.js-accordion-item.is-active
-					+e.title Сложные ИТ решения
-						+icon('icon-plus')
-						+icon('icon-minus')
+				+e.item.is-active
+					+e.title
+						+e.SPAN.title-text Сложные ИТ решения
+						+e.SPAN.title-icons
+							+icon('icon-plus')
+							+icon('icon-minus')
 					+e.UL.content.js-accordion-content
 						+e.LI
 							+e.A(href='#!') Сетевая инфраструктура
@@ -58,10 +62,12 @@ block content
 						+e.LI
 							+e.A(href='#!') Сервисное обслуживание
 
-				+e.item.js-accordion-item
-					+e.title Проектирование
-						+icon('icon-plus')
-						+icon('icon-minus')
+				+e.item
+					+e.title
+						+e.SPAN.title-text Проектирование
+						+e.SPAN.title-icons
+							+icon('icon-plus')
+							+icon('icon-minus')
 					+e.UL.content.js-accordion-content
 						+e.LI
 							+e.A(href='#!') Сетевая инфраструктура
@@ -91,7 +97,7 @@ block content
 				+e.H2.title.title-md Бизнес - приложения
 
 				+b.product-offers.catalog__product-offers.js-accordion
-					+e.item.js-accordion-item.is-active
+					+e.item.is-active
 						+e.item-name
 							+e.item-name-in
 								+e.title.title-sm sing-easy
@@ -127,7 +133,7 @@ block content
 									+e.view-glow
 										+e.view-parallax(class='layer' data-depth='0.05')
 
-					+e.item.js-accordion-item
+					+e.item
 						+e.item-name
 							+e.item-name-in
 								+e.title.title-sm sing-easy

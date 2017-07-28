@@ -1,5 +1,5 @@
 import particles from 'particles.js';
-import {detectDevice} from '../helpers';
+import {detectDevice} from '../dev/helpers';
 import Parallax from '../lib/parallax.min';
 
 const detectMob = detectDevice(767);

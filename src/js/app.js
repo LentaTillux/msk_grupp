@@ -1,4 +1,4 @@
-import './helpers';
+import './dev/helpers';
 import './common';
 import './components/sliders';
 import './components/accordion';

@@ -1,19 +1,49 @@
+import { TweenMax, CSSPlugin } from 'gsap';
+
 const $accordion = $('.js-accordion');
 
-(function () {
-  $accordion.each(function () {
-    const $accordTitle = $(this).find('.js-accordion-item');
-    const $accordContent = $('.js-accordion-content');
+(function() {
+  $accordion.each(function() {
+    const $item = $(this).children();
+    const $btn = $item.find('> div');
+    const $content = $item.find('.js-accordion-content');
+    const speed = 0.5;
 
-    $('.js-accordion-item.is-active').children('.js-accordion-content').slideDown();
-    $accordTitle.on('click', function () {
-      const $this = $(this);
-      $this.siblings($accordTitle).removeClass('is-active').children('.js-accordion-content').slideUp();
-      $this.toggleClass('is-active').children('.js-accordion-content').slideToggle('ease-out');
+    $item.each(function() {
+      const $thisContent = $(this).find('.js-accordion-content');
+      if ($(this).hasClass('is-active')) {
+        showContent($thisContent);
+      }
     });
 
-    $accordContent.on('click', (ev) => {
-      ev.stopPropagation();
+    $btn.on('click', function() {
+      const $selfItem = $(this).closest($item);
+      const $selftContent = $selfItem.find($content);
+
+      $item.not($selfItem).removeClass('is-active');
+      $content.each(function() {
+        if (!$(this).closest($selfItem).length) {
+          hideContent($(this));
+        }
+      });
+      $selfItem.toggleClass('is-active');
+
+      if ($selfItem.hasClass('is-active')) {
+        showContent($selftContent);
+      } else {
+        hideContent($selftContent);
+      }
     });
+
+    function showContent(el) {
+      TweenMax.set(el, { height: 'auto', scaleY: 1 });
+      TweenMax.from(el, speed, { height: 0, scaleY: 0 });
+    }
+
+    function hideContent(el) {
+      TweenMax.to(el, speed, { height: 0, scaleY: 0 });
+    }
   });
-})();
+}()
+)
+;

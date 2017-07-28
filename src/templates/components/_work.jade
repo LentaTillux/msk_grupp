@@ -15,7 +15,7 @@ if workList ? workList : workList = defaultWorkList
 +b.SECTION.work(class= workClass ? workClass : '')
 	+e.container.container
 		+e.title.title-md= workTitle
-		+e.row#js-glow-parallax
+		+e.row.js-glow-parallax
 			mixin workItem(item)
 				+e.item
 					+e.item-pic
