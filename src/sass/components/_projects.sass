@@ -1,1 +1,75 @@
 .projects
+	padding: 80px 0 80px
+	&__container
+		display: flex
+		align-items: flex-start
+	&__nav
+		flex: 0 0 256px
+		border: 1px solid #eee
+		&-btn
+			position: relative
+			padding: 20px 40px 20px 10px
+			+f('pn-700', 15)
+			text-transform: uppercase
+			color: $blue-dark
+			line-height: 20px
+			cursor: pointer
+			transition: background .3s
+			&:not(:first-child)
+				border-top: 1px solid #eee
+			&-icon
+				position: absolute
+				top: calc(50% - 5px)
+				right: 20px
+				fill: #2ab1b4
+				font-size: 10px
+				
+			&.is-active
+				pointer-events: none
+				background: #f2fafd
+			+hover
+				background: #f2fafd
+				
+	&__content
+		flex: 1 1 825px
+		margin-left: 30px
+		&-item
+			display: none
+		&-inner
+			display: flex
+			justify-content: space-between
+			&:not(:first-child)
+				margin-top: 30px
+		
+	&__block
+		flex: 1 1 auto
+		border: 1px solid #eee
+		background-color: #fff
+		&-title
+			padding: 20px 20px
+			text-transform: uppercase
+			+f('pn-700', 18)
+			color: $white
+			text-align: center
+			background: #2ab1b4
+		&-inner
+			padding: 20px 20px 20px 40px
+		&-item
+			position: relative
+			padding-left: 30px
+			font-size: 15px
+			&::before
+				content: ''
+				position: absolute
+				top: 0
+				left: 0
+				+s('logo-circle')
+			&-title
+				text-transform: uppercase
+				color: $blue-dark
+				+f('pn-700')
+			&-descr
+				+f('pn-300')
+				color: #7a7f85
+		&_half
+			flex: 0 1 398px

@@ -1,0 +1,500 @@
+---
+title: Профиль компании
+---
+extends layouts/_layout
+block content
+	//begin main
+	+b.MAIN.main
+		//- page-info
+		-pageInfo = {title: 'наши проекты'}
+		-breadcrumbsList = ['главная', 'наши проекты']
+		-activeIndex = 2
+		include components/_page-info
+
+		//begin projects
+		+b.SECTION.projects
+			+e.container.container.js-tabs
+				+e.nav.js-tabs-nav
+					-tabsNav = ['все отрасли', 'РЕАЛИЗОВАННЫЕ ПРОЕКТЫ ДЛЯ ГОС. СТРУКТУР', 'БАЗОВЫЕ ИТ-РЕШЕНИЯ', 'решение в области информационных технологий', 'НЕСТАНДАРТНЫЕ ПРОЕКТЫ', 'НАШ ОПЫТ']
+					-acitveIndex = 3
+					for tabsBtn, index in tabsNav
+						+e.nav-btn(class= index === activeIndex ? 'is-active' : '')
+							+e.SPAN= tabsBtn
+							+icon('icon-arr', 'projects__nav-btn-icon')
+
+				+e.content.js-tabs-content
+					+e.content-item
+						+e.content-inner
+							+e.block._half
+								+e.block-title
+									+e.SPAN СИСТЕМА БЕЗОПАСНЫЙ ГОРОД
+								+e.block-inner
+									+e.block-item
+										+e.block-item-title Самара и самарская область (с 2007 по настоящее время)
+										+e.block-item-descr Проектирование, строительство, обслуживание
+									+e.block-item
+										+e.block-item-title пенза (2008-2009 г.)
+										+e.block-item-descr Проектирование, строительство, обслуживание
+									+e.block-item
+										+e.block-item-title нижний-новгород (2008-2009 г.)
+										+e.block-item-descr Проектирование
+									+e.block-item
+										+e.block-item-title Самара и самарская область (с 2007 по настоящее время)
+										+e.block-item-descr Проектирование, строительство, обслуживание
+									+e.block-item
+										+e.block-item-title Северная Осетия, Алания (2010-2014 г.)
+										+e.block-item-descr Строительство
+									+e.block-item
+										+e.block-item-title Сыктывкар (2010-2014 г.)
+										+e.block-item-descr Проектирование
+									+e.block-item
+										+e.block-item-title Оренбургская область, Орск, Новотроицк (2010-2012 г.)
+										+e.block-item-descr Проектирование, строительство
+							+e.block._half
+								+e.block-title
+									+e.SPAN ФОТО-видео фиксация нарушений пдд система 112
+								+e.block-inner
+									+e.block-item
+										+e.block-item-title Самара и самарская область (с 2013 по текущее время)
+										+e.block-item-descr Проектирование, внедрение, обслуживание
+									+e.block-item
+										+e.block-item-title Самара (2014-2015 г.)
+										+e.block-item-descr Строительство
+									+e.block-item
+										+e.block-item-title Рязанская область (2008)
+										+e.block-item-descr Проектирование
+									+e.block-item
+										+e.block-item-title Северная Осетия, Алания (2010)
+										+e.block-item-descr Строительство
+
+						+e.content-inner
+							+e.block
+								+e.block-title
+									+e.SPAN ИНЖЕНЕРНАЯ ИТ-ИНФРАСТРУКТУРА
+								+e.block-inner
+									+e.block-item
+										+e.block-item-title самарский спид0центр (2014 г.)
+										+e.block-item-descr Комплексная автоматизация здания, включая ЛВС, Видеонаблюдение, Телефонию, ЦОД, ПК, печатную технику, медицинскую информационную систему, количество пользователей 250 чел.
+									+e.block-item
+										+e.block-item-title новое здание самарского кардиологического центра (2015-2016)
+										+e.block-item-descr Комплексная автоматизация здания, включа, ЛВС, телефонию, Wi-Fi, ЦОД, ПК, печатную технику
+									+e.block-item
+										+e.block-item-title ГУП “Институт нефтехимпереработки республики башкортостан” (2015-2016)
+										+e.block-item-descr Создание центра обработки данных
+									+e.block-item
+										+e.block-item-title гбоу пвно первый мгму и. м. сеченова минздрава россии (2015-2016)
+										+e.block-item-descr Комплексная автоматизация здания. включая ЛВС, ЦОД, Печатную технику, ПК
+
+						+e.content-inner
+							+e.block
+								+e.block-title
+									+e.SPAN ИНЖЕНЕРНАЯ ИТ-ИНФРАСТРУКТУРА
+								+e.block-inner
+									+e.block-item
+										+e.block-item-title самарский спид0центр (2014 г.)
+										+e.block-item-descr Комплексная автоматизация здания, включая ЛВС, Видеонаблюдение, Телефонию, ЦОД, ПК, печатную технику, медицинскую информационную систему, количество пользователей 250 чел.
+									+e.block-item
+										+e.block-item-title новое здание самарского кардиологического центра (2015-2016)
+										+e.block-item-descr Комплексная автоматизация здания, включа, ЛВС, телефонию, Wi-Fi, ЦОД, ПК, печатную технику
+									+e.block-item
+										+e.block-item-title ГУП “Институт нефтехимпереработки республики башкортостан” (2015-2016)
+										+e.block-item-descr Создание центра обработки данных
+									+e.block-item
+										+e.block-item-title гбоу пвно первый мгму и. м. сеченова минздрава россии (2015-2016)
+										+e.block-item-descr Комплексная автоматизация здания. включая ЛВС, ЦОД, Печатную технику, ПК
+					+e.content-item
+						+e.content-inner
+							+e.block._half
+								+e.block-title
+									+e.SPAN СИСТЕМА БЕЗОПАСНЫЙ ГОРОД
+								+e.block-inner
+									+e.block-item
+										+e.block-item-title Самара и самарская область (с 2007 по настоящее время)
+										+e.block-item-descr Проектирование, строительство, обслуживание
+									+e.block-item
+										+e.block-item-title пенза (2008-2009 г.)
+										+e.block-item-descr Проектирование, строительство, обслуживание
+									+e.block-item
+										+e.block-item-title нижний-новгород (2008-2009 г.)
+										+e.block-item-descr Проектирование
+									+e.block-item
+										+e.block-item-title Самара и самарская область (с 2007 по настоящее время)
+										+e.block-item-descr Проектирование, строительство, обслуживание
+									+e.block-item
+										+e.block-item-title Северная Осетия, Алания (2010-2014 г.)
+										+e.block-item-descr Строительство
+									+e.block-item
+										+e.block-item-title Сыктывкар (2010-2014 г.)
+										+e.block-item-descr Проектирование
+									+e.block-item
+										+e.block-item-title Оренбургская область, Орск, Новотроицк (2010-2012 г.)
+										+e.block-item-descr Проектирование, строительство
+							+e.block._half
+								+e.block-title
+									+e.SPAN ФОТО-видео фиксация нарушений пдд система 112
+								+e.block-inner
+									+e.block-item
+										+e.block-item-title Самара и самарская область (с 2013 по текущее время)
+										+e.block-item-descr Проектирование, внедрение, обслуживание
+									+e.block-item
+										+e.block-item-title Самара (2014-2015 г.)
+										+e.block-item-descr Строительство
+									+e.block-item
+										+e.block-item-title Рязанская область (2008)
+										+e.block-item-descr Проектирование
+									+e.block-item
+										+e.block-item-title Северная Осетия, Алания (2010)
+										+e.block-item-descr Строительство
+
+						+e.content-inner
+							+e.block
+								+e.block-title
+									+e.SPAN ИНЖЕНЕРНАЯ ИТ-ИНФРАСТРУКТУРА
+								+e.block-inner
+									+e.block-item
+										+e.block-item-title самарский спид0центр (2014 г.)
+										+e.block-item-descr Комплексная автоматизация здания, включая ЛВС, Видеонаблюдение, Телефонию, ЦОД, ПК, печатную технику, медицинскую информационную систему, количество пользователей 250 чел.
+									+e.block-item
+										+e.block-item-title новое здание самарского кардиологического центра (2015-2016)
+										+e.block-item-descr Комплексная автоматизация здания, включа, ЛВС, телефонию, Wi-Fi, ЦОД, ПК, печатную технику
+									+e.block-item
+										+e.block-item-title ГУП “Институт нефтехимпереработки республики башкортостан” (2015-2016)
+										+e.block-item-descr Создание центра обработки данных
+									+e.block-item
+										+e.block-item-title гбоу пвно первый мгму и. м. сеченова минздрава россии (2015-2016)
+										+e.block-item-descr Комплексная автоматизация здания. включая ЛВС, ЦОД, Печатную технику, ПК
+
+						+e.content-inner
+							+e.block
+								+e.block-title
+									+e.SPAN ИНЖЕНЕРНАЯ ИТ-ИНФРАСТРУКТУРА
+								+e.block-inner
+									+e.block-item
+										+e.block-item-title самарский спид0центр (2014 г.)
+										+e.block-item-descr Комплексная автоматизация здания, включая ЛВС, Видеонаблюдение, Телефонию, ЦОД, ПК, печатную технику, медицинскую информационную систему, количество пользователей 250 чел.
+									+e.block-item
+										+e.block-item-title новое здание самарского кардиологического центра (2015-2016)
+										+e.block-item-descr Комплексная автоматизация здания, включа, ЛВС, телефонию, Wi-Fi, ЦОД, ПК, печатную технику
+									+e.block-item
+										+e.block-item-title ГУП “Институт нефтехимпереработки республики башкортостан” (2015-2016)
+										+e.block-item-descr Создание центра обработки данных
+									+e.block-item
+										+e.block-item-title гбоу пвно первый мгму и. м. сеченова минздрава россии (2015-2016)
+										+e.block-item-descr Комплексная автоматизация здания. включая ЛВС, ЦОД, Печатную технику, ПК
+					+e.content-item
+						+e.content-inner
+							+e.block._half
+								+e.block-title
+									+e.SPAN СИСТЕМА БЕЗОПАСНЫЙ ГОРОД
+								+e.block-inner
+									+e.block-item
+										+e.block-item-title Самара и самарская область (с 2007 по настоящее время)
+										+e.block-item-descr Проектирование, строительство, обслуживание
+									+e.block-item
+										+e.block-item-title пенза (2008-2009 г.)
+										+e.block-item-descr Проектирование, строительство, обслуживание
+									+e.block-item
+										+e.block-item-title нижний-новгород (2008-2009 г.)
+										+e.block-item-descr Проектирование
+									+e.block-item
+										+e.block-item-title Самара и самарская область (с 2007 по настоящее время)
+										+e.block-item-descr Проектирование, строительство, обслуживание
+									+e.block-item
+										+e.block-item-title Северная Осетия, Алания (2010-2014 г.)
+										+e.block-item-descr Строительство
+									+e.block-item
+										+e.block-item-title Сыктывкар (2010-2014 г.)
+										+e.block-item-descr Проектирование
+									+e.block-item
+										+e.block-item-title Оренбургская область, Орск, Новотроицк (2010-2012 г.)
+										+e.block-item-descr Проектирование, строительство
+							+e.block._half
+								+e.block-title
+									+e.SPAN ФОТО-видео фиксация нарушений пдд система 112
+								+e.block-inner
+									+e.block-item
+										+e.block-item-title Самара и самарская область (с 2013 по текущее время)
+										+e.block-item-descr Проектирование, внедрение, обслуживание
+									+e.block-item
+										+e.block-item-title Самара (2014-2015 г.)
+										+e.block-item-descr Строительство
+									+e.block-item
+										+e.block-item-title Рязанская область (2008)
+										+e.block-item-descr Проектирование
+									+e.block-item
+										+e.block-item-title Северная Осетия, Алания (2010)
+										+e.block-item-descr Строительство
+
+						+e.content-inner
+							+e.block
+								+e.block-title
+									+e.SPAN ИНЖЕНЕРНАЯ ИТ-ИНФРАСТРУКТУРА
+								+e.block-inner
+									+e.block-item
+										+e.block-item-title самарский спид0центр (2014 г.)
+										+e.block-item-descr Комплексная автоматизация здания, включая ЛВС, Видеонаблюдение, Телефонию, ЦОД, ПК, печатную технику, медицинскую информационную систему, количество пользователей 250 чел.
+									+e.block-item
+										+e.block-item-title новое здание самарского кардиологического центра (2015-2016)
+										+e.block-item-descr Комплексная автоматизация здания, включа, ЛВС, телефонию, Wi-Fi, ЦОД, ПК, печатную технику
+									+e.block-item
+										+e.block-item-title ГУП “Институт нефтехимпереработки республики башкортостан” (2015-2016)
+										+e.block-item-descr Создание центра обработки данных
+									+e.block-item
+										+e.block-item-title гбоу пвно первый мгму и. м. сеченова минздрава россии (2015-2016)
+										+e.block-item-descr Комплексная автоматизация здания. включая ЛВС, ЦОД, Печатную технику, ПК
+
+						+e.content-inner
+							+e.block
+								+e.block-title
+									+e.SPAN ИНЖЕНЕРНАЯ ИТ-ИНФРАСТРУКТУРА
+								+e.block-inner
+									+e.block-item
+										+e.block-item-title самарский спид0центр (2014 г.)
+										+e.block-item-descr Комплексная автоматизация здания, включая ЛВС, Видеонаблюдение, Телефонию, ЦОД, ПК, печатную технику, медицинскую информационную систему, количество пользователей 250 чел.
+									+e.block-item
+										+e.block-item-title новое здание самарского кардиологического центра (2015-2016)
+										+e.block-item-descr Комплексная автоматизация здания, включа, ЛВС, телефонию, Wi-Fi, ЦОД, ПК, печатную технику
+									+e.block-item
+										+e.block-item-title ГУП “Институт нефтехимпереработки республики башкортостан” (2015-2016)
+										+e.block-item-descr Создание центра обработки данных
+									+e.block-item
+										+e.block-item-title гбоу пвно первый мгму и. м. сеченова минздрава россии (2015-2016)
+										+e.block-item-descr Комплексная автоматизация здания. включая ЛВС, ЦОД, Печатную технику, ПК
+					+e.content-item
+						+e.content-inner
+							+e.block._half
+								+e.block-title
+									+e.SPAN СИСТЕМА БЕЗОПАСНЫЙ ГОРОД
+								+e.block-inner
+									+e.block-item
+										+e.block-item-title Самара и самарская область (с 2007 по настоящее время)
+										+e.block-item-descr Проектирование, строительство, обслуживание
+									+e.block-item
+										+e.block-item-title пенза (2008-2009 г.)
+										+e.block-item-descr Проектирование, строительство, обслуживание
+									+e.block-item
+										+e.block-item-title нижний-новгород (2008-2009 г.)
+										+e.block-item-descr Проектирование
+									+e.block-item
+										+e.block-item-title Самара и самарская область (с 2007 по настоящее время)
+										+e.block-item-descr Проектирование, строительство, обслуживание
+									+e.block-item
+										+e.block-item-title Северная Осетия, Алания (2010-2014 г.)
+										+e.block-item-descr Строительство
+									+e.block-item
+										+e.block-item-title Сыктывкар (2010-2014 г.)
+										+e.block-item-descr Проектирование
+									+e.block-item
+										+e.block-item-title Оренбургская область, Орск, Новотроицк (2010-2012 г.)
+										+e.block-item-descr Проектирование, строительство
+							+e.block._half
+								+e.block-title
+									+e.SPAN ФОТО-видео фиксация нарушений пдд система 112
+								+e.block-inner
+									+e.block-item
+										+e.block-item-title Самара и самарская область (с 2013 по текущее время)
+										+e.block-item-descr Проектирование, внедрение, обслуживание
+									+e.block-item
+										+e.block-item-title Самара (2014-2015 г.)
+										+e.block-item-descr Строительство
+									+e.block-item
+										+e.block-item-title Рязанская область (2008)
+										+e.block-item-descr Проектирование
+									+e.block-item
+										+e.block-item-title Северная Осетия, Алания (2010)
+										+e.block-item-descr Строительство
+
+						+e.content-inner
+							+e.block
+								+e.block-title
+									+e.SPAN ИНЖЕНЕРНАЯ ИТ-ИНФРАСТРУКТУРА
+								+e.block-inner
+									+e.block-item
+										+e.block-item-title самарский спид0центр (2014 г.)
+										+e.block-item-descr Комплексная автоматизация здания, включая ЛВС, Видеонаблюдение, Телефонию, ЦОД, ПК, печатную технику, медицинскую информационную систему, количество пользователей 250 чел.
+									+e.block-item
+										+e.block-item-title новое здание самарского кардиологического центра (2015-2016)
+										+e.block-item-descr Комплексная автоматизация здания, включа, ЛВС, телефонию, Wi-Fi, ЦОД, ПК, печатную технику
+									+e.block-item
+										+e.block-item-title ГУП “Институт нефтехимпереработки республики башкортостан” (2015-2016)
+										+e.block-item-descr Создание центра обработки данных
+									+e.block-item
+										+e.block-item-title гбоу пвно первый мгму и. м. сеченова минздрава россии (2015-2016)
+										+e.block-item-descr Комплексная автоматизация здания. включая ЛВС, ЦОД, Печатную технику, ПК
+
+						+e.content-inner
+							+e.block
+								+e.block-title
+									+e.SPAN ИНЖЕНЕРНАЯ ИТ-ИНФРАСТРУКТУРА
+								+e.block-inner
+									+e.block-item
+										+e.block-item-title самарский спид0центр (2014 г.)
+										+e.block-item-descr Комплексная автоматизация здания, включая ЛВС, Видеонаблюдение, Телефонию, ЦОД, ПК, печатную технику, медицинскую информационную систему, количество пользователей 250 чел.
+									+e.block-item
+										+e.block-item-title новое здание самарского кардиологического центра (2015-2016)
+										+e.block-item-descr Комплексная автоматизация здания, включа, ЛВС, телефонию, Wi-Fi, ЦОД, ПК, печатную технику
+									+e.block-item
+										+e.block-item-title ГУП “Институт нефтехимпереработки республики башкортостан” (2015-2016)
+										+e.block-item-descr Создание центра обработки данных
+									+e.block-item
+										+e.block-item-title гбоу пвно первый мгму и. м. сеченова минздрава россии (2015-2016)
+										+e.block-item-descr Комплексная автоматизация здания. включая ЛВС, ЦОД, Печатную технику, ПК
+					+e.content-item
+						+e.content-inner
+							+e.block._half
+								+e.block-title
+									+e.SPAN СИСТЕМА БЕЗОПАСНЫЙ ГОРОД
+								+e.block-inner
+									+e.block-item
+										+e.block-item-title Самара и самарская область (с 2007 по настоящее время)
+										+e.block-item-descr Проектирование, строительство, обслуживание
+									+e.block-item
+										+e.block-item-title пенза (2008-2009 г.)
+										+e.block-item-descr Проектирование, строительство, обслуживание
+									+e.block-item
+										+e.block-item-title нижний-новгород (2008-2009 г.)
+										+e.block-item-descr Проектирование
+									+e.block-item
+										+e.block-item-title Самара и самарская область (с 2007 по настоящее время)
+										+e.block-item-descr Проектирование, строительство, обслуживание
+									+e.block-item
+										+e.block-item-title Северная Осетия, Алания (2010-2014 г.)
+										+e.block-item-descr Строительство
+									+e.block-item
+										+e.block-item-title Сыктывкар (2010-2014 г.)
+										+e.block-item-descr Проектирование
+									+e.block-item
+										+e.block-item-title Оренбургская область, Орск, Новотроицк (2010-2012 г.)
+										+e.block-item-descr Проектирование, строительство
+							+e.block._half
+								+e.block-title
+									+e.SPAN ФОТО-видео фиксация нарушений пдд система 112
+								+e.block-inner
+									+e.block-item
+										+e.block-item-title Самара и самарская область (с 2013 по текущее время)
+										+e.block-item-descr Проектирование, внедрение, обслуживание
+									+e.block-item
+										+e.block-item-title Самара (2014-2015 г.)
+										+e.block-item-descr Строительство
+									+e.block-item
+										+e.block-item-title Рязанская область (2008)
+										+e.block-item-descr Проектирование
+									+e.block-item
+										+e.block-item-title Северная Осетия, Алания (2010)
+										+e.block-item-descr Строительство
+
+						+e.content-inner
+							+e.block
+								+e.block-title
+									+e.SPAN ИНЖЕНЕРНАЯ ИТ-ИНФРАСТРУКТУРА
+								+e.block-inner
+									+e.block-item
+										+e.block-item-title самарский спид0центр (2014 г.)
+										+e.block-item-descr Комплексная автоматизация здания, включая ЛВС, Видеонаблюдение, Телефонию, ЦОД, ПК, печатную технику, медицинскую информационную систему, количество пользователей 250 чел.
+									+e.block-item
+										+e.block-item-title новое здание самарского кардиологического центра (2015-2016)
+										+e.block-item-descr Комплексная автоматизация здания, включа, ЛВС, телефонию, Wi-Fi, ЦОД, ПК, печатную технику
+									+e.block-item
+										+e.block-item-title ГУП “Институт нефтехимпереработки республики башкортостан” (2015-2016)
+										+e.block-item-descr Создание центра обработки данных
+									+e.block-item
+										+e.block-item-title гбоу пвно первый мгму и. м. сеченова минздрава россии (2015-2016)
+										+e.block-item-descr Комплексная автоматизация здания. включая ЛВС, ЦОД, Печатную технику, ПК
+
+						+e.content-inner
+							+e.block
+								+e.block-title
+									+e.SPAN ИНЖЕНЕРНАЯ ИТ-ИНФРАСТРУКТУРА
+								+e.block-inner
+									+e.block-item
+										+e.block-item-title самарский спид0центр (2014 г.)
+										+e.block-item-descr Комплексная автоматизация здания, включая ЛВС, Видеонаблюдение, Телефонию, ЦОД, ПК, печатную технику, медицинскую информационную систему, количество пользователей 250 чел.
+									+e.block-item
+										+e.block-item-title новое здание самарского кардиологического центра (2015-2016)
+										+e.block-item-descr Комплексная автоматизация здания, включа, ЛВС, телефонию, Wi-Fi, ЦОД, ПК, печатную технику
+									+e.block-item
+										+e.block-item-title ГУП “Институт нефтехимпереработки республики башкортостан” (2015-2016)
+										+e.block-item-descr Создание центра обработки данных
+									+e.block-item
+										+e.block-item-title гбоу пвно первый мгму и. м. сеченова минздрава россии (2015-2016)
+										+e.block-item-descr Комплексная автоматизация здания. включая ЛВС, ЦОД, Печатную технику, ПК
+					+e.content-item
+						+e.content-inner
+							+e.block._half
+								+e.block-title
+									+e.SPAN СИСТЕМА БЕЗОПАСНЫЙ ГОРОД
+								+e.block-inner
+									+e.block-item
+										+e.block-item-title Самара и самарская область (с 2007 по настоящее время)
+										+e.block-item-descr Проектирование, строительство, обслуживание
+									+e.block-item
+										+e.block-item-title пенза (2008-2009 г.)
+										+e.block-item-descr Проектирование, строительство, обслуживание
+									+e.block-item
+										+e.block-item-title нижний-новгород (2008-2009 г.)
+										+e.block-item-descr Проектирование
+									+e.block-item
+										+e.block-item-title Самара и самарская область (с 2007 по настоящее время)
+										+e.block-item-descr Проектирование, строительство, обслуживание
+									+e.block-item
+										+e.block-item-title Северная Осетия, Алания (2010-2014 г.)
+										+e.block-item-descr Строительство
+									+e.block-item
+										+e.block-item-title Сыктывкар (2010-2014 г.)
+										+e.block-item-descr Проектирование
+									+e.block-item
+										+e.block-item-title Оренбургская область, Орск, Новотроицк (2010-2012 г.)
+										+e.block-item-descr Проектирование, строительство
+							+e.block._half
+								+e.block-title
+									+e.SPAN ФОТО-видео фиксация нарушений пдд система 112
+								+e.block-inner
+									+e.block-item
+										+e.block-item-title Самара и самарская область (с 2013 по текущее время)
+										+e.block-item-descr Проектирование, внедрение, обслуживание
+									+e.block-item
+										+e.block-item-title Самара (2014-2015 г.)
+										+e.block-item-descr Строительство
+									+e.block-item
+										+e.block-item-title Рязанская область (2008)
+										+e.block-item-descr Проектирование
+									+e.block-item
+										+e.block-item-title Северная Осетия, Алания (2010)
+										+e.block-item-descr Строительство
+
+						+e.content-inner
+							+e.block
+								+e.block-title
+									+e.SPAN ИНЖЕНЕРНАЯ ИТ-ИНФРАСТРУКТУРА
+								+e.block-inner
+									+e.block-item
+										+e.block-item-title самарский спид0центр (2014 г.)
+										+e.block-item-descr Комплексная автоматизация здания, включая ЛВС, Видеонаблюдение, Телефонию, ЦОД, ПК, печатную технику, медицинскую информационную систему, количество пользователей 250 чел.
+									+e.block-item
+										+e.block-item-title новое здание самарского кардиологического центра (2015-2016)
+										+e.block-item-descr Комплексная автоматизация здания, включа, ЛВС, телефонию, Wi-Fi, ЦОД, ПК, печатную технику
+									+e.block-item
+										+e.block-item-title ГУП “Институт нефтехимпереработки республики башкортостан” (2015-2016)
+										+e.block-item-descr Создание центра обработки данных
+									+e.block-item
+										+e.block-item-title гбоу пвно первый мгму и. м. сеченова минздрава россии (2015-2016)
+										+e.block-item-descr Комплексная автоматизация здания. включая ЛВС, ЦОД, Печатную технику, ПК
+
+						+e.content-inner
+							+e.block
+								+e.block-title
+									+e.SPAN ИНЖЕНЕРНАЯ ИТ-ИНФРАСТРУКТУРА
+								+e.block-inner
+									+e.block-item
+										+e.block-item-title самарский спид0центр (2014 г.)
+										+e.block-item-descr Комплексная автоматизация здания, включая ЛВС, Видеонаблюдение, Телефонию, ЦОД, ПК, печатную технику, медицинскую информационную систему, количество пользователей 250 чел.
+									+e.block-item
+										+e.block-item-title новое здание самарского кардиологического центра (2015-2016)
+										+e.block-item-descr Комплексная автоматизация здания, включа, ЛВС, телефонию, Wi-Fi, ЦОД, ПК, печатную технику
+									+e.block-item
+										+e.block-item-title ГУП “Институт нефтехимпереработки республики башкортостан” (2015-2016)
+										+e.block-item-descr Создание центра обработки данных
+									+e.block-item
+										+e.block-item-title гбоу пвно первый мгму и. м. сеченова минздрава россии (2015-2016)
+										+e.block-item-descr Комплексная автоматизация здания. включая ЛВС, ЦОД, Печатную технику, ПК
+		//end projects
