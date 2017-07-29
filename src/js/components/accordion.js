@@ -18,7 +18,7 @@ const $accordion = $('.js-accordion');
 
     $btn.on('click', function() {
       const $selfItem = $(this).closest($item);
-      const $selftContent = $selfItem.find($content);
+      const $selfContent = $selfItem.find($content);
 
       $item.not($selfItem).removeClass('is-active');
       $content.each(function() {
@@ -29,9 +29,9 @@ const $accordion = $('.js-accordion');
       $selfItem.toggleClass('is-active');
 
       if ($selfItem.hasClass('is-active')) {
-        showContent($selftContent);
+        showContent($selfContent);
       } else {
-        hideContent($selftContent);
+        hideContent($selfContent);
       }
     });
 

@@ -16,9 +16,9 @@ block content
 			+e.container.container.js-tabs
 				+e.nav.js-tabs-nav
 					-tabsNav = ['все отрасли', 'РЕАЛИЗОВАННЫЕ ПРОЕКТЫ ДЛЯ ГОС. СТРУКТУР', 'БАЗОВЫЕ ИТ-РЕШЕНИЯ', 'решение в области информационных технологий', 'НЕСТАНДАРТНЫЕ ПРОЕКТЫ', 'НАШ ОПЫТ']
-					-acitveIndex = 3
+					-acitveTab = 3
 					for tabsBtn, index in tabsNav
-						+e.nav-btn(class= index === activeIndex ? 'is-active' : '')
+						+e.nav-btn(class= index === acitveTab - 1 ? 'is-active' : '')
 							+e.SPAN= tabsBtn
 							+icon('icon-arr', 'projects__nav-btn-icon')
 
