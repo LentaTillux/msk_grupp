@@ -126,12 +126,14 @@
 		height: 0
 		overflow: hidden
 		&-in
-			padding: 22px 14px 38px 39px
+			padding: 22px 0 38px 39px
 		&-overview
 			position: relative
 			display: flex
 			align-items: flex-start
-			min-height: 375px
+			min-height: 360px
+			margin-bottom: 15px
+			background: $white
 		&-title
 			margin-bottom: 9px
 			font-size: 22px
@@ -146,24 +148,26 @@
 		&-text
 			max-width: 715px
 	&__text
-		position: absolute
-		top: 0
-		left: 0
-		z-index: 2
-		max-width: 460px
+		flex: 0 1 460px
+		align-self: stretch
 		background: $white
+		z-index: 3
 		&_full
 			margin-top: 30px
 			flex: 1 1 100%
 	&__look
-		position: relative
+		position: absolute
+		top: 0
+		right: 0
+		z-index: 2
+		max-width: 352px
 		display: none
-		flex: 0 1 352px
 		padding-top: 4px
-		margin-left: auto
-		width: 1px
+		&.slick-initialized
+			display: block
 		&-item
 			position: relative
+			pointer-events: all
 		&-glow
 			position: absolute
 			&:nth-of-type(1)
@@ -177,13 +181,12 @@
 				left: 50%
 		&-parallax
 			+s('glow')
-		&.slick-initialized
-			display: block
 		.slider-btn
 			top: calc(51% - 8px)
 			background: transparent
 			height: 20px
 			width: 20px
+			pointer-events: all
 			z-index: 3
 			+hover
 				background: transparent
