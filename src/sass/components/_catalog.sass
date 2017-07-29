@@ -1,16 +1,18 @@
 .catalog
-	padding: 40px 0
+	padding: 78px 0
 	&__container
 		display: flex
 		align-items: flex-start
+	&__title
+		margin-bottom: 27px
 	&__accordion-menu
 		flex: 0 0 257px
 	&__product
 		flex: 1 1 auto
-		margin-left: 30px
+		margin-left: 27px
 	&__actions
 		display: flex
-		margin-bottom: 30px
+		margin-bottom: 16px
 		&-item
 			&:not(:first-child)
 				margin-left: 5px
@@ -24,7 +26,7 @@
 			position: relative
 			display: block
 			height: 26px
-			padding: 0 24px
+			padding: 0 17px
 			border-radius: 12px
 			background: $white
 			+f('pn-700', 11)
@@ -33,9 +35,12 @@
 			border: 1px solid #2ab1b4
 			color: $blue-dark
 			transition: .3s
+			&_back
+				padding: 0 21px 0 27px
 			+hover
 				background: $aqua-dark
 				color: $white
+				border-color: $aqua-dark
 				svg
 					fill: $white
 			svg
@@ -45,8 +50,7 @@
 				fill: $blue-dark
 				font-size: 9px
 				transition: .3s
-				+gpu
-				
+				transform: scaleX(-1) translate3d(0, 0, 0)
 /* accordion-menu
 	----------------------------------- */
 .accordion-menu
@@ -60,31 +64,28 @@
 	&__item.is-active .icon-minus
 		height: 16px
 		width: 16px
-		opacity: 1
 	&__item.is-active .icon-plus
 		height: 0
 		width: 0
-		opacity: 0
 	&__title
 		display: flex
 		align-items: center
-		padding: 15px 0px 15px 20px
+		padding: 20px 21px 20px 19px
 		text-transform: uppercase
+		letter-spacing: .05em
 		+f('pn-700', 15)
 		color: $blue-dark
 		cursor: pointer
 		transition: background .5s
+		border-top: 1px solid #eee
 		&-text
 			flex: 1 1 auto
 		&-icons
 			flex: 0 0 16px
 			line-height: 0
 		svg
-			opacity: 1
 			font-size: 16px
 			fill: #2ab1b4
-			transition: opacity .5s
-			+gpu
 		.icon-minus
 			height: 0
 			width: 0
@@ -93,7 +94,12 @@
 		height: 0
 		list-style: none
 		li
-			padding: 0 20px
+			padding: 0 19px
+			line-height: 18px
+			&:not(:first-child)
+				margin-top: 10px
+			&:last-child
+				padding-bottom: 30px
 		li.is-active a
 			color: #2ab1b4
 			border-bottom-color: transparentize(#2ab1b4, .6)
@@ -108,48 +114,133 @@
 /* product-offers
 	----------------------------------- */
 .product-offers
-	border: 1px solid #eee
 	background-color: #fff
 	&__title
+		padding: 3px 0 0
+		line-height: 28px
 	&__descr
 		font-size: 17px
 		line-height: 32px
 		color: $blue-dark
 	&__content
-		display: none
-		padding: 30px 40px
+		height: 0
+		overflow: hidden
+		&-in
+			padding: 22px 14px 38px 39px
+		&-overview
+			position: relative
+			display: flex
+			align-items: flex-start
+			min-height: 375px
 		&-title
+			margin-bottom: 9px
 			font-size: 22px
 			line-height: 25px
 		&-descr
 			color: #585858
 			+f('pn-300', 16)
 			line-height: 28px
-	&__item
-		&-name
+		&-block
+			&:not(:first-child)
+				margin-top: 23px
+		&-text
+			max-width: 715px
+	&__text
+		position: absolute
+		top: 0
+		left: 0
+		z-index: 2
+		max-width: 460px
+		background: $white
+		&_full
+			margin-top: 30px
+			flex: 1 1 100%
+	&__look
+		position: relative
+		display: none
+		flex: 0 1 352px
+		padding-top: 4px
+		margin-left: auto
+		width: 1px
+		&-item
 			position: relative
-			padding: 25px 2px 25px 110px
-			border-bottom: 1px solid #eee
+		&-glow
+			position: absolute
+			&:nth-of-type(1)
+				top: 5%
+				left: 34%
+			&:nth-of-type(2)
+				top: 25%
+				left: 72%
+			&:nth-of-type(3)
+				top: 83%
+				left: 50%
+		&-parallax
+			+s('glow')
+		&.slick-initialized
+			display: block
+		.slider-btn
+			top: calc(51% - 8px)
+			background: transparent
+			height: 20px
+			width: 20px
+			z-index: 3
+			+hover
+				background: transparent
+			&_prev
+				left: 67px
+			&_next
+				right: 45px
+			&__icon
+				fill: #2ab1b4
+				font-size: 16px
+	&__item
+		border: 1px solid #eee
+		&:not(:first-child)
+			margin-top: 28px
+		&.is-active &-top
+			border-bottom-color: #eee
+		&.is-active .icon-minus
+			height: 32px
+			width: 32px
+		&.is-active .icon-plus
+			height: 0
+			width: 0
+		&-top
+			display: flex
+			align-items: center
+			position: relative
+			padding: 21px 5px 17px 41px
+			border-bottom: 1px solid transparent
 			cursor: pointer
+			transition: border-color .5s
 			svg
-				position: absolute
-				top: calc(50% - 16px)
-				left: 40px
 				font-size: 32px
 				fill: #2ab1b4
-				transition: .3s
-				+gpu
+				transition: opacity .5s
+			.icon-minus
+				height: 0
+				width: 0
 			&-in
-				padding-left: 19px
+				margin-left: 39px
+				padding: 13px 0 10px 17px
 				border-left: 1px solid #f1f1f1
+			&-icons
+				flex: 0 0 32px
+				line-height: 0
 	&__list
+		line-height: 25px
+		color: #585858
+		+f('pn-300')
 		&-item
 			display: flex
 			align-items: flex-start
+			&:not(:first-child)
+				margin-top: 14px
 			&-count
 				flex: 0 0 20px
-				margin-top: 5px
-				margin-right: 20px
+				margin-top: 4px
+				margin-right: 12px
 				width: 20px
 				height: 20px
 				+f('pn-700', 13)
@@ -159,3 +250,5 @@
 				color: $white
 				text-align: center
 				line-height: 20px
+	&__order-btn
+		margin: 22px 0 0

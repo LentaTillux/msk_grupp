@@ -1,0 +1,30 @@
+if testimonials ? testimonials : testimonials = []
+if testimonials.title ? testimonials.title : testimonials.title = 'ОТЗЫВЫ КЛИЕНТОВ:'
+
+//begin testimonials
++b.SECTION.testimonials(class= testimonials.classMod ? testimonials.classMod : '')
+	+e.container.container
+		+e.title.title-md= testimonials.title
+		+e.block.js-testimonials-slider
+			-var testisItem = 0
+			while testisItem < 2
+				+e.block-item
+					+e.block-item-in
+						+e.block-img
+							+b.IMG.obj-fit(src='img/content/testimon-1.png' alt='img')
+							+e.block-speech
+								+e.P.block-speech-text У НАС УЖЕ
+								+e.P.block-speech-text БОЛЕЕ
+									= ' '
+									+e.SPAN 260
+									= ' '
+									| ОТЗЫВОВ
+
+						+e.block-text
+							+e.P Компания Джи Эс Ти динамично развивающийся системный интегратор Компания занимается разработкой комплексных решений по автоматизации технологических и бизнес процессов мелких и средних предприятий а так же оказывает услуги в области розничного и корпоративного сервисного
+							+icon('icon-quotes', 'testimonials__block-quotes testimonials__block-quotes_l')
+							+icon('icon-quotes', 'testimonials__block-quotes testimonials__block-quotes_r')
+				-testisItem++
+
+	//+b.particles#js-gray-particles
+//end testimonials

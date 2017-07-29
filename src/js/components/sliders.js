@@ -5,8 +5,8 @@ let sldDefaultOpt = {
   infinite: true,
   cssEase: 'ease',
   speed: 500,
-  prevArrow: '<button type="button" class="slider-btn slider-btn_prev"><svg class="slider-btn__icon icon-arr_l"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-arr_l"></use></svg></button>',
-  nextArrow: '<button type="button" class="slider-btn slider-btn_next"><svg class="slider-btn__icon icon-arr_r"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-arr_r"></use></svg></button>'
+  prevArrow: '<button type="button" class="slider-btn slider-btn_prev"><svg class="slider-btn__icon icon-arr"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-arr"></use></svg></button>',
+  nextArrow: '<button type="button" class="slider-btn slider-btn_next"><svg class="slider-btn__icon icon-arr"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-arr"></use></svg></button>'
 };
 
 const $screenSld = $('.js-screen-slider');
@@ -26,8 +26,8 @@ $teaserSld.slick({
   slidesToScroll: 1,
   speed: 1000,
   infinite: true,
-  prevArrow: '<button type="button" class="teaser__slider-arr teaser__slider-arr_prev"><svg class="teaser__slider-arr-icon icon-arr_l"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-arr_l"></use></svg></button>',
-  nextArrow: '<button type="button" class="teaser__slider-arr teaser__slider-arr_next"><svg class="teaser__slider-arr-icon icon-arr_r"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-arr_r"></use></svg></button>'
+  prevArrow: '<button type="button" class="teaser__slider-arr teaser__slider-arr_prev"><svg class="teaser__slider-arr-icon icon-arr"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-arr"></use></svg></button>',
+  nextArrow: '<button type="button" class="teaser__slider-arr teaser__slider-arr_next"><svg class="teaser__slider-arr-icon icon-arr"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-arr"></use></svg></button>'
 });
 
 const $newsBlockSld = $('.js-news-block-slider');
@@ -41,7 +41,7 @@ $newsBlockSld.slick({
 });
 
 const $ourSld = $('.js-our-slider');
-$ourSld.slick($.extend(true, sldDefaultOpt, {
+$ourSld.slick($.extend({}, sldDefaultOpt, {
   slidesToShow: 3,
   slidesToScroll: 1
 }));
@@ -52,3 +52,16 @@ $awardsSld.slick($.extend({}, sldDefaultOpt, {
   slidesToScroll: 1
 }));
 
+const $productSld = $('.js-product-slider');
+$productSld.slick($.extend({}, sldDefaultOpt, {
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  speed: 800
+}));
+
+const $testimonialsSld = $('.js-testimonials-slider');
+$testimonialsSld.slick($.extend({}, sldDefaultOpt, {
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  speed: 800
+}));

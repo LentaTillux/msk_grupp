@@ -1,0 +1,81 @@
+.testimonials
+	padding: 70px 0 55px
+	background: #f2fafd
+	&__container
+		text-align: center
+	&__title
+		position: relative
+		z-index: 2
+		display: inline-block
+	&__block
+		position: relative
+		display: none
+		z-index: 2
+		max-width: 1060px
+		margin: 27px auto 0
+		padding: 0 60px
+		&.slick-initialized
+			display: block
+		&-item
+			&-in
+				display: flex
+				align-items: center
+				max-width: 710px
+				margin: 0 auto
+		&-img
+			position: relative
+			flex: 1 0 240px
+			height: 290px
+		&-text
+			position: relative
+			flex: 1 1 auto
+			align-self: flex-start
+			margin-left: 30px
+			padding: 32px 0 39px
+			color: $blue-dark
+			font-size: 17px
+			line-height: 32px
+			text-align: left
+		&-speech
+			position: absolute
+			top: 47%
+			left: -45%
+			z-index: 2
+			max-width: 220px
+			text-align: right
+			font-size: 0
+			line-height: 1
+			text-transform: uppercase
+			&-text
+				display: inline-block
+				background: transparentize(#78c698, .1)
+				color: $white
+				+f('pn-600', 17)
+				line-height: 1
+				&:first-of-type
+					padding: 20px 24px 0px 16px
+					border-radius: 20px 20px 0 0
+				&:last-of-type
+					padding: 18px 20px 17px 21px
+					border-radius: 20px 0 20px 20px
+				span
+					+f('pn-900')
+			&-text
+		&-quotes
+			position: absolute
+			font-size: 24px
+			fill: transparentize(#2ab1b4, .5)
+			&_l
+				top: 0
+				left: 0
+				width: 32px
+				+rotate(180)
+			&_r
+				bottom: 0
+				right: 0
+		.slider-btn
+			top: calc(46% - 20px)
+		.slider-btn_prev
+			left: 0
+		.slider-btn_next
+			right: 0

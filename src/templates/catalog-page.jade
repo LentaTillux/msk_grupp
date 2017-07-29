@@ -89,8 +89,8 @@ block content
 			+e.product
 				+e.UL.actions
 					+e.LI.actions-item
-						+e.A.actions-link(href='#!') назад
-							+icon('icon-arr_l')
+						+e.A.actions-link._back(href='#!') назад
+							+icon('icon-arr')
 					+e.LI.actions-item.is-active
 						+e.A.actions-link(href='#!') БИЗНЕС - ПРиложения
 
@@ -98,75 +98,164 @@ block content
 
 				+b.product-offers.catalog__product-offers.js-accordion
 					+e.item.is-active
-						+e.item-name
-							+e.item-name-in
-								+e.title.title-sm sing-easy
-								+e.P.descr Приложение позволяет легким способом подписывать документы в электронном виде.
+						+e.item-top
+							+e.item-top-icons
 								+icon('icon-plus')
 								+icon('icon-minus')
+							+e.item-top-in
+								+e.title.title-sm sing-easy
+								+e.P.descr Приложение позволяет легким способом подписывать документы в электронном виде.
+
 						+e.content.js-accordion-content
-							+e.text
-								+e.content-block
-									+e.H4.content-title Описание
-									+e.P.content-descr Sing Easy  простое приложение для Вашего смартфона или любого гаджета которое позволяет легким способом подписывать документы в электронном виде вне зависимости где Вы находитесь.
-								+e.content-block
-									+e.H4.content-title Как работает приложение
-									+e.UL.list
-										+e.LI.list-item
-											+e.list-item-count 1
-											+e.P Импортируем документы из любого сервиса (Email, Dropbox, Evernote, Google Drive и много других.)
-										+e.LI.list-item
-											+e.list-item-count 2
-											+e.P Ставим нашу подпись с помощью пальца или стилуса (можно нарисовать заранее и просто выставлять ее в нужные документы.)
-										+e.LI.list-item
-											+e.list-item-count 3
-											+e.P Отправляем нужный документ
+							+e.content-in
+								+e.content-overview
+									+e.text
+										+e.content-block
+											+e.H4.content-title Описание
+											+e.P.content-descr Sing Easy  простое приложение для Вашего смартфона или любого гаджета которое позволяет легким способом подписывать документы в электронном виде вне зависимости
+										+e.content-block
+											+e.H4.content-title Как работает приложение
+											+e.UL.list
+												+e.LI.list-item
+													+e.list-item-count 1
+													+e.P Импортируем документы из любого сервиса (Email, Dropbox, Evernote, Google Drive и много других.)
+												+e.LI.list-item
+													+e.list-item-count 2
+													+e.P Ставим нашу подпись с помощью пальца или стилуса (можно нарисовать заранее и просто выставлять ее в нужные документы.)
+												+e.LI.list-item
+													+e.list-item-count 3
+													+e.P Отправляем нужный документ
 
 
-							+e.view.js-product-slider.js-parallax
-								+e.view-item
-									+e.IMG.obj-fit(src='img/content/product-phone.png' alt='img')
-									+e.view-glow
-										+e.view-parallax(class='layer' data-depth='0.05')
-									+e.view-glow
-										+e.view-parallax(class='layer' data-depth='0.05')
-									+e.view-glow
-										+e.view-parallax(class='layer' data-depth='0.05')
+									+e.look.js-product-slider.js-glow-parallax
+										+e.look-item
+											+e.IMG.obj-fit(src='img/content/product-phone.png' alt='img')
+											+e.look-glow
+												+e.look-parallax(class='layer' data-depth='0.3')
+											+e.look-glow
+												+e.look-parallax(class='layer' data-depth='0.3')
+											+e.look-glow
+												+e.look-parallax(class='layer' data-depth='0.3')
+										+e.look-item
+											+e.IMG.obj-fit(src='img/content/product-phone.png' alt='img')
+											+e.look-glow
+												+e.look-parallax(class='layer' data-depth='0.3')
+											+e.look-glow
+												+e.look-parallax(class='layer' data-depth='0.3')
+											+e.look-glow
+												+e.look-parallax(class='layer' data-depth='0.3')
+
+								+e.content-text
+									+e.H4.content-title Функии
+									+e.P.content-descr Sing Easy поддерживает огромное количество форматов, начиная стандартными PDF и Word, и заканчивая Apple Pages и HTML. И помимо основного функционала подписи. Приложение может вставлять изображения (печати, логотипы компании), заполнять пустые поля, поддерживает несколько различных подписей и многое другое.
+									+e.BUTTON.order-btn.btn._aqua(type='button') ОСТАВИТЬ ЗАЯВКУ
 
 					+e.item
-						+e.item-name
-							+e.item-name-in
-								+e.title.title-sm sing-easy
-								+e.P.descr Приложение позволяет легким способом подписывать документы в электронном виде.
+						+e.item-top
+							+e.item-top-icons
 								+icon('icon-plus')
 								+icon('icon-minus')
+							+e.item-top-in
+								+e.title.title-sm weekdone
+								+e.P.descr Сервис, который позволяет Вам собирать все отчеты от ваших работников.
+
 						+e.content.js-accordion-content
-							+e.text
-								+e.content-block
-									+e.H4.content-title Описание
-									+e.P.content-descr Sing Easy  простое приложение для Вашего смартфона или любого гаджета которое позволяет легким способом подписывать документы в электронном виде вне зависимости где Вы находитесь.
-								+e.content-block
-									+e.H4.content-title Как работает приложение
-									+e.UL.list
-										+e.LI.list-item
-											+e.list-item-count 1
-											+e.P Импортируем документы из любого сервиса (Email, Dropbox, Evernote, Google Drive и много других.)
-										+e.LI.list-item
-											+e.list-item-count 2
-											+e.P Ставим нашу подпись с помощью пальца или стилуса (можно нарисовать заранее и просто выставлять ее в нужные документы.)
-										+e.LI.list-item
-											+e.list-item-count 3
-											+e.P Отправляем нужный документ
+							+e.content-in
+								+e.content-overview
+									+e.text
+										+e.content-block
+											+e.H4.content-title Описание
+											+e.P.content-descr Sing Easy  простое приложение для Вашего смартфона или любого гаджета которое позволяет легким способом подписывать документы в электронном виде вне зависимости где Вы находитесь.
+										+e.content-block
+											+e.H4.content-title Как работает приложение
+											+e.UL.list
+												+e.LI.list-item
+													+e.list-item-count 1
+													+e.P Импортируем документы из любого сервиса (Email, Dropbox, Evernote, Google Drive и много других.)
+												+e.LI.list-item
+													+e.list-item-count 2
+													+e.P Ставим нашу подпись с помощью пальца или стилуса (можно нарисовать заранее и просто выставлять ее в нужные документы.)
+												+e.LI.list-item
+													+e.list-item-count 3
+													+e.P Отправляем нужный документ
 
 
-							+e.view.js-product-slider#js-glow-parallax
-								+e.view-item
-									+e.IMG.obj-fit(src='img/content/product-phone.png' alt='img')
-									+e.view-glow
-										+e.view-parallax(class='layer' data-depth='0.05')
-									+e.view-glow
-										+e.view-parallax(class='layer' data-depth='0.05')
-									+e.view-glow
-										+e.view-parallax(class='layer' data-depth='0.05')
+									+e.look.js-product-slider.js-glow-parallax
+										+e.look-item
+											+e.IMG.obj-fit(src='img/content/product-phone.png' alt='img')
+											+e.look-glow
+												+e.look-parallax(class='layer' data-depth='0.3')
+											+e.look-glow
+												+e.look-parallax(class='layer' data-depth='0.3')
+											+e.look-glow
+												+e.look-parallax(class='layer' data-depth='0.3')
+										+e.look-item
+											+e.IMG.obj-fit(src='img/content/product-phone.png' alt='img')
+											+e.look-glow
+												+e.look-parallax(class='layer' data-depth='0.3')
+											+e.look-glow
+												+e.look-parallax(class='layer' data-depth='0.3')
+											+e.look-glow
+												+e.look-parallax(class='layer' data-depth='0.3')
 
+								+e.content-text
+									+e.H4.content-title Функии
+									+e.P.content-descr Sing Easy поддерживает огромное количество форматов, начиная стандартными PDF и Word, и заканчивая Apple Pages и HTML. И помимо основного функционала подписи. Приложение может вставлять изображения (печати, логотипы компании), заполнять пустые поля, поддерживает несколько различных подписей и многое другое.
+									+e.BUTTON.order-btn.btn._aqua(type='button') ОСТАВИТЬ ЗАЯВКУ
+
+					+e.item
+						+e.item-top
+							+e.item-top-icons
+								+icon('icon-plus')
+								+icon('icon-minus')
+							+e.item-top-in
+								+e.title.title-sm office mobile
+								+e.P.descr Офисный пакет в Вашем кармане
+
+						+e.content.js-accordion-content
+							+e.content-in
+								+e.content-overview
+									+e.text
+										+e.content-block
+											+e.H4.content-title Описание
+											+e.P.content-descr Sing Easy  простое приложение для Вашего смартфона или любого гаджета которое позволяет легким способом подписывать документы в электронном виде вне зависимости где Вы находитесь.
+										+e.content-block
+											+e.H4.content-title Как работает приложение
+											+e.UL.list
+												+e.LI.list-item
+													+e.list-item-count 1
+													+e.P Импортируем документы из любого сервиса (Email, Dropbox, Evernote, Google Drive и много других.)
+												+e.LI.list-item
+													+e.list-item-count 2
+													+e.P Ставим нашу подпись с помощью пальца или стилуса (можно нарисовать заранее и просто выставлять ее в нужные документы.)
+												+e.LI.list-item
+													+e.list-item-count 3
+													+e.P Отправляем нужный документ
+
+
+									+e.look.js-product-slider.js-glow-parallax
+										+e.look-item
+											+e.IMG.obj-fit(src='img/content/product-phone.png' alt='img')
+											+e.look-glow
+												+e.look-parallax(class='layer' data-depth='0.3')
+											+e.look-glow
+												+e.look-parallax(class='layer' data-depth='0.3')
+											+e.look-glow
+												+e.look-parallax(class='layer' data-depth='0.3')
+										+e.look-item
+											+e.IMG.obj-fit(src='img/content/product-phone.png' alt='img')
+											+e.look-glow
+												+e.look-parallax(class='layer' data-depth='0.3')
+											+e.look-glow
+												+e.look-parallax(class='layer' data-depth='0.3')
+											+e.look-glow
+												+e.look-parallax(class='layer' data-depth='0.3')
+
+								+e.content-text
+									+e.H4.content-title Функии
+									+e.P.content-descr Sing Easy поддерживает огромное количество форматов, начиная стандартными PDF и Word, и заканчивая Apple Pages и HTML. И помимо основного функционала подписи. Приложение может вставлять изображения (печати, логотипы компании), заполнять пустые поля, поддерживает несколько различных подписей и многое другое.
+									+e.BUTTON.order-btn.btn._aqua(type='button') ОСТАВИТЬ ЗАЯВКУ
 	//end catalog
+
+	//-testis
+	include components/_testimonials
