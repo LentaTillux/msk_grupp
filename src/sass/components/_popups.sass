@@ -89,9 +89,11 @@
 		margin: 0 auto 33px
 		&-icon
 			position: relative
-			width: 65px
-			height: 67px
-			line-height: 88px
+			width: 68px
+			height: 68px
+			line-height: 98px
+			&:nth-child(3)
+				line-height: 90px
 			&::before
 				content: ''
 				position: absolute
@@ -102,11 +104,11 @@
 			svg
 				fill: #2ab1b4
 			.icon-tel
-				font-size: 30px
+				font-size: 29px
 			.icon-balloon
 				font-size: 30px
 			.icon-mail
-				font-size: 22px
+				font-size: 20px
 			&_circle
 				border-radius: 50%
 				background: #2ab1b4
@@ -120,6 +122,9 @@
 	&__title
 		font-size: 35px
 		margin-bottom: 8px
+		&-link
+			color: #2ab1b4
+			text-decoration: underline
 	&__descr
 		font-size: 20px
 		color: $blue-dark
@@ -140,6 +145,8 @@
 		&-field
 			flex: 0 1 50%
 			margin: 0 5px
+			&_full
+				flex: 1 1 100%
 		&-descr
 			margin: 13px -4px 0
 			font-size: 15px
@@ -148,12 +155,34 @@
 			text-align: left
 			-ms-text-align-last: center
 			text-align-last: center
+		&-example
+			padding-left: 20px
+			+f('pn-300', 13)
+			color: #9a9a9a
+			text-align: left
+		&-actions
+			margin-top: 10px
+			padding-top: 10px
+			border-top: 1px solid #f0f1f3
+			&-in
+				display: flex
+				justify-content: space-between
 	&__submit-btn
 		margin-top: 11px
-		
+	
 	&_call &__text
 		margin-bottom: 0
-
+	&_vacancy &__text
+		margin: 8px auto 30px
+	&_vacancy &__title
+		text-transform: none
+		font-size: 30px
+	&_vacancy &__form-descr
+		margin-top: 0
+		margin-bottom: 10px
+	&_vacancy &__submit-btn
+		margin-top: 0
+		
 body.popup-opened
 	position: fixed
 	top: 0

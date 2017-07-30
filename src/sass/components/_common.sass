@@ -1,5 +1,6 @@
 // basic styles
 body
+	height: 100%
 	min-width: 320px
 	+f('pn-400', 16)
 	line-height: 30px
@@ -59,6 +60,9 @@ video::-webkit-media-controls-start-playback-button
 	font-family: 'object-fit: cover;'
 
 .out
+	display: flex
+	flex-direction: column
+	min-height: 100vh
 	overflow: hidden
 	
 .container
@@ -98,6 +102,24 @@ video::-webkit-media-controls-start-playback-button
 			background: $aqua
 			color: $white
 			border-color: $aqua
+	&_file
+		@extend .btn_white-bordered
+		position: relative
+		padding: 10px 21px 10px 61px
+		cursor: pointer
+		border-color: #0f2740
+		letter-spacing: .05em
+		.no-touch &:hover .icon-file
+			fill: $white
+		.icon-file
+			position: absolute
+			top: calc(50% - 11px)
+			left: 26px
+			font-size: 19px
+			transition: .3s ease-in-out
+		
+		input
+			display: none
 			
 .title-lg
 	+f('pn-700', 45)

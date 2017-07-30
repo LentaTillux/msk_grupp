@@ -72,17 +72,25 @@
 
 		+e.FORM.form(action='#!')
 			+e.form-row
-				+b.INPUT.input._popup._radius(type='text' placeholder='Фамилия, Имя, Отчество' required name='')
-				+e.form-example Например: Иванов Иван Иванович
+				+e.form-field._full
+					+b.INPUT.input._popup._radius(type='text' placeholder='Фамилия, Имя, Отчество' required name='')
+					+e.P.form-example Например: Иванов Иван Иванович
 			+e.form-row
 				+e.form-field
 					+b.INPUT.input._popup(type='text' placeholder='Дата рождения' required name='')
-					+e.form-example В формате: ДД.ММ.ГГГГ
+					+e.P.form-example В формате: ДД.ММ.ГГГГ
 				+e.form-field
 					+b.INPUT.input._popup(type='text' placeholder='E-mail*' required name='')
-					+e.form-example Для получения ответа
-			+e.form-row._full
-				+b.TEXTAREA.textarea._popup(placeholder='Короткое сопроводительное письмо')
-				+e.form-example Раскажите, почему Вы - идеальный кандидат
-			+e.P.form-descr * Оставляя свои данные вы соглашаетесь с политикой конфедециальности
-			+e.BUTTON.submit-btn.btn.btn_aqua(type='submit') оставить заявку
+					+e.P.form-example Для получения ответа
+			+e.form-row
+				+e.form-field._full
+					+b.TEXTAREA.textarea._popup(placeholder='Короткое сопроводительное письмо')
+					+e.P.form-example Раскажите, почему Вы - идеальный кандидат
+			+e.form-actions
+				+e.P.form-descr Готовое резюме в виде документа PDF, DOC (максимальный размер 5мб)
+				+e.form-actions-in
+					+e.LABEL.btn.btn_file прикрепить резюме
+						+icon('icon-file')
+						+b.INPUT(type='file' accept='')
+
+					+e.BUTTON.submit-btn.btn.btn_aqua(type='submit') оставить заявку
