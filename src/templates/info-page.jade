@@ -1,0 +1,129 @@
+---
+title: НОВОСТИ
+---
+extends layouts/_layout
+block content
+	//begin main
+	+b.main
+		//- page-info
+		-pageInfo = {title: 'ПОЛЕЗНАЯ ИНФОРМАЦИЯ'}
+		-breadcrumbsList = ['главная', 'ПОЛЕЗНАЯ ИНФОРМАЦИЯ']
+		-activeIndex = 2
+		include components/_page-info
+
+		//begin info
+		+b.SECTION.info
+			+e.container.container
+				+e.tags
+					-tagsList = ['акции', 'награды', 'пресса о нас', 'наши жизнь', 'интервью', 'софт', 'софт', 'асу', 'программное обеспечение', 'железо']
+					+e.UL.tags-list
+						for tagsItem in tagsList
+							+e.LI
+								+e.A(href='#!')
+									+e.SPAN #
+									= tagsItem
+
+					//begin blog
+				+b.SECTION.blog
+					+e.inner
+						+e.ARTICLE.item._md
+							+e.item-img-wrap
+								+e.IMG.item-img(src='img/content/news-1.jpg')
+							+e.item-text
+								+e.H4.item-title Система MasterSCADA
+								+e.item-date 10.03.2017
+								+e.item-row
+									+e.P.item-descr.js-dot В Москве 5 июня 2017 года прошла IT конференция. Представители различных компаний были удивлены организацией...
+									+e.A.item-btn.btn._white-bordered(href='#!') ЧИТАТЬ
+
+						+e.ARTICLE.item
+							+e.item-img-wrap
+								+e.IMG.item-img.obj-fit(src='img/content/news-2.jpg')
+							+e.item-text
+								+e.H4.item-title Система MasterSCADA
+								+e.P.item-descr.js-dot В Москве 5 июня 2017 года прошла IT конференция. Представители различных компаний были удивлены организацией...
+								+e.item-row
+									+e.item-date 10.03.2017
+									+e.A.item-link.link(href='#!') ЧИТАТЬ
+
+						+e.ARTICLE.item
+							+e.item-img-wrap
+								+e.IMG.item-img.obj-fit(src='img/content/news-2.jpg')
+							+e.item-text
+								+e.H4.item-title Система MasterSCADA
+								+e.P.item-descr.js-dot В Москве 5 июня 2017 года прошла IT конференция. Представители различных компаний были удивлены организацией...
+								+e.item-row
+									+e.item-date 10.03.2017
+									+e.A.item-link.link(href='#!') ЧИТАТЬ
+
+						+e.ARTICLE.item
+							+e.item-img-wrap
+								+e.IMG.item-img.obj-fit(src='img/content/news-2.jpg')
+							+e.item-text
+								+e.H4.item-title Система MasterSCADA
+								+e.P.item-descr.js-dot В Москве 5 июня 2017 года прошла IT конференция. Представители различных компаний были удивлены организацией...
+								+e.item-row
+									+e.item-date 10.03.2017
+									+e.A.item-link.link(href='#!') ЧИТАТЬ
+
+						+e.ARTICLE.item
+							+e.item-img-wrap
+								+e.IMG.item-img.obj-fit(src='img/content/news-2.jpg')
+							+e.item-text
+								+e.H4.item-title Система MasterSCADA
+								+e.P.item-descr.js-dot В Москве 5 июня 2017 года прошла IT конференция. Представители различных компаний были удивлены организацией...
+								+e.item-row
+									+e.item-date 10.03.2017
+									+e.A.item-link.link(href='#!') ЧИТАТЬ
+
+						+e.ARTICLE.item._md
+							+e.item-img-wrap
+								+e.IMG.item-img(src='img/content/news-1.jpg')
+							+e.item-text
+								+e.H4.item-title Система MasterSCADA
+								+e.item-date 10.03.2017
+								+e.item-row
+									+e.P.item-descr.js-dot В Москве 5 июня 2017 года прошла IT конференция. Представители различных компаний были удивлены организацией...
+									+e.A.item-btn.btn._white-bordered(href='#!') ЧИТАТЬ
+
+						+e.ARTICLE.item._md.is-hidden
+							+e.item-img-wrap
+								+e.IMG.item-img(src='img/content/news-1.jpg')
+							+e.item-text
+								+e.H4.item-title Система MasterSCADA
+								+e.item-date 10.03.2017
+								+e.item-row
+									+e.P.item-descr.js-dot В Москве 5 июня 2017 года прошла IT конференция. Представители различных компаний были удивлены организацией...
+									+e.A.item-btn.btn._white-bordered(href='#!') ЧИТАТЬ
+
+						+e.ARTICLE.item.is-hidden
+							+e.item-img-wrap
+								+e.IMG.item-img.obj-fit(src='img/content/news-2.jpg')
+							+e.item-text
+								+e.H4.item-title Система MasterSCADA
+								+e.P.item-descr.js-dot В Москве 5 июня 2017 года прошла IT конференция. Представители различных компаний были удивлены организацией...
+								+e.item-row
+									+e.item-date 10.03.2017
+									+e.A.item-link.link(href='#!') ЧИТАТЬ
+
+						+e.ARTICLE.item.is-hidden
+							+e.item-img-wrap
+								+e.IMG.item-img.obj-fit(src='img/content/news-2.jpg')
+							+e.item-text
+								+e.H4.item-title Система MasterSCADA
+								+e.P.item-descr.js-dot В Москве 5 июня 2017 года прошла IT конференция. Представители различных компаний были удивлены организацией...
+								+e.item-row
+									+e.item-date 10.03.2017
+									+e.A.item-link.link(href='#!') ЧИТАТЬ
+
+						+e.BUTTON.more-btn.btn._aqua.js-more-btn(type='button') ПОКАЗАТЬ ЕЩЕ
+				//end blog
+		//end info
+
+		//-contact-block
+		-contactBlockClass = '_has-form-mod'
+		-contactBlockForm = true
+		-contactFormLgTitle = 'Остались вопросы?'
+		include components/_contact-block
+
+	//end main

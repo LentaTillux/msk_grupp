@@ -19,5 +19,12 @@ PageList:
 - file: vacancies-page.html
   ready: 100
 
-- file: modals-page.html
+- file: news-page.html
+  ready: 100
+
+- file: info-page.html
+  ready: 100
+
+
+- file: popups-page.html
   ready: 100

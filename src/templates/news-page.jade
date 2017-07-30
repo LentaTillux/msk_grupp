@@ -1,0 +1,90 @@
+---
+title: НОВОСТИ
+---
+extends layouts/_layout
+block content
+	//begin main
+	+b.main
+		//- page-info
+		-pageInfo = {title: 'НОВОСТИ', subTitle: 'все самые последние новости, а так же из мира ит', textClassMod: '_has-sub-title-big'}
+		-breadcrumbsList = ['главная', 'НОВОСТИ']
+		-activeIndex = 2
+		include components/_page-info
+
+		//begin news
+		+b.SECTION.news
+			+e.container.container
+				+e.FORM.search(action='#!')
+					+e.search-field
+						+e.INPUT.search-input.input(type='text' placeholder='Поиск новостей' name='' required)
+						+e.BUTTON.search-btn(type='submit')
+							+icon('icon-search')
+
+				+e.block
+					-var rowCount = 0
+					while rowCount < 3
+						+e.row
+							+b.ARTICLE.news-article.news__article
+								+e.H5.title IT конференция в Москве
+								+e.img-wrap
+									+b.IMG.obj-fit(src='img/content/news-1.jpg', alt='img', title='')
+								+e.P.descr В Москве 5 июня 2017 года прошла IT конференция. Представители различных компаний были удивлены организацией...
+								+e.actions
+									+e.A.actions-btn.btn.btn_white-bordered(href='#!') ЧИТАТЬ
+									+e.A.actions-link(href='#!')
+										+icon('icon-share')
+
+							+b.ARTICLE.news-article.news__article
+								+e.H5.title Новые решения в мире АСУ
+								+e.img-wrap
+									+b.IMG.obj-fit(src='img/content/news-2.jpg', alt='img', title='')
+								+e.P.descr В Москве 5 июня 2017 года прошла IT конференция. Представители различных компаний были удивлены организацией...
+								+e.actions
+									+e.A.actions-btn.btn.btn_white-bordered(href='#!') ЧИТАТЬ
+									+e.A.actions-link(href='#!')
+										+icon('icon-share')
+
+							+b.ARTICLE.news-article.news__article
+								+e.H5.title Новинки из мира ИТ
+								+e.img-wrap
+									+b.IMG.obj-fit(src='img/content/news-3.jpg', alt='img', title='')
+								+e.P.descr В Москве 5 июня 2017 года прошла IT конференция. Представители различных компаний были удивлены организацией...
+								+e.actions
+									+e.A.actions-btn.btn.btn_white-bordered(href='#!') ЧИТАТЬ
+									+e.A.actions-link(href='#!')
+										+icon('icon-share')
+							-rowCount++
+
+					+e.row.is-hidden
+						+b.ARTICLE.news-article.news__article
+							+e.H5.title IT конференция в Москве
+							+e.img-wrap
+								+b.IMG.obj-fit(src='img/content/news-1.jpg', alt='img', title='')
+							+e.P.descr В Москве 5 июня 2017 года прошла IT конференция. Представители различных компаний были удивлены организацией...
+							+e.actions
+								+e.A.actions-btn.btn.btn_white-bordered(href='#!') ЧИТАТЬ
+								+e.A.actions-link(href='#!')
+									+icon('icon-share')
+
+						+b.ARTICLE.news-article.news__article
+							+e.H5.title Новые решения в мире АСУ
+							+e.img-wrap
+								+b.IMG.obj-fit(src='img/content/news-2.jpg', alt='img', title='')
+							+e.P.descr В Москве 5 июня 2017 года прошла IT конференция. Представители различных компаний были удивлены организацией...
+							+e.actions
+								+e.A.actions-btn.btn.btn_white-bordered(href='#!') ЧИТАТЬ
+								+e.A.actions-link(href='#!')
+									+icon('icon-share')
+
+						+b.ARTICLE.news-article.news__article
+							+e.H5.title Новинки из мира ИТ
+							+e.img-wrap
+								+b.IMG.obj-fit(src='img/content/news-3.jpg', alt='img', title='')
+							+e.P.descr В Москве 5 июня 2017 года прошла IT конференция. Представители различных компаний были удивлены организацией...
+							+e.actions
+								+e.A.actions-btn.btn.btn_white-bordered(href='#!') ЧИТАТЬ
+								+e.A.actions-link(href='#!')
+									+icon('icon-share')
+
+					+e.BUTTON.more-btn.btn._aqua.js-more-btn(type='button') ПОКАЗАТЬ ЕЩЕ
+		//end news

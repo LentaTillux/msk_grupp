@@ -3,7 +3,7 @@ initToggling();
 function initToggling() {
   const $togglingBlock = $('.js-toggling-block');
 
-  $togglingBlock.each(function () {
+  $togglingBlock.each(function() {
     const $thisBlock = $(this);
     const $togglingBtn = $thisBlock.find('.js-toggling-btn');
     const $togglingContent = $thisBlock.find('.js-toggling-content');
@@ -14,7 +14,7 @@ function initToggling() {
       $togglingContent.show();
     }
 
-    $togglingBtn.on('click tap', function (ev) {
+    $togglingBtn.on('click tap', function(ev) {
       ev.preventDefault();
       const $thisBtn = $(this);
       const $BtnText = $thisBtn.find('span');
@@ -28,3 +28,14 @@ function initToggling() {
     });
   });
 }
+
+(function() {
+  const $newsBtn = $('.js-more-btn');
+
+  $newsBtn.on('click tap', function(e) {
+    e.preventDefault();
+    const $this = $(this);
+    $this.siblings(':hidden').slideDown();
+    $this.fadeOut();
+  });
+}());
