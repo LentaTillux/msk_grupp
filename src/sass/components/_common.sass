@@ -144,7 +144,11 @@ video::-webkit-media-controls-start-playback-button
 			font-style: italic
 	&_transp
 		background: transparent
-		
+	&_popup
+		height: 45px
+		border-radius: 22px
+	&_radius
+		border-radius: 20px
 .textarea
 	display: block
 	width: 100%
@@ -160,3 +164,15 @@ video::-webkit-media-controls-start-playback-button
 		font-style: italic
 	&_transp
 		background: transparent
+	&_popup
+		min-height: 136px
+		padding: 12px 27px
+		border-radius: 27px
+		border: 2px solid #c9c9c9
+		background-color: #ffffff
+		color: $blue-dark
+		+f('pn-400')
+		+placeholder
+			color: $blue-dark
+			font-style: normal
+			font-size: 15px

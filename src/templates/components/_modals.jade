@@ -1,0 +1,88 @@
+// request popup
++b.popup(data-popup-id='requestPopup', tabindex='-1', role='dialog')
+	+e.container
+		+e.close.js-popup-close
+			+icon('icon-close')
+		+e.top
+			+e.top-icon
+				+icon('icon-tel')
+			+e.top-icon
+				+icon('icon-balloon')
+			+e.top-icon
+				+icon('icon-mail')
+		+e.text
+			+e.H3.title.title-sm ОСТАВИТЬ ЗАЯВКУ
+			+e.P.descr Заполните форму и наш эксперт свяжется с вами в течение 24 часов
+		+e.FORM.form(action='#!')
+			+e.form-row
+				+e.form-field
+					+b.INPUT.input._popup._radius(type='text' placeholder='Имя*' required name='')
+				+e.form-field
+					+b.INPUT.input._popup._radius(type='text' placeholder='Фамилия*' required name='')
+			+e.form-row
+				+e.form-field
+					+b.INPUT.input._popup(type='text' placeholder='Телефон*' required name='')
+				+e.form-field
+					+b.INPUT.input._popup(type='text' placeholder='E-mail*' required name='')
+			+e.form-row._full
+				+b.SELECT.js-select
+					+e.OPTION Меня интересует
+					+e.OPTION Сетевая инфраструктура
+					+e.OPTION Инженерная ИТ инфраструктура
+					+e.OPTION Системы безопасности
+					+e.OPTION Бизнес приложения
+					+e.OPTION Системы коллективной работы
+					+e.OPTION Web сайты
+					+e.OPTION Сервисное обслуживание
+			+e.form-row._full
+				+b.INPUT.input._popup(type='text' placeholder='Обратный звонок менеджера' name='')
+
+			+e.form-row._full
+				+b.TEXTAREA.textarea._popup(placeholder='Текст вашего сообщения')
+
+			+e.P.form-descr * Оставляя свои данные вы соглашаетесь с политикой конфедециальности
+			+e.BUTTON.submit-btn.btn.btn_aqua(type='submit') оставить заявку
+
+// call
++b.popup._call(data-popup-id='callPopup', tabindex='-1', role='dialog')
+	+e.container
+		+e.close.js-popup-close
+			+icon('icon-close')
+		+e.top
+			+e.top-icon._circle
+				+icon('icon-tel')
+			+e.top-icon
+				+icon('icon-balloon')
+			+e.top-icon
+				+icon('icon-mail')
+		+e.text
+			+e.H3.title.title-sm ЗВОНИТЕ НАМ
+			+e.P.descr Каждый день с 09:00 до 18:00 мы рады ответить на все ваши вопросы
+			+e.A.tel.title-sm(href='tel:+78463406191') +7 (846) 340-61-91
+
+// vacancy
++b.popup._vacancy(data-popup-id='vacancyPopup', tabindex='-1', role='dialog')
+	+e.container
+		+e.close.js-popup-close
+			+icon('icon-close')
+		+e.text
+			+e.H3.title.title-sm Отправить заявку на вакансию
+				= ' '
+				+e.A.title-link(href='#!') Менеджер по IT
+
+		+e.FORM.form(action='#!')
+			+e.form-row
+				+b.INPUT.input._popup._radius(type='text' placeholder='Фамилия, Имя, Отчество' required name='')
+				+e.form-example Например: Иванов Иван Иванович
+			+e.form-row
+				+e.form-field
+					+b.INPUT.input._popup(type='text' placeholder='Дата рождения' required name='')
+					+e.form-example В формате: ДД.ММ.ГГГГ
+				+e.form-field
+					+b.INPUT.input._popup(type='text' placeholder='E-mail*' required name='')
+					+e.form-example Для получения ответа
+			+e.form-row._full
+				+b.TEXTAREA.textarea._popup(placeholder='Короткое сопроводительное письмо')
+				+e.form-example Раскажите, почему Вы - идеальный кандидат
+			+e.P.form-descr * Оставляя свои данные вы соглашаетесь с политикой конфедециальности
+			+e.BUTTON.submit-btn.btn.btn_aqua(type='submit') оставить заявку

@@ -1,0 +1,167 @@
+.popup
+	position: fixed
+	top: 0
+	right: 0
+	bottom: 0
+	left: 0
+	opacity: 0
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"
+	visibility: hidden
+	z-index: 1050
+	overflow: auto
+	outline: 0
+	text-align: center
+	font-size: 0
+	transform: translate3d(0, 0, 0)
+	background-color: rgba(0, 0, 0, 0.7)
+	-webkit-transition: opacity .3s ease, -webkit-transform .5s ease
+	transition: opacity .3s ease, -webkit-transform .5s ease
+	-o-transition: opacity .3s ease, -o-transform .5s ease
+	-moz-transition: opacity .3s ease, transform .5s ease, -moz-transform .5s ease
+	transition: opacity .3s ease, transform .5s ease
+	transition: opacity .3s ease, transform .5s ease, -webkit-transform .5s ease, -moz-transform .5s ease, -o-transform .5s ease
+	will-change: opacity, transform
+	&:after
+		content: ''
+		display: inline-block
+		vertical-align: middle
+		width: 0
+		height: 100%
+	&.opened
+		opacity: 1
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"
+		visibility: visible
+	&__close
+		position: absolute
+		top: 24px
+		right: 29px
+		width: 13px
+		height: 13px
+		cursor: pointer
+		svg
+			font-size: 13px
+		span
+			display: block
+			width: 100%
+			height: 1px
+			background-color: #d0d0d0
+			&:first-of-type
+				-webkit-transform: rotate(45deg)
+				-moz-transform: rotate(45deg)
+				-ms-transform: rotate(45deg)
+				-o-transform: rotate(45deg)
+				transform: rotate(45deg)
+			&:last-of-type
+				-webkit-transform: rotate(-45deg) translateY(-1px)
+				-moz-transform: rotate(-45deg) translateY(-1px)
+				-ms-transform: rotate(-45deg) translateY(-1px)
+				-o-transform: rotate(-45deg) translateY(-1px)
+				transform: rotate(-45deg) translateY(-1px)
+	&__container
+		display: inline-block
+		vertical-align: middle
+		width: 100%
+		max-width: 618px
+		position: relative
+		padding: 50px
+		background: $white
+		box-shadow: 2px 3px 2px rgba(0, 0, 0, 0.1)
+		border-radius: 20px
+		border: 1px solid #eeeeee
+		-webkit-box-shadow: 0 3px 24px rgba(0, 0, 0, 0.12)
+		-moz-box-shadow: 0 3px 24px rgba(0, 0, 0, 0.12)
+		margin: 30px auto
+		-webkit-transition: opacity .2s ease, visibility 0s .1s, -webkit-transform .3s ease
+		transition: opacity .2s ease, visibility 0s .1s, -webkit-transform .3s ease
+		-o-transition: opacity .2s ease, visibility 0s .1s, -o-transform .3s ease
+		-moz-transition: opacity .2s ease, transform .3s ease, visibility 0s .1s, -moz-transform .3s ease
+		transition: opacity .2s ease, transform .3s ease, visibility 0s .1s
+		transition: opacity .2s ease, transform .3s ease, visibility 0s .1s, -webkit-transform .3s ease, -moz-transform .3s ease, -o-transform .3s ease
+		-webkit-transform: translate3d(0, -50px, 0)
+		-moz-transform: translate3d(0, -50px, 0)
+		transform: translate3d(0, -50px, 0)
+		will-change: transform, opacity
+		
+	&__top
+		display: flex
+		justify-content: space-between
+		max-width: 440px
+		margin: 0 auto 33px
+		&-icon
+			position: relative
+			width: 65px
+			height: 67px
+			line-height: 88px
+			&::before
+				content: ''
+				position: absolute
+				top: 0
+				left: 0
+				+s('logo-circle_lg')
+				opacity: .3
+			svg
+				fill: #2ab1b4
+			.icon-tel
+				font-size: 30px
+			.icon-balloon
+				font-size: 30px
+			.icon-mail
+				font-size: 22px
+			&_circle
+				border-radius: 50%
+				background: #2ab1b4
+				svg
+					fill: $white
+				&::before
+					display: none
+	&__text
+		max-width: 425px
+		margin: 0 auto 30px
+	&__title
+		font-size: 35px
+		margin-bottom: 8px
+	&__descr
+		font-size: 20px
+		color: $blue-dark
+		+f('pn-700')
+		letter-spacing: .025em
+	&__tel
+		display: block
+		margin-top: 29px
+		font-size: 35px
+	&__form
+		&-row
+			display: flex
+			margin: 0 -5px
+			&:not(:first-child)
+				margin-top: 10px
+			&_full
+				margin: 0
+		&-field
+			flex: 0 1 50%
+			margin: 0 5px
+		&-descr
+			margin: 13px -4px 0
+			font-size: 15px
+			color: #585858
+			line-height: 25px
+			text-align: left
+			-ms-text-align-last: center
+			text-align-last: center
+	&__submit-btn
+		margin-top: 11px
+		
+	&_call &__text
+		margin-bottom: 0
+
+body.popup-opened
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	overflow: hidden
+
+.popup.opened .popup__container
+	-webkit-transform: translate3d(0, 0, 0)
+	-moz-transform: translate3d(0, 0, 0)
+	transform: translate3d(0, 0, 0)

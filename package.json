@@ -70,6 +70,8 @@
     "gsap": "^1.20.2",
     "object-fit-images": "^3.2.3",
     "particles.js": "^2.0.0",
-    "slick-carousel": "^1.6.0"
+    "selectric": "^1.11.1",
+    "slick-carousel": "^1.6.0",
+    "vintage-popup": "^0.1.74"
   }
 }
