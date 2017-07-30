@@ -13,6 +13,8 @@ PageList:
 - file: catalog-page.html
   ready: 100
 
-
 - file: projects-page.html
+  ready: 100
+
+- file: vacancies-page.html
   ready: 100

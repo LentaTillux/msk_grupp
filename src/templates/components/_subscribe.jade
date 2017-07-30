@@ -5,8 +5,11 @@ if subscribe.btn ? subscribe.btn : subscribe.btn = 'ПОДПИСАТЬСЯ'
 //begin subscribe
 +b.SECTION.subscribe(class= subscribe.classMod ? subscribe.classMod : '')
 	+e.container.container
-		+b.A.logo._shadow(href='#!')
-		+e.P.descr= subscribe.descr
+		if subscribe.logoDescr !== false
+			+b.A.logo._shadow(href='#!')
+			+e.P.descr= subscribe.descr
+		if subscribe.title
+			+e.H4.title.title-sm-white= subscribe.title
 		+e.FORM.form(action='#!')
 			+e.form-in
 				+e.form-field

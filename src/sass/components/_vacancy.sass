@@ -1,0 +1,97 @@
+.vacancy
+	padding: 69px 0 78px
+	&__item
+	&__title
+		margin-bottom: 6px
+		font-size: 35px
+	&__descr
+		font-size: 22px
+		line-height: 25px
+		color: #00899a
+	&__details
+		padding-top: 45px
+		display: flex
+	&__block
+		&:not(:last-child)
+			padding-right: 52px
+		&-title
+			margin-bottom: 6px
+			font-size: 22px
+			line-height: 25px
+		&-list
+			font-size: 17px
+			line-height: 35px
+			color: $gray
+			li
+				position: relative
+				padding-left: 20px
+				.icon-arr
+					position: absolute
+					top: calc(50% - 6px)
+					left: 2px
+					fill: #2ab1b4
+					font-size: 12px
+					+gpu
+		&-salary
+			margin-top: 18px
+			font-size: 20px
+			&-count
+				display: flex
+				align-items: center
+				+f('pn-900')
+				text-transform: uppercase
+				color: #78c698
+				span
+					margin: 0 13px
+					font-size: 40px
+					letter-spacing: 0.04em
+			&-descr
+				font-size: 17px
+				color: $gray
+	&__actions
+		display: flex
+		justify-content: space-between
+		margin: 30px 0 0
+		&-submit
+		&-toggling
+			position: relative
+			min-width: 184px
+			padding: 10px 30px 10px 55px
+			&.is-hidden svg
+				+rotate(90)
+			.no-touch &:hover svg
+				fill: $white
+			svg
+				position: absolute
+				left: 42px
+				top: calc(50% - 6px)
+				font-size: 12px
+				fill: $blue-dark
+				+rotate(-90)
+				transition: .3s ease-in-out
+				
+				
+/* ===================================
+	 vac-links
+	 =================================== */
+.vac-links
+	padding: 90px 0
+	&__container
+	&__item
+		display: flex
+		align-items: center
+		justify-content: space-between
+		&:not(:first-child)
+			margin-top: 65px
+		&-col
+			flex: 1 1 50%
+			&:nth-child(2)
+				padding-left: 15px
+	&__link
+		font-size: 35px
+		border-bottom: 1px solid currentColor
+		transition: .3s
+		.no-touch &:hover
+			border-bottom-color: transparent
+	&__descr
+		font-size: 22px

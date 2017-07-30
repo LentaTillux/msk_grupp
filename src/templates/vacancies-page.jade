@@ -1,0 +1,92 @@
+---
+title: Профиль компании
+---
+extends layouts/_layout
+block content
+	//begin main
+	+b.MAIN.main
+		//- page-info
+		-pageInfo = {textClassMod: '_has-sub-title', title: 'ВАКАНСИИ', subTitle: 'интересных проектов становится на много больше и команда продолжает расти'}
+		-breadcrumbsList = ['главная', 'ВАКАНСИИ']
+		-activeIndex = 2
+		include components/_page-info
+
+		//begin vacancy
+		+b.SECTION.vacancy
+			+e.container.container
+				+e.item.js-toggling-block.is-open
+					+e.H3.title.title-md react - РАЗРАБОТЧИК
+					+e.descr Создание сложных и быстрых интерфейсов
+					+e.details.js-toggling-content
+						+e.block
+							+e.block-title Требования к кандидату
+							+e.UL.block-list
+								+e.LI React;
+									+icon('icon-arr')
+								+e.LI React Router;
+									+icon('icon-arr')
+								+e.LI Redux;
+									+icon('icon-arr')
+								+e.LI Работа с REST API;
+									+icon('icon-arr')
+								+e.LI EcmaScript 6;
+									+icon('icon-arr')
+								+e.LI препроцессоры (Stylus, SASS или LESS)
+									+icon('icon-arr')
+						+e.block
+							+e.block-title Плюсом будет
+							+e.UL.block-list
+								+e.LI Навыки конфикурации Webpack и Gulp;
+									+icon('icon-arr')
+								+e.LI Разработки анимации в интерфейсах;
+									+icon('icon-arr')
+								+e.LI Расработка тестов;
+									+icon('icon-arr')
+								+e.LI Умение работать в Canvas;
+									+icon('icon-arr')
+								+e.LI Опыт Backend-разработки.
+									+icon('icon-arr')
+						+e.block
+							+e.block-title Зарплата
+							+e.block-salary
+								+e.DIV.block-salary-count от
+									= ' '
+									+e.SPAN 50 000
+									= ' '
+									| руб.
+								+e.DIV.block-salary-descr по результатам собеседования
+
+					+e.actions
+						+e.BUTTON.actions-submit.btn._aqua(type='button') ОСТАВИТЬ ЗАЯВКУ
+						+e.BUTTON.actions-toggling.btn._white-bordered.js-toggling-btn(type='button')
+							+icon('icon-arr')
+							+b.SPAN(data-default-text='свернуть' data-change-text='показать') свернуть
+		//end vacancy
+
+		//begin vac-links
+		+b.SECTION.vac-links
+			+e.container.container
+				-
+					vacList = [{
+					linkText: 'МЕНЕДЖЕР ПО ПРОДАЖАМ',
+					descrText: 'Продажа программных продуктов'
+					}, {
+					linkText: 'JAVA программист',
+					descrText: 'Разработка платформ'
+					}, {
+					linkText: 'инженер',
+					descrText: 'Проектирование сложных систем'
+					}]
+				mixin vacItem(item)
+					+e.item
+						+e.item-col
+							+e.A.link.title-sm(href='#!')= item.linkText
+						+e.item-col
+							+e.P.descr= item.descrText
+				each item in vacList
+					+vacItem(item)
+		//end vac-links
+
+		//-subscribe
+		-var subscribe = {classMod: '_has-title', title: 'ПОДПИШИСЬ НА НОВЫЕ', logoDescr: false}
+		include components/_subscribe

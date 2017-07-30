@@ -1,5 +1,5 @@
 if work ? work : work = []
-if workTitle ? workTitle : workTitle = 'Как мы работаем?'
+if work.title ? work.title : work.title = 'Как мы работаем?'
 
 -
 	defaultWorkList = [{
@@ -14,7 +14,7 @@ if workList ? workList : workList = defaultWorkList
 //begin work
 +b.SECTION.work(class= workClass ? workClass : '')
 	+e.container.container
-		+e.title.title-md= workTitle
+		+e.title.title-md= work.title
 		+e.row.js-glow-parallax
 			mixin workItem(item)
 				+e.item

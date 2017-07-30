@@ -9,7 +9,7 @@ if pageInfo.title ? pageInfo.title : 'Title'
 				+e.LI.item(class= index === activeIndex -1 ? 'is-active' : '')
 					+e.A.link(href='#!')= breadcrumbsLink
 
-		+e.text
+		+e.text(class=pageInfo.textClassMod ? pageInfo.textClassMod : '')
 			+e.H2.title(class=pageInfo.titleClassMod ? pageInfo.titleClassMod : '').title-lg= pageInfo.title
 			if pageInfo.subTitle
 				+e.H4.sub-title.title-sm-white= pageInfo.subTitle

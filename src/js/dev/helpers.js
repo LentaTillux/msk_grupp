@@ -1,5 +1,5 @@
-const BODY = $('body'),
-  WINDOW  = $(window);
+const BODY = $('body');
+const WINDOW = $(window);
 
 const echo = (arg) => {
   console.log(arg);
@@ -14,6 +14,8 @@ const detectDevice = (w) => {
 
 // detect touch device
 const isTouchDevice = () => 'ontouchstart' in window;
-if (!isTouchDevice()) { BODY.addClass('no-touch'); }
+if (!isTouchDevice()) {
+  BODY.addClass('no-touch');
+}
 
 export { BODY, WINDOW, echo, detectDevice, isTouchDevice };
