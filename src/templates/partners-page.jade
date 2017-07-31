@@ -1,0 +1,12 @@
+---
+title: ПАРТНЕРАМ
+---
+extends layouts/_layout
+block content
+	//begin main
+	+b.main
+		//- page-info
+		-pageInfo = {title: 'ПАРТНЕРАМ'}
+		-breadcrumbsList = ['главная', 'ПАРТНЕРАМ']
+		-activeIndex = 2
+		include components/_page-info

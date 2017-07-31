@@ -1,13 +1,15 @@
-if partners ? partners : partners = []
-if partners.title ? partners.title : partners.title = 'Партнеры'
+if partnersBlock ? partnersBlock : partnersBlock = []
+if partnersBlock.title ? partnersBlock.title : partnersBlock.title = 'Партнеры'
 
 //begin partners
-+b.SECTION.partners(class= partners.classMod ? partners.classMod : '')
++b.SECTION.partners-block(class= partnersBlock.classMod ? partnersBlock.classMod : '')
 	+e.container.container
-		+e.H3.title.title-md= partners.title
-		+e.list
+		+e.H3.title.title-md= partnersBlock.title
+		+e.row
 			-var partnersList = [1, 2, 3]
-			each partnersImg in partnersList
-				+e.list-item
-					+e.IMG(src=`img/content/partners-${partnersImg}.png` alt='img')
+			for partnersImg in partnersList
+				+e.item
+					+e.A.item-link(href='#!')
+						+e.IMG.item-img(src=`img/content/partners-${partnersImg}.png` alt='img')
+						+e.DIV.item-img._color(style=`background-image: url(img/content/partners-${partnersImg}_color.png)`)
 //end partners
