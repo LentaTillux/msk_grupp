@@ -1,11 +1,16 @@
 .header
 	padding: 20px 0 29px
 	background: $white
+	+sm
+		z-index: 100
 	&__container
 		position: relative
 		display: flex
 		align-items: center
 		z-index: 2
+		+sm
+			flex-direction: column
+			justify-content: flex-start
 	&__block
 		display: flex
 		flex-wrap: wrap
@@ -14,19 +19,48 @@
 		margin-left: 35px
 		padding-left: 35px
 		border-left: 1px solid #e8e9ed
+		+md
+			margin-left: 18px
+			padding-left: 16px
+		+sm
+			position: relative
+			padding-left: 0
+			margin: 5px 0 0
+			border-left: 0
+			width: 100%
 	&__contact-info
 		flex: 1 1 100%
 		padding: 10px 0
+		+md
+			flex: 1 1 80%
+			order: 1
 	&__nav
 		display: inline-flex
 		flex: 1 1 auto
 		padding: 15px 0 0
+		margin-right: 15px
+		+md
+			order: 3
+			margin-right: 0
+			padding: 10px 0 0
 	&__action-bar
 		display: inline-flex
-		flex: 0 0 65px
+		flex: 0 0 auto
+		+md
+			flex-direction: column
+			order: 2
+		+sm
+			position: absolute
+			right: 0
+			bottom: 15px
+			flex-direction: row
 	&__logo
 		margin-top: 10px
-	
+		+sm
+			flex: 0 0 auto
+			align-self: flex-start
+			z-index: 300
+			position: relative
 	h1
 		position: absolute
 		clip: rect(0, 0, 0, 0)
@@ -35,6 +69,10 @@
 		margin: -1px
 		+hide-text
 		
+	&__nav-toggle
+		+sm
+			display: block
+		
 	&_home
 		position: absolute
 		top: 0
@@ -42,6 +80,10 @@
 		right: 0
 		padding: 52px 0 10px
 		background: transparent
+		+lg
+			padding: 25px 0 10px
+		+sm
+			padding: 10px 0
 		.contact-info__link-text,
 		.nav__list-link
 			color: $white
@@ -59,33 +101,86 @@
 /* nav
 	----------------------------------- */
 .nav
+	+sm
+		display: none
+		position: fixed
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
+		background-image: linear-gradient(45deg, #01be9d 0%, #0057b8 100%)
+		z-index: 101
+		padding: 0
 	&__list
 		display: flex
 		flex: 0 1 764px
 		justify-content: space-between
+		+sm
+			flex-direction: column
+			justify-content: center
+			align-items: stretch
+			text-align: center
+			overflow: auto
 		&-item
 			padding-bottom: 9px
 			border-bottom: 1px solid transparent
 			line-height: 1
+			+sm
+				border-bottom: 0
+				padding: 0
 			&.is-active
 				border-bottom-color: #dcdcdc
+				+sm
+					border-bottom-color: transparent
+			&.is-active a
+				+sm
+					color: $blue-dark
+			&:last-child
+				+md
+					display: none
+				+sm
+					display: block
 		&-link
 			+f('pn-600', 14)
 			text-transform: uppercase
 			color: $blue-dark
+			+md
+				font-size: 13px
+			+sm
+				display: block
+				padding: 20px
+				font-size: 18px
 			
 /* contact-info
 	----------------------------------- */
 .contact-info
 	font-size: 0
+	+md
+		display: flex
+		flex-wrap: wrap
+	+sm
+		flex-direction: column
 	&__link
 		display: inline-block
 		vertical-align: top
 		font-size: 0
+		white-space: nowrap
+		+md
+			flex: 1 1 60%
+			padding-right: 10px
+		
 		&:first-child
 			margin-right: 10px
+			+md
+				margin-right: 0
 		&:not(:first-child)
 			margin-left: 43px
+			+lg
+				margin-left: 15px
+			+md
+				margin-left: 0
+		&:nth-child(2n)
+			flex: 1 1 30%
 		&-icon
 			display: inline-block
 			vertical-align: middle
@@ -116,6 +211,12 @@
 		transition: background .3s
 		&:not(:first-child)
 			margin-left: 5px
+			+md
+				margin-left: 0
+				margin-top: 5px
+			+sm
+				margin-left: 10px
+				margin-top: 0
 		+hover
 			background: $white
 		.no-touch &:hover &-icon

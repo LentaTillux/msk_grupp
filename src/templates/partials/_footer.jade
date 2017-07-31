@@ -1,7 +1,7 @@
 //begin footer
 +b.FOOTER.footer
 	+e.container.container
-		+e.blocks
+		+e.inner
 			+e.block
 				+e.H6.block-title КОМПАНИЯ
 				+e.UL.list
@@ -53,6 +53,7 @@
 					= ' '
 					+e.A.block-link(href='mailto:sales@mskgr.ru') SALES@MSKGR.RU
 				//-soicals
+				-socialsClass = 'footer__socials'
 				include ../components/_socials
 			
 		+e.info

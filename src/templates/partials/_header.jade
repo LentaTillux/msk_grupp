@@ -4,6 +4,9 @@
 		+e.A.logo.logo(class= headerLogoMod ? headerLogoMod : '_color' href='#!')
 		+b.H1 МСК ГРУПП
 
+		+b.BUTTON.header__nav-toggle.nav-toggle.js-nav-toggle
+			span МЕНЮ
+
 		+e.block
 			+b.contact-info.header__contact-info
 				+e.P.link
@@ -22,7 +25,7 @@
 					+icon('icon-mail', 'contact-info__link-icon')
 					+e.SPAN.link-text sales@mskgr.ru
 
-			+b.NAV.nav.header__nav
+			+b.NAV.nav.header__nav.js-nav
 				+e.UL.list
 					-var navList = ['о компании', 'каталог услуг', 'новости', 'полезная информация', 'партнерам', 'контакты'];
 					for navLink, index in navList

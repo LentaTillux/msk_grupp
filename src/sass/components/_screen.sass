@@ -7,11 +7,17 @@
 	&__slider
 		display: none
 		margin-right: -15px
+		pointer-events: all
+		+sm
+			margin-right: 0
+			padding-bottom: 40px
 		&.slick-initialized
 			display: block
 		&-item
 			position: relative
 			cursor: default
+			+sm
+				text-align: right
 		&-text
 			position: absolute
 			top: 6%
@@ -19,14 +25,30 @@
 			z-index: 1
 			max-width: 550px
 			pointer-events: all
+			+sm
+				position: static
+				max-width: none
+				padding: 0 5px 10px
 		&-title
+			+md
+				font-size: 30px
+				line-height: 35px
+			+sm
+				font-size: 25px
+				line-height: 30px
 		&-descr
 			max-width: 390px
 			margin: 22px 0 31px
 			color: $white
+			+md
+				margin: 5px 0 10px
+			+sm
+				max-width: none
 			p
 				+f('pn-300', 18)
 				line-height: 26px
+				+md
+					font-size: 16px
 				&:not(:first-child)
 					margin-top: 8px
 		&-btn
@@ -36,24 +58,38 @@
 			padding-top: 53.4%
 			width: 65.1%
 			+cover
-			
+			+sm
+				position: relative
+				display: inline-block
+				float: none
+				padding-top: 79%
+				width: 96%
 		&-parallax
 			position: absolute
 			&_el-1
 				top: 14.5%
 				right: 38%
-				width: 126px
-				height: 135px
+				width: percentage(126 / 1125)
+				+sm
+					top: 18%
+					right: 63%
+					width: 15%
 			&_el-2
 				top: 13%
 				right: 48%
-				width: 294px
-				height: 282px
+				width: percentage(294 / 1125)
+				+sm
+					width: 31.9%
+					top: 19%
+					right: 77%
 			&_el-3
-				width: 322px
-				height: 366px
+				width: percentage(322 / 1125)
 				top: 14.2%
 				right: 0.7%
+				+sm
+					width: 38%
+					top: 15.2%
+					right: 4.7%
 		.slick-dots
 			display: flex
 			position: absolute
@@ -62,6 +98,8 @@
 			z-index: 2
 			transform: translateX(-50%)
 			pointer-events: all
+			+sm
+				bottom: 15px
 			li
 				position: relative
 				width: 14px
@@ -88,3 +126,9 @@
 		padding-top: 200px
 		height: 1140px
 		background-image: linear-gradient(to bottom, #008b9b 17%, #2aa5b1 40%, #5cbfc6 60%, #fff)
+		+lg
+			height: auto
+			padding-top: 170px
+			background: linear-gradient(to bottom, #008b9b, #5cbfc6)
+		+sm
+			padding-top: 205px

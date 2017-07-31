@@ -17,7 +17,15 @@ $screenSld.slick({
   speed: 700,
   infinite: true,
   dots: true,
-  arrows: false
+  arrows: false,
+  responsive: [{
+    breakpoint: 767,
+    settings: {
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      fade: false
+    }
+  }]
 });
 
 const $teaserSld = $('.js-teaser-slider');
@@ -56,7 +64,14 @@ $newsBlockSld.slick({
 const $ourSld = $('.js-our-slider');
 $ourSld.slick($.extend({}, sldDefaultOpt, {
   slidesToShow: 3,
-  slidesToScroll: 1
+  slidesToScroll: 1,
+  responsive: [{
+    breakpoint: 1023,
+    settings: {
+      slidesToShow: 2,
+      slidesToScroll: 2
+    }
+  }]
 }));
 
 const $certifSld = $('.js-certif-slider');

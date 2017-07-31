@@ -4,29 +4,68 @@
 		justify-content: space-between
 		flex-wrap: wrap
 		max-width: 1190px
+		+sm
+			justify-content: center
 	&__block
 		flex: 0 1 560px
 		min-width: 1px
+		+lg
+			flex: 0 1 460px
+		+md
+			flex: 0 1 360px
+		+sm
+			flex: 0 1 460px
+			&:not(:first-child)
+				margin-top: 100px
 	&__block:nth-child(2) &__title
 		margin: 0 0 25px 27px
-	&__block:nth-child(2) &__slider-btn_prev
+		+md
+			margin: 0 auto 20px
+		+sm
+			margin: 0 auto 10px
+	&__block:nth-child(2) .slider-btn_prev
 		right: 220px
-	&__block:nth-child(2) &__slider-btn_next
+		+lg
+			right: 41px
+		+md
+			right: calc(50% -  -2px)
+	&__block:nth-child(2) .slider-btn_next
 		right: 179px
+		+lg
+			right: 0
+		+md
+			right: calc(50% - 40px)
 	&__title
 		max-width: 270px
 		margin: 0 0 25px 22px
+		+md
+			text-align: center
+			margin: 0 auto 20px
+		+sm
+			margin: 0 auto
 	&__slider
 		display: none
 		background: url("../img/bg/our-block_bg.png") no-repeat 50% 50%
+		+md
+			background: 0 0
 		&.slick-initialized
 			display: block
 		.slider-btn
 			top: -65px
+			+md
+				top: 105%
 			&_prev
 				right: 206px
+				+lg
+					right: 41px
+				+md
+					right: calc(50% -  -2px)
 			&_next
 				right: 165px
+				+lg
+					right: 0
+				+md
+					right: calc(50% - 40px)
 	&__item
 		&-inner
 			display: flex
@@ -50,10 +89,16 @@
 	&__btn
 		margin: 45px auto 0
 		padding: 10px 43px
+		+md
+			margin: 85px auto 0
 	
 	&_default
 		padding: 93px 0 90px
-		
+		+md
+			padding: 70px 0 70px
+		+sm
+			padding: 50px 0
+
 /* ===================================
 	 clients
 	 =================================== */

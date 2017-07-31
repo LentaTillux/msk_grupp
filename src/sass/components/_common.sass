@@ -5,13 +5,13 @@ body
 	+f('pn-400', 16)
 	line-height: 30px
 	color: $black
-	//&.is-locked
-	//	position: fixed
-	//	top: 0
-	//	left: 0
-	//	right: 0
-	//	height: 100%
-	//	overflow: hidden
+	&.is-locked
+		position: fixed
+		top: 0
+		left: 0
+		right: 0
+		height: 100%
+		overflow: hidden
 
 *
 	-webkit-tap-highlight-color: transparent
@@ -49,9 +49,6 @@ input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button
 	-webkit-appearance: none
 	margin: 0
-
-video::-webkit-media-controls-start-playback-button
-	display: none !important
 	
 .obj-fit
 	width: 100%
