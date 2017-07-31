@@ -28,12 +28,6 @@
 	&__inner
 		text-align: center
 		+clr
-		+sm
-			display: flex
-			flex-wrap: wrap
-			margin: 0 -10px
-		+xs
-			margin: 0
 	&__item
 		float: left
 		position: relative
@@ -43,30 +37,11 @@
 		text-align: left
 		&.is-hidden
 			display: none
-		+md
-			width: 25%
-			margin-bottom: 15px
-			margin-right: 14px
-		+sm
-			flex: 1 1 auto
-			margin: 0 5px 15px
-		+xs
-			flex-basis: 100%
-			margin: 0 0 15px
 		&:nth-child(3n)
 			margin-right: 0
-			+sm
-				margin: 0 5px 15px
-			+xs
-				margin: 0 0 15px
 		&_md
 			margin-right: 30px
 			width: percentage(540 / 1110)
-			+md
-				width: 47%
-				margin-right: 15px
-			+sm
-				margin: 0 5px 15px
 		&_md &-text
 			align-items: flex-start
 			flex-wrap: wrap
@@ -75,8 +50,6 @@
 			background: rgba(#fff, .9)
 			border: 2px solid #e0e0e0
 			min-height: 0
-			+xs
-				max-width: 100%
 		&_md &-row
 			margin-top: 2px
 			align-items: center
@@ -92,14 +65,10 @@
 			width: 100%
 		&_md &-img-wrap
 			height: 241px
-			+xs
-				height: auto
 		&-img-wrap
 			height: 153px
 			overflow: hidden
 			border-radius: 3px 3px 0 0
-			+xs
-				height: auto
 		&-img
 		&-text
 			display: flex
@@ -108,10 +77,6 @@
 			border: 2px solid #e0e0e0
 			border-top: 0
 			min-height: 212px
-			+md
-				padding: 15px 12px 20px
-			+xs
-				min-height: 0
 		&-title
 			margin-bottom: 2px
 			font-size: 18px
@@ -123,8 +88,6 @@
 			opacity: .8
 			+f('pn-300', 16)
 			line-height: 28px
-			+xs
-				height: auto
 		&-btn
 			margin: 13px 0 0
 			padding: 5px 25px

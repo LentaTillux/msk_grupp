@@ -1,12 +1,15 @@
 .services-block
 	&__container
 		position: relative
-		z-index: 4
+		z-index: 5
 	&__main-title
 		text-align: center
 		margin-bottom: 27px
 	&__row
 		display: flex
+		+sm
+			flex-wrap: wrap
+			
 	&__item
 		position: relative
 		flex: 0 0 20%
@@ -14,17 +17,49 @@
 		background: $white
 		border: 1px solid #eeeeee
 		border-right: 0
+		+md
+			height: 260px
+		+sm
+			flex: 1 1 50%
+			min-width: 250px
 		&:last-child
 			border-right: 1px solid #eeeeee
 	&__item:hover &__inner
-			height: 372px
-			width: 245px
-			padding: 42px 22px 42px 30px
-			top: 50%
-			transform: translate(-10px ,-50%)
-			transition: height .3s, width .3s
-			background-color: $aqua-dark
-			box-shadow: 2px 3px 2px rgba(0, 0, 0, 0.1)
+		height: 372px
+		width: 245px
+		padding: 42px 22px 42px 30px
+		top: 50%
+		transform: translate(-10px ,-50%)
+		transition: height .3s, width .3s
+		background-color: $aqua-dark
+		z-index: 7
+		box-shadow: 2px 3px 2px rgba(0, 0, 0, 0.1)
+		+lg
+			height: 330px
+			padding: 23px 22px 42px 30px
+		+sm
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			transform: none
+			height: auto
+			width: auto
+			padding: 20px 22px 42px 30px
+	&__item:first-child:hover &__inner
+		+lg
+			transform: translate(0, -50%)
+		+sm
+			transform: none
+		
+	&__item:last-child:hover &__inner
+		+lg
+			transform: translate(0,-50%)
+			right: -1px
+			left: auto
+		+sm
+			transform: none
+		
 	&__item:hover &__title
 		text-align: left
 		color: $white
@@ -42,8 +77,12 @@
 		right: -1px
 		left: -1px
 		height: 318px
-		z-index: 2
+		z-index: 6
 		padding: 62px 30px 30px
+		+md
+			height: 260px
+			padding: 30px 5px 10px
+	
 	&__title
 		position: relative
 		display: block
@@ -52,6 +91,11 @@
 		line-height: 21px
 		color: $black
 		text-align: center
+		+md
+			font-size: 15px
+		+sm
+			margin: 0 0 10px
+			font-size: 17px
 	&__descr
 		display: block
 		visibility: hidden
@@ -66,6 +110,11 @@
 		bottom: 60px
 		font-size: 97px
 		fill: $blue-dark
+		+md
+			bottom: 40px
+			font-size: 78px
+		+sm
+			font-size: 100px
 		&.icon-services-5
 			stroke: #fff
 			stroke-width: 1px

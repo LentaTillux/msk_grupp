@@ -37,7 +37,20 @@ $newsBlockSld.slick({
   speed: 1000,
   infinite: true,
   dots: true,
-  arrows: false
+  arrows: false,
+  responsive: [{
+    breakpoint: 1023,
+    settings: {
+      slidesToShow: 2,
+      slidesToScroll: 1
+    }
+  }, {
+    breakpoint: 767,
+    settings: {
+      slidesToShow: 1,
+      slidesToScroll: 1
+    }
+  }]
 });
 
 const $ourSld = $('.js-our-slider');
@@ -46,10 +59,23 @@ $ourSld.slick($.extend({}, sldDefaultOpt, {
   slidesToScroll: 1
 }));
 
-const $awardsSld = $('.js-certif-slider');
-$awardsSld.slick($.extend({}, sldDefaultOpt, {
+const $certifSld = $('.js-certif-slider');
+$certifSld.slick($.extend({}, sldDefaultOpt, {
   slidesToShow: 6,
-  slidesToScroll: 1
+  slidesToScroll: 1,
+  responsive: [{
+    breakpoint: 1023,
+    settings: {
+      slidesToShow: 2,
+      slidesToScroll: 1
+    }
+  }, {
+    breakpoint: 767,
+    settings: {
+      slidesToShow: 1,
+      slidesToScroll: 1
+    }
+  }]
 }));
 
 const $productSld = $('.js-product-slider');

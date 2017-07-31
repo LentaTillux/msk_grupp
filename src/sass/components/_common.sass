@@ -69,6 +69,8 @@ video::-webkit-media-controls-start-playback-button
 	max-width: 1140px
 	margin: 0 auto
 	padding: 0 15px
+	+sm
+		padding: 0 10px
 
 .btn
 	display: inline-block
@@ -140,7 +142,10 @@ video::-webkit-media-controls-start-playback-button
 	line-height: 50px
 	text-transform: uppercase
 	letter-spacing: 0.02em
-	
+	+sm
+		font-size: 35px
+		line-height: 35px
+
 .title-sm
 	@extend .title-md
 	font-size: 30px

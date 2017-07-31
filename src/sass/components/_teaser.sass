@@ -5,14 +5,22 @@
 		display: none
 		&.slick-initialized
 			display: block
+		.slick-track
+			display: flex
 		&-item
 			position: relative
 			height: 450px
 			cursor: default
+			+sm
+				height: auto
 		&-text
 			position: relative
 			padding: 83px 20px 20px 93px
 			z-index: 3
+			+md
+				padding: 40px 20px 20px 40px
+			+sm
+				padding: 30px 10px 4px 15px
 		&-title
 			max-width: 370px
 		&-descr
@@ -21,8 +29,12 @@
 			+f('pn-300', 18)
 			line-height: 25px
 			color: $white
+			+md
+				font-size: 17px
+			+sm
+				font-size: 16px
 		&-img
-			height: 450px
+			height: 100%
 			position: absolute
 			top: 0
 			left: 0
@@ -55,3 +67,7 @@
 				margin-top: 3px
 				fill: $white
 				font-size: 26px
+				
+	&_default
+		position: relative
+		z-index: 4

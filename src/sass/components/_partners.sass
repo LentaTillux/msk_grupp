@@ -8,6 +8,13 @@
 		margin: 30px auto 0
 		padding: 35px 0 35px 65px
 		background: url(../img/bg/partners_bg.png) no-repeat 100% 50%
+		+md
+			padding: 35px 0
+		+sm
+			align-items: center
+			flex-direction: column
+			margin: 0 auto
+			background-position: 43% 60%
 	&__item
 		position: relative
 		display: flex
@@ -15,12 +22,18 @@
 		align-items: center
 		justify-content: center
 		flex: 1 1 auto
+		+sm
+			flex: 0 1 auto
+			background: $white
+			margin: 0 30px
+			&:not(:first-child)
+				margin-top: 30px
 		&-link
 			position: relative
-		.no-touch &:hover &-img
-			opacity: 0
-		.no-touch &:hover &-img_color
-			opacity: 1
+			.no-touch &:hover .partners-block__item-img
+				opacity: 0
+			.no-touch &:hover .partners-block__item-img_color
+				opacity: 1
 		&-img
 			transition: opacity .3s ease-in-out
 		&-img_color
@@ -34,3 +47,7 @@
 			background: no-repeat 50% 50%
 	&_default
 		padding: 110px 0 88px
+		+md
+			padding: 60px 0 70px
+		+sm
+			padding: 50px 0 20px

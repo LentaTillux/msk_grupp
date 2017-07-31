@@ -6,8 +6,13 @@
 		display: flex
 		align-items: center
 		margin-bottom: 50px
+		+sm
+			justify-content: space-between
+			margin-bottom: 30px
 		&-btn
 			margin-right: 28px
+			+sm
+				margin-right: 0
 		&-link
 			+f('pn-700', 15)
 			line-height: 18px
@@ -16,11 +21,15 @@
 			letter-spacing: 0.05em
 			border-bottom: 1px solid rgba($blue-dark, .3)
 			+tr(border-color .3s)
+			+sm
+				font-size: 14px
 			+hover
 				border-bottom-color: transparent
 	&__slider
 		padding-bottom: 80px
 		display: none
+		+sm
+			padding-bottom: 50px
 		&.slick-initialized
 			display: block
 		.slick-list
@@ -58,7 +67,9 @@
 			
 	&_default
 		padding: 103px 0
-	
+		+sm
+			padding: 50px 0
+
 /* ===================================
 	 news-article
 	 =================================== */
@@ -71,10 +82,15 @@
 		line-height: 25px
 	&__descr
 		margin: 14px 0 19px
+		height: 90px
+		+sm
+			height: auto
 	&__img-wrap
 		overflow: hidden
 		height: 210px
 		border-radius: 3px
+		+sm
+			height: auto
 	&__actions
 		display: flex
 		align-items: center

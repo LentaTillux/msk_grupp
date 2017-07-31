@@ -80,7 +80,7 @@
 			+s('glow')
 		&-count
 			position: absolute
-			right: 25px
+			right: 11%
 			top: 156px
 			height: 53px
 			padding: 0 18px
@@ -99,15 +99,31 @@
 			font-size: 20px
 			line-height: 25px
 			color: $black
+			+sm
+				font-size: 19px
 			& + &
 				margin-top: 0!important
 	&__btn
 		position: relative
 		z-index: 2
 	
-	&_default
+	&_home
 		padding: 80px 0 88px
-		
+		+sm
+			padding: 50px 0
+	&_home &__inner
+		+lg
+			flex-wrap: wrap
+			justify-content: space-around
+			margin: 46px auto 20px
+	&_home &__item
+		+lg
+		flex: 0 1 250px
+		margin: 0 0 30px
+	&_home &__btn
+		padding: 10px 16px
+		font-size: 14px
+	
 	&_short
 		padding: 80px 0 88px
 	&_short &__inner
