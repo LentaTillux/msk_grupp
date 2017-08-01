@@ -46,6 +46,17 @@
 			color: $gray
 	&__form
 		flex: 0 0 260px
+		text-align: center
+		&-field
+			&:not(:first-child)
+				margin-top: 10px
+		&-btn
+			padding: 11px 40px
+			margin-top: 30px
+	&__textarea
+		font-size: 15px
+		+placeholder
+			font-size: 15px
 	&__title
 		margin-bottom: 33px
 		text-align: left
