@@ -14,10 +14,10 @@ if contactBlock ? contactBlock : contactBlock = []
 				+e.A.actions-btn.btn._white(href='#!') Обратный звонок
 
 		if contactBlockForm
-			if contactFormSmTitle
-				+b.H3.title-sm-white= contactFormSmTitle
 			if contactFormLgTitle
 				+b.H3.title-lg= contactFormLgTitle
+			if contactFormSmTitle
+				+b.H3.title-sm-white= contactFormSmTitle
 			+e.FORM.form(action='#!')
 				+e.form-row
 					+e.form-field

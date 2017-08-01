@@ -1,0 +1,182 @@
+/* ===================================
+	 contacts
+	 =================================== */
+.contacts
+	padding: 72px 0 80px
+	&__container
+		display: flex
+		align-items: flex-start
+	&__info
+		flex: 1 1 auto
+		padding-right: 10px
+		text-align: center
+		&-btn
+			padding: 10px 37px
+	&__data
+		display: flex
+		&-item
+			flex: 1 1 33.33333%
+			padding: 0 8px
+			text-align: center
+		&-icon
+			position: relative
+			margin-bottom: 10px
+			&::after
+				display: block
+				margin: 0 auto
+				content: ''
+				+s('logo-circle_lg')
+				opacity: .3
+			svg
+				+vcenter
+				fill: #2ab1b4
+			.icon-tel
+				font-size: 28px
+			.icon-balloon
+				font-size: 30px
+			.icon-mail
+				font-size: 20px
+		&-link
+			display: block
+			font-size: 22px
+			line-height: 25px
+		
+		&-descr
+			font-size: 16px
+			color: $gray
+	&__form
+		flex: 0 0 260px
+	&__title
+		margin-bottom: 33px
+		text-align: left
+		
+	&__team
+		display: flex
+		padding: 50px 0 37px
+		.team__person
+			margin: 0
+		
+.contact-block
+	display: flex
+	align-items: center
+	text-align: center
+	+cover
+	&__container
+		z-index: 2
+	&__phone
+		margin-bottom: 10px
+		+sm
+			font-size: 32px
+	&__email
+		font-size: 35px
+		line-height: 35px
+		color: $white
+		border-bottom: 1px solid #cfebee
+		+tr(border-color .3s)
+		+sm
+			font-size: 26px
+		+hover
+			border-bottom-color: transparent
+	&__address
+		margin: 15px 0 33px
+		font-style: normal
+		font-size: 20px
+		line-height: 25px
+		color: $white
+		text-align: center
+		+sm
+			align-self: stretch
+	&__actions
+		margin: 0 -20px
+		+sm
+			display: flex
+			flex-direction: column
+		&-btn
+			margin:  0 10px
+			padding: 11px 39px
+			+sm
+				margin: 10px
+	
+	&__form
+		max-width: 795px
+		margin: 30px auto 0
+		text-align: center
+	&__form-row
+		display: flex
+		& + &
+			margin-top: 20px
+	&__form-field
+		flex: 1 1 255px
+		margin: 0 5px
+	&__form-descr
+		margin: 15px 0 7px
+		color: $white
+		font-size: 15px
+		line-height: 25px
+	&__input
+		padding: 0 23px
+		+f('pn-300', 16)
+	&__textarea
+		min-height: 100px
+		margin: 0 5px
+	&_has-address
+		padding: 80px 0 90px
+		+sm
+			padding: 60px 0
+	&_has-address &__container
+		display: flex
+		flex-direction: column
+		align-items: center
+		flex: 1 1 100%
+		max-width: 550px
+		
+	&_has-form
+		padding: 81px 0
+	&_has-form &__container
+		flex: 1 1 auto
+	&_has-form-mod
+		padding: 83px 0 81px
+	&_has-form-mod &__container
+		flex: 1 1 auto
+	&_has-form-mod .contact-block__form-row + .contact-block__form-row
+		margin-top: 16px
+		
+	&_partners
+		position: relative
+		padding: 72px 0 81px
+		background: #f2fafd
+	&_partners .title-lg
+		margin-bottom: 8px
+		color: $blue-dark
+		font-size: 40px
+		text-shadow: none
+	&_partners .title-sm-white
+		text-transform: none
+		font-size: 25px
+	&_partners &__input
+		+f('pn-400')
+	&_partners &__textarea
+		min-height: 136px
+		padding: 12px 24px
+		+placeholder
+			font-size: 16px
+	&_partners &__form
+		text-align: left
+	&_partners &__form-btn
+		margin: 0 5px
+	&_partners &__form-row + &__form-row
+		margin-top: 10px
+	&_partners &__form-descr
+		margin: 15px 5px 13px
+		text-align: left
+		color: $gray
+	&_partners .btn_file
+		padding: 10px 20px 10px 52px
+		border: 0
+		background: transparent
+		.no-touch &:hover svg
+			fill: $blue-dark
+		+hover
+			background: transparent
+			color: $blue-dark
+		

@@ -1,0 +1,94 @@
+---
+title: КОНТАКТЫ
+---
+extends layouts/_layout
+block content
+	//begin main
+	+b.main
+		//- page-info
+		-pageInfo = {title: 'КОНТАКТЫ'}
+		-breadcrumbsList = ['главная', 'КОНТАКТЫ']
+		-activeIndex = 2
+		include components/_page-info
+
+		+b.SECTION.contacts
+			+e.container.container
+				+e.info
+					+e.title.title-sm контактные данные
+					+e.data
+						+e.data-item
+							+e.data-icon
+								+icon('icon-tel')
+							+e.A.data-link(href='tel:+78463406197') +7 (846) 340-61-97
+							+e.data-descr Контактный телефон
+
+						+e.data-item
+							+e.data-icon
+								+icon('icon-balloon')
+							+e.P.data-link г. Самара,
+							+e.P.data-link ул. Чапаевская, дом №112
+							+e.data-descr Адрес
+
+						+e.data-item
+							+e.data-icon
+								+icon('icon-mail')
+							+e.A.data-link(href='mailto:sales@mskgr.ru') sales@mskgr.ru
+							+e.data-descr E-mail
+
+					+b.team.contacts__team
+						+e.person
+							+e.person-img
+								+e.IMG(src='img/content/team-man.png' alt='img')
+							+e.person-title Роман Казаченко
+							+e.person-position Технический директор
+							+e.person-contacts
+								+e.A.person-email(href='#!') roman@yandex.ru
+								+e.A.person-phone(href='#!') +7 (846) 340-61-91
+								+e.person-social
+									+e.A.person-social-link(href='#!')
+										+icon('icon-fb')
+
+						+e.person
+							+e.person-img
+								+e.IMG(src='img/content/team-woman.png' alt='img')
+							+e.person-title Екатерина Волошанова
+							+e.person-position МАРКЕТОЛОГ
+							+e.person-contacts
+								+e.A.person-email(href='#!') volonashova@yandex.ru
+								+e.A.person-phone(href='#!') +7 (846) 340-61-91
+								+e.person-social
+									+e.A.person-social-link(href='#!')
+										+icon('icon-fb')
+
+						+e.person
+							+e.person-img
+								+e.IMG(src='img/content/team-man.png' alt='img')
+							+e.person-title Иван Иванов
+							+e.person-position Технический директор
+							+e.person-contacts
+								+e.A.person-email(href='#!') roman@yandex.ru
+								+e.A.person-phone(href='#!') +7 (846) 340-61-91
+								+e.person-social
+									+e.A.person-social-link(href='#!')
+										+icon('icon-fb')
+
+					+e.A.info-btn.btn._white-bordered(href='#!') реквизиты компании
+
+				+e.form
+					+e.FORM(action='#!')
+						+e.title.title-sm напишите нам
+						+e.form-field
+							+e.INPUT.input.input._popup(type='text' placeholder='Ваше имя' name='')
+						+e.form-field
+							+e.INPUT.input.input._popup(type='text' placeholder='E-mail адрес' name='')
+						+e.form-field
+							+b.TEXTAREA.textarea._popup(placeholder='Текст вашего сообщения')
+						+e.BUTTON.form-btn.btn._aqua(type='button') оставить заявку
+
+
+
+
+		//-contact-block
+		-contactBlockClass = '_has-address'
+		-contactBlockAddress = true
+		include components/_contact-block

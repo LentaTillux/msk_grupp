@@ -28,5 +28,8 @@ PageList:
 - file: partners-page.html
   ready: 100
 
+- file: contacts-page.html
+  ready: 100
+
 - file: popups-page.html
   ready: 100

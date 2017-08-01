@@ -8,13 +8,14 @@
 		border: 1px solid #eee
 		&-btn
 			position: relative
-			padding: 20px 40px 20px 10px
+			padding: 24px 35px 24px 17px
 			+f('pn-700', 15)
 			text-transform: uppercase
 			color: $blue-dark
 			line-height: 20px
 			cursor: pointer
 			transition: background .3s
+			letter-spacing: .05em
 			&:not(:first-child)
 				border-top: 1px solid #eee
 			&-icon
@@ -47,17 +48,24 @@
 		border: 1px solid #eee
 		background-color: #fff
 		&-title
-			padding: 20px 20px
+			padding: 20px 30px
+			min-height: 92px
+			display: flex
+			align-items: center
+			justify-content: center
 			text-transform: uppercase
 			+f('pn-700', 18)
 			color: $white
+			line-height: 25px
+			letter-spacing: .03em
 			text-align: center
 			background: #2ab1b4
 		&-inner
-			padding: 20px 20px 20px 40px
+			padding: 25px 30px 5px
 		&-item
 			position: relative
 			padding-left: 30px
+			padding-bottom: 21px
 			font-size: 15px
 			&::before
 				content: ''
@@ -69,8 +77,14 @@
 				text-transform: uppercase
 				color: $blue-dark
 				+f('pn-700')
+				letter-spacing: .05em
+				line-height: 20px
 			&-descr
+				max-width: 230px
 				+f('pn-300')
+				line-height: 20px
 				color: #7a7f85
+				&_full
+					max-width: none
 		&_half
 			flex: 0 1 398px

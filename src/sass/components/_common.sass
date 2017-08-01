@@ -116,7 +116,6 @@ input[type=number]::-webkit-outer-spin-button
 			left: 26px
 			font-size: 19px
 			transition: .3s ease-in-out
-		
 		input
 			display: none
 			
@@ -166,6 +165,10 @@ input[type=number]::-webkit-outer-spin-button
 		+placeholder
 			color: $white
 			font-style: italic
+	&_gray
+		+f('pn-400')
+		+placeholder
+			font-style: normal
 	&_transp
 		background: transparent
 	&_popup
@@ -173,6 +176,7 @@ input[type=number]::-webkit-outer-spin-button
 		border-radius: 22px
 	&_radius
 		border-radius: 20px
+		
 .textarea
 	display: block
 	width: 100%
