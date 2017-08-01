@@ -3,98 +3,61 @@
   position: absolute;
   right: 15px;
   top: 3px;
-  overflow: hidden;
-  padding: 0;
-  width: 70px;
-  height: 70px;
-  font-size: 0;
-  text-indent: -9999px;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  box-shadow: none;
-  border-radius: none;
-  border: none;
-  cursor: pointer;
-  -webkit-transition: background 0.5s;
-  transition: background 0.5s;
   z-index: 300;
+  &__line {
+    width: 50px;
+    height: 5px;
+    background-color: #fff;
+    margin: 8px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
 }
 
-.nav-toggle:focus {
-  outline: none;
-}
-.nav-toggle span {
-  display: block;
-  position: absolute;
-  top: 34px;
-  left: 10px;
-  right: 10px;
-  height: 4px;
-  background: #00899a;
+.nav-toggle.is-active {
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
 }
 
-.nav-toggle span::before,
-.nav-toggle span::after {
-  position: absolute;
-  display: block;
-  left: 0;
-  width: 100%;
-  height: 4px;
-  background-color: #00899a;
-  content: "";
+.nav-toggle.is-active .nav-toggle__line:nth-child(2) {
+  -webkit-transition: none;
+  -o-transition: none;
+  transition: none;
 }
 
-.nav-toggle span::before {
-  top: -24px;
+.nav-toggle .nav-toggle__line:nth-child(2) {
+  -webkit-transition-delay: 0.3s;
+  -o-transition-delay: 0.3s;
+  transition-delay: 0.3s;
 }
 
-.nav-toggle span::after {
-  bottom: 12px;
+.nav-toggle.is-active .nav-toggle__line:nth-child(2) {
+  opacity: 0;
 }
 
-.nav-toggle span {
-  -webkit-transition: -webkit-transform 0.5s;
-  transition: transform 0.5s;
+.nav-toggle.is-active .nav-toggle__line:nth-child(1),
+.nav-toggle.is-active .nav-toggle__line:nth-child(3) {
+  width: 35px;
+  -webkit-transform-origin: right;
+  -moz-transform-origin: right;
+  -ms-transform-origin: right;
+  -o-transform-origin: right;
+  transform-origin: right;
 }
 
-.nav-toggle span::before {
-  -webkit-transform-origin: top left;
-  -ms-transform-origin: top left;
-  transform-origin: top left;
-  transition: transform 0.5s, width 0.5s, top 0.5s, background 0.3s;
+.nav-toggle.is-active .nav-toggle__line:nth-child(1) {
+  -webkit-transform: translateY(15px) rotate(45deg);
+  -ms-transform: translateY(15px) rotate(45deg);
+  -o-transform: translateY(15px) rotate(45deg);
+  transform: translateY(15px) rotate(45deg);
 }
 
-.nav-toggle span::after {
-  -webkit-transform-origin: bottom left;
-  -ms-transform-origin: bottom left;
-  transform-origin: bottom left;
-  transition: transform 0.5s, width 0.5s, bottom 0.5s, background 0.3s;
-}
-
-/* active state, i.e. menu open */
-
-.nav-toggle.active span {
-  transform: rotate(-90deg);
-  background: #fff;
-}
-
-.nav-toggle.active span::before,
-.nav-toggle.active span::after {
-  width: 50%;
-  background: #fff;
-}
-
-.nav-toggle.active span::before {
-  top: 0;
-  -webkit-transform: translateX(-4px) translateY(2px) rotate(-45deg);
-  -ms-transform: translateX(-4px) translateY(2px) rotate(-45deg);
-  transform: translateX(-4px) translateY(2px) rotate(-45deg);
-}
-
-.nav-toggle.active span::after {
-  bottom: 0;
-  -webkit-transform: translateX(-4px) translateY(-2px) rotate(45deg);
-  -ms-transform: translateX(-4px) translateY(-2px) rotate(45deg);
-  transform: translateX(-4px) translateY(-2px) rotate(45deg);
+.nav-toggle.is-active .nav-toggle__line:nth-child(3) {
+  -webkit-transform: translateY(-15px) rotate(-45deg);
+  -ms-transform: translateY(-15px) rotate(-45deg);
+  -o-transform: translateY(-15px) rotate(-45deg);
+  transform: translateY(-15px) rotate(-45deg);
 }

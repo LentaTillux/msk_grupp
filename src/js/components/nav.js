@@ -7,14 +7,14 @@ import { BODY, WINDOW } from '../dev/helpers';
 
   $navBtn.on('click', function (e) {
     const $this = $(this);
-    $this.toggleClass('active');
+    $this.toggleClass('is-active');
     $navLogo.toggleClass('active');
     BODY.toggleClass('is-locked');
     $nav.slideToggle().css('display', 'flex');
   });
 
   WINDOW.on('resize', () => {
-    $navBtn.removeClass('active');
+    $navBtn.removeClass('is-active');
     BODY.removeClass('is-locked');
     $navLogo.removeClass('active');
     $nav.removeAttr('style');
