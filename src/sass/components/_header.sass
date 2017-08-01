@@ -1,8 +1,11 @@
 .header
 	padding: 20px 0 29px
 	background: $white
+	+lg
+		padding: 20px 0
 	+sm
 		z-index: 100
+		
 	&__container
 		position: relative
 		display: flex
@@ -55,7 +58,18 @@
 			bottom: 15px
 			flex-direction: row
 	&__logo
+		position: relative
 		margin-top: 10px
+		&.active.logo_color::after
+			opacity: 1
+		&.logo_color::after
+			content: ''
+			+s('logo')
+			position: absolute
+			top: 0
+			left: 0
+			opacity: 0
+			transition: .3s
 		+sm
 			flex: 0 0 auto
 			align-self: flex-start
@@ -97,7 +111,12 @@
 			fill: $blue-dark
 		.header__block
 			border-left-color: transparentize($white, .8)
-			
+		.nav-toggle span
+			background: #fff
+			&::after, &::before
+				background: #fff
+
+
 /* nav
 	----------------------------------- */
 .nav
@@ -150,6 +169,7 @@
 				display: block
 				padding: 20px
 				font-size: 18px
+				color: $white
 			
 /* contact-info
 	----------------------------------- */
