@@ -10,7 +10,7 @@ if contactBlock ? contactBlock : contactBlock = []
 				+e.P 456455, Россия, Самара, ул. Чапаевская, дом 112А
 				+e.P пн-пт 9:00 - 18:00
 			+e.actions
-				+e.A.actions-btn.btn._white(href='#!') оставить заявку
+				+e.BUTTON.actions-btn.btn._white(type='submit') оставить заявку
 				+e.A.actions-btn.btn._white(href='#!') Обратный звонок
 
 		if contactBlockForm
@@ -30,5 +30,5 @@ if contactBlock ? contactBlock : contactBlock = []
 					+e.TEXTAREA.textarea.textarea._transp(placeholder='Ваше сообщение')
 
 				+e.P.form-descr * Оставляя свои данные вы соглашаетесь с политикой конфедециальности
-				+e.A.form-btn.btn._white(href='#!') оставить заявку
+				+e.BUTTON.form-btn.btn._white(type='submit') оставить заявку
 //end contact-block

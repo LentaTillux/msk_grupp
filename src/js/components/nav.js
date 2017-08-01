@@ -16,6 +16,7 @@ import { BODY, WINDOW } from '../dev/helpers';
   WINDOW.on('resize', () => {
     $navBtn.removeClass('active');
     BODY.removeClass('is-locked');
+    $navLogo.removeClass('active');
     $nav.removeAttr('style');
   });
 }());

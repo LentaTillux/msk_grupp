@@ -81,7 +81,7 @@ $certifSld.slick($.extend({}, sldDefaultOpt, {
   responsive: [{
     breakpoint: 1023,
     settings: {
-      slidesToShow: 2,
+      slidesToShow: 4,
       slidesToScroll: 1
     }
   }, {
@@ -106,3 +106,48 @@ $testimonialsSld.slick($.extend({}, sldDefaultOpt, {
   slidesToScroll: 1,
   speed: 800
 }));
+
+(function() {
+  const $teamSld = $('.js-team-slider');
+  const $clientsSld = $('.js-clients-slider');
+  const $partnersSld = $('.js-partners-slider');
+
+  function initSlider(slider) {
+    initSlickSlider(slider);
+    toggleSlider(1023, slider);
+    $(window).resize(() => {
+      toggleSlider(1023, slider);
+    });
+
+    function toggleSlider(breakpoint, slider) {
+      if ($(window).width() < breakpoint) {
+        if (!slider.hasClass('slick-initialized')) {
+          initSlickSlider(slider);
+        }
+      } else {
+        slider.slick('unslick');
+      }
+    }
+
+    function initSlickSlider(slider) {
+      slider.slick({
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        prevArrow: '<button type="button" class="slider-btn slider-btn_prev"><svg class="slider-btn__icon icon-arr"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-arr"></use></svg></button>',
+        nextArrow: '<button type="button" class="slider-btn slider-btn_next"><svg class="slider-btn__icon icon-arr"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-arr"></use></svg></button>',
+        responsive: [{
+          breakpoint: 767,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }]
+      });
+    }
+  }
+
+  initSlider($teamSld);
+  initSlider($clientsSld);
+  initSlider($partnersSld);
+})();

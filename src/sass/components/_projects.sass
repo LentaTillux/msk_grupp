@@ -1,11 +1,18 @@
 .projects
 	padding: 80px 0 80px
+	+sm
+		padding: 40px 0
 	&__container
 		display: flex
 		align-items: flex-start
+		+md
+			flex-wrap: wrap
 	&__nav
 		flex: 0 0 256px
 		border: 1px solid #eee
+		+md
+			flex: 1 1 100%
+			margin-bottom: 30px
 		&-btn
 			position: relative
 			padding: 24px 35px 24px 17px
@@ -34,12 +41,19 @@
 	&__content
 		flex: 1 1 825px
 		margin-left: 30px
+		+lg
+			margin-left: 15px
+		+md
+			margin-left: 0
+			flex: 1 1 auto
 		&-item
 			height: 0
 			overflow: hidden
 		&-inner
 			display: flex
 			justify-content: space-between
+			+sm
+				flex-wrap: wrap
 			&:not(:first-child)
 				margin-top: 30px
 		
@@ -60,8 +74,14 @@
 			letter-spacing: .03em
 			text-align: center
 			background: #2ab1b4
+			+lg
+				padding: 20px
 		&-inner
 			padding: 25px 30px 5px
+			+lg
+				padding: 25px 18px 5px
+			+sm
+				padding: 20px 10px 5px
 		&-item
 			position: relative
 			padding-left: 30px
@@ -88,3 +108,7 @@
 					max-width: none
 		&_half
 			flex: 0 1 398px
+			+lg
+				flex: 0 1 355px
+			+sm
+				flex: 1 1 auto

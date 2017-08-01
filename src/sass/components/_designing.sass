@@ -2,11 +2,20 @@
 	padding: 69px 0
 	background-repeat: no-repeat
 	background-position: top 10px right
+	+r(1599)
+		background-size: 61%
+	+sm
+		padding: 90px 0 60px
+		background-size: 320px
 	&__top-info
 		max-width: 400px
 		margin-bottom: 47px
+		+sm
+			margin-bottom: 25px
 	&__title
 		margin-bottom: 18px
+		+sm
+			font-size: 31px
 	&__text
 		+f('pn-300', 17)
 		line-height: 32px

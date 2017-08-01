@@ -30,18 +30,6 @@ const detectMob = detectDevice(767);
   const $glowParallax = $('.js-glow-parallax');
   const $screenParallax = $('.js-screen-parallax');
 
-  if ($glowParallax.length) {
-    const whyUsParallax = $glowParallax.get(0);
-    const glowParallax = new Parallax(whyUsParallax);
-  }
-
-  if ($screenParallax.length) {
-    const scrParallax = $screenParallax.get(0);
-    const screenParallax = new Parallax(scrParallax);
-  }
-
-  // if ($('.js-glow-parallax').length) {
-  // const glowParallax = $('.js-glow-parallax').get(0);
-  // const glowParallaxLax = new Parallax(glowParallax);
-  // }
+  $glowParallax.each(function() { new Parallax($(this).get(0)); });
+  $screenParallax.each(function() { new Parallax($(this).get(0)); });
 })();

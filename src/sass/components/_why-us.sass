@@ -131,9 +131,16 @@
 	&_short &__inner
 		justify-content: center
 		margin: 46px -20px 0
+		+md
+			flex-wrap: wrap
 	&_short &__item
 		flex: 1 1 33.33333%
 		margin: 0 20px
+		+md
+			min-width: 320px
+			flex: 0 0 33.33333%
+			&:not(:last-child)
+				margin: 0 0 30px
 		&-descr
 			min-width: 330px
 		&-count

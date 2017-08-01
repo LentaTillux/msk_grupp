@@ -1,5 +1,9 @@
 .vacancy
-	padding: 69px 0 78px
+	padding: 70px 0
+	+md
+		padding: 50px 0
+	+sm
+		padding: 50px 0 10px
 	&__item
 	&__title
 		margin-bottom: 6px
@@ -8,12 +12,32 @@
 		font-size: 22px
 		line-height: 25px
 		color: #00899a
+		+sm
+			font-size: 19px
 	&__details
 		padding-top: 45px
 		display: flex
+		+md
+			flex-wrap: wrap
+		+sm
+			padding-top: 20px
 	&__block
+		+md
+			flex: 1 1 50%
+			&:nth-child(3)
+				padding: 20px 0 0
+				flex: 1 1 100%
+				text-align: right
+		+sm
+			flex: 1 1 100%
+			&:not(:first-child)
+				margin-top: 20px
 		&:not(:last-child)
 			padding-right: 52px
+			+lg
+				padding-right: 25px
+			+sm
+				padding-right: 0
 		&-title
 			margin-bottom: 6px
 			font-size: 22px
@@ -25,13 +49,17 @@
 			li
 				position: relative
 				padding-left: 20px
+				+sm
+					line-height: 25px
 				.icon-arr
 					position: absolute
-					top: calc(50% - 6px)
+					top: 12px
 					left: 2px
 					fill: #2ab1b4
 					font-size: 12px
 					+gpu
+					+sm
+						top: 7px
 		&-salary
 			margin-top: 18px
 			font-size: 20px
@@ -41,6 +69,8 @@
 				+f('pn-900')
 				text-transform: uppercase
 				color: #78c698
+				+md
+					display: inline-block
 				span
 					margin: 0 13px
 					font-size: 40px
@@ -52,7 +82,11 @@
 		display: flex
 		justify-content: space-between
 		margin: 30px 0 0
+		+sm
+			flex-direction: column
 		&-submit
+			+sm
+				margin-bottom: 10px
 		&-toggling
 			position: relative
 			min-width: 184px
@@ -75,23 +109,44 @@
 	 vac-links
 	 =================================== */
 .vac-links
-	padding: 90px 0
+	padding: 30px 0 90px
+	+sm
+		padding: 30px 0 50px
 	&__container
 	&__item
 		display: flex
 		align-items: center
 		justify-content: space-between
+		+sm
+			flex-direction: column
 		&:not(:first-child)
 			margin-top: 65px
+			+sm
+				margin-top: 25px
 		&-col
 			flex: 1 1 50%
 			&:nth-child(2)
 				padding-left: 15px
+			+sm
+				flex: 1 1 100%
+				width: 100%
+				text-align: center
 	&__link
 		font-size: 35px
 		border-bottom: 1px solid currentColor
 		transition: .3s
+		+md
+			font-size: 24px
+		+sm
+			font-size: 19px
 		.no-touch &:hover
 			border-bottom-color: transparent
 	&__descr
 		font-size: 22px
+		+lg
+			text-align: right
+		+md
+			font-size: 20px
+		+sm
+			text-align: center
+			font-size: 17px

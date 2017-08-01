@@ -12,6 +12,8 @@
 		display: flex
 		justify-content: center
 		margin: 35px 0 0
+		+sm
+			flex-wrap: wrap
 		&::after
 			content: ''
 			position: absolute
@@ -21,11 +23,18 @@
 			z-index: 2
 			opacity: .5
 			+s('arrows_r')
+			+md
+				transform: scale3d(0.7, .7, .7) translate3d(0, 0, 0)
+			+sm
+				display: none
 	&__title
 		text-align: center
 	&__item
 		text-align: center
 		flex: 1 1 33.33333%
+		+sm
+			min-width: 246px
+			margin: 0 15px 25px
 		
 		&:nth-child(1) &-glow:nth-child(2)
 			top: 34%

@@ -1,5 +1,7 @@
 .team
 	padding: 70px 0 40px
+	+md
+		padding: 60px 0 80px
 	&__title
 		text-align: center
 	&__sub-title
@@ -11,14 +13,25 @@
 		+f('pn-700')
 		text-align: center
 		letter-spacing: .02em
+		+sm
+			margin: 20px auto 0
+			font-size: 24px
+			line-height: 28px
 	&__inner
 		display: flex
 		align-items: flex-start
 		margin: 45px 0 0
+		+md
+			flex-wrap: wrap
+			margin: 30px 0 0
 	&__lead
 		position: relative
 		flex: 0 0 260px
 		margin: 40px 0 0
+		+md
+			flex: 1 1 auto
+			margin: 0 0 40px
+			text-align: center
 		.icon-quotes
 			position: absolute
 			right: 6px
@@ -26,6 +39,8 @@
 			fill: #2ab1b4
 			opacity: .5
 			font-size: 24px
+			+md
+				display: none
 		&-text
 			line-height: 25px
 			font-size: 15px
@@ -33,11 +48,22 @@
 				margin-top: 3px
 	&__lead &__person-title
 		margin: 15px 0 -4px
+		+lg
+			font-size: 21px
 	&__squad
 		display: flex
 		flex-wrap: wrap
 		flex: 1 1 auto
 		background: url("../img/bg/team_bg.png") no-repeat 50% 50%
+		+md
+			min-width: 1px
+			background: 0 0
+		.slider-btn
+			top: 100%
+			&_prev
+				left: calc(50% - 45px)
+			&_next
+				right: calc(50% - 45px)
 	&__person
 		flex: 1 1 33.33333%
 		margin: 0 0 37px
@@ -48,10 +74,15 @@
 		line-height: 1
 		&-img
 			text-align: center
+			min-height: 183px
+			img
+				margin: 0 auto
 		&-title
 			margin: 5px 0 8px
 			font-size: 22px
 			color: $black
+			+lg
+				font-size: 19px
 		&-position
 			+f('pn-600', 11)
 			color: $aqua-dark
@@ -109,10 +140,18 @@
 			svg
 				+vcenter
 				
+	&_partners
+		+sm
+			padding: 50px 0 80px
 	&_partners &__person
 		flex: 1 1 25%
+	&_partners &__title
+		+sm
+			font-size: 30px
 	&_partners &__inner
 		margin: 37px 0 0
 	&_partners &__squad
 		background-image: url("../img/bg/team_bg-2.png")
+		+md
+			background: 0 0
 	

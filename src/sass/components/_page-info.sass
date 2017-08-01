@@ -3,7 +3,7 @@
 	min-height: 310px
 	+cover
 	+md
-		min-height: 240px
+		min-height: 250px
 	&__container
 		display: flex
 		flex-wrap: wrap
@@ -14,8 +14,12 @@
 		flex: 1 1 100%
 		margin-top: -60px
 		text-align: center
+		+sm
+			margin-top: -40px
 		&_has-sub-title
 			margin-top: -30px
+			+sm
+				margin-top: -10px
 	&__text_has-sub-title-big &__sub-title
 		max-width: none
 		font-size: 30px
@@ -24,14 +28,23 @@
 		margin: 0 auto
 		&_sm
 			max-width: 240px
+		+sm
+			font-size: 32px
+			line-height: 32px
 	&__sub-title
 		max-width: 620px
 		margin: 20px auto 0
 		font-size: 20px
 		line-height: 30px
+		+sm
+			margin: 5px auto 0
+			font-size: 17px
+			line-height: 25px
 	&__breadcrumbs
 		flex: 1 1 100%
 		margin: 39px 0 0
+		+sm
+			margin: 25px 0 0
 
 /* breadcrumbs
 	----------------------------------- */

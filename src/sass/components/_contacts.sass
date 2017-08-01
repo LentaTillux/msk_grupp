@@ -3,21 +3,34 @@
 	 =================================== */
 .contacts
 	padding: 72px 0 80px
+	+sm
+		padding: 50px 0
 	&__container
 		display: flex
 		align-items: flex-start
+		+md
+			flex-wrap: wrap
+			justify-content: center
 	&__info
 		flex: 1 1 auto
 		padding-right: 10px
 		text-align: center
+		+md
+			padding-right: 0
 		&-btn
 			padding: 10px 37px
 	&__data
 		display: flex
+		+md
+			flex-wrap: wrap
 		&-item
 			flex: 1 1 33.33333%
 			padding: 0 8px
 			text-align: center
+			min-width: 246px
+			+md
+				margin-bottom: 20px
+			
 		&-icon
 			position: relative
 			margin-bottom: 10px
@@ -49,6 +62,9 @@
 	&__form
 		flex: 0 0 260px
 		text-align: center
+		+md
+			flex: 0 1 460px
+			padding-top: 50px
 		&-field
 			&:not(:first-child)
 				margin-top: 10px
@@ -62,12 +78,22 @@
 	&__title
 		margin-bottom: 33px
 		text-align: left
+		+md
+			text-align: center
 		
 	&__team
 		display: flex
 		padding: 50px 0 37px
+		+md
+			flex-wrap: wrap
+			padding: 20px 0 37px
 		.team__person
+			min-width: 246px
 			margin: 0
+			+md
+				&:not(:last-child)
+					margin-bottom: 30px
+				
 		.team__person-title
 			font-size: 20px
 		
@@ -118,11 +144,18 @@
 		text-align: center
 	&__form-row
 		display: flex
+		+sm
+			flex-wrap: wrap
 		& + &
 			margin-top: 20px
 	&__form-field
 		flex: 1 1 255px
 		margin: 0 5px
+		+sm
+			flex: 1 1 100%
+			&:not(:first-child)
+				margin-top: 15px
+	
 	&__form-descr
 		margin: 15px 0 7px
 		color: $white
@@ -147,6 +180,11 @@
 		
 	&_has-form
 		padding: 81px 0
+		+sm
+			padding: 40px 0
+	&_has-form .title-sm-white
+		+sm
+			font-size: 23px
 	&_has-form &__container
 		flex: 1 1 auto
 	&_has-form-mod
@@ -160,6 +198,11 @@
 		position: relative
 		padding: 72px 0 81px
 		background: #f2fafd
+		+sm
+			padding: 50px 0 40px
+	&_partners .contact-block__form
+		+sm
+			text-align: center
 	&_partners .title-lg
 		margin-bottom: 8px
 		color: $blue-dark
@@ -168,6 +211,9 @@
 	&_partners .title-sm-white
 		text-transform: none
 		font-size: 25px
+		+sm
+			font-size: 22px
+			line-height: 24px
 	&_partners &__input
 		+f('pn-400')
 	&_partners &__textarea
@@ -185,6 +231,8 @@
 		margin: 15px 5px 13px
 		text-align: left
 		color: $gray
+		+sm
+			text-align: center
 	&_partners .btn_file
 		padding: 10px 20px 10px 52px
 		border: 0

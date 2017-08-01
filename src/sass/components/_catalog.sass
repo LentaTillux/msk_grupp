@@ -1,15 +1,28 @@
 .catalog
 	padding: 78px 0
+	+md
+		padding: 50px 0
 	&__container
 		display: flex
 		align-items: flex-start
+		+md
+			flex-wrap: wrap
 	&__title
 		margin-bottom: 27px
+		+md
+			margin-bottom: 10px
 	&__accordion-menu
 		flex: 0 0 257px
+		+md
+			flex: 1 1 auto
+			margin-bottom: 30px
 	&__product
 		flex: 1 1 auto
 		margin-left: 27px
+		+lg
+			margin-left: 15px
+		+md
+			margin-left: 0
 	&__actions
 		display: flex
 		margin-bottom: 16px
@@ -109,6 +122,8 @@
 			border-bottom: 1px solid transparentize(#585858, .6)
 			transition: .15s
 			color: #585858
+			+md
+				font-size: 16px
 			+hover
 				border-bottom-color: transparent
 				
@@ -119,15 +134,26 @@
 	&__title
 		padding: 3px 0 0
 		line-height: 28px
+		+sm
+			font-size: 26px
+			line-height: 24px
 	&__descr
 		font-size: 17px
 		line-height: 32px
 		color: $blue-dark
+		+md
+			line-height: 20px
+		+sm
+			font-size: 16px
 	&__content
 		height: 0
 		overflow: hidden
 		&-in
 			padding: 22px 0 38px 39px
+			+lg
+				padding: 22px 0 38px 15px
+			+sm
+				padding: 20px 10px
 		&-overview
 			position: relative
 			display: flex
@@ -135,6 +161,8 @@
 			min-height: 360px
 			margin-bottom: 15px
 			background: $white
+			+sm
+				flex-wrap: wrap
 		&-title
 			margin-bottom: 9px
 			font-size: 22px
@@ -153,17 +181,25 @@
 		align-self: stretch
 		background: $white
 		z-index: 3
+		+sm
+			flex: 1 1 auto
 		&_full
 			margin-top: 30px
 			flex: 1 1 100%
 	&__look
-		position: absolute
+		position: absolute!important
 		top: 0
 		right: 0
 		z-index: 2
 		max-width: 352px
 		display: none
 		padding-top: 4px
+		+lg
+			max-width: 300px
+		+sm
+			position: static!important
+			margin: 0 auto
+			max-width: 280px
 		&.slick-initialized
 			display: block
 		&-item
@@ -178,7 +214,7 @@
 				top: 25%
 				left: 72%
 			&:nth-of-type(3)
-				top: 83%
+				top: 80%
 				left: 50%
 		&-parallax
 			+s('glow')
@@ -193,8 +229,12 @@
 				background: transparent
 			&_prev
 				left: 67px
+				+lg
+					left: 51px
 			&_next
 				right: 45px
+				+lg
+					right: 34px
 			&__icon
 				fill: #2ab1b4
 				font-size: 16px
@@ -218,6 +258,10 @@
 			border-bottom: 1px solid transparent
 			cursor: pointer
 			transition: border-color .5s
+			+md
+				padding: 10px 5px 10px 40px
+			+sm
+				padding: 10px
 			svg
 				font-size: 32px
 				fill: #2ab1b4
@@ -229,6 +273,8 @@
 				margin-left: 39px
 				padding: 13px 0 10px 17px
 				border-left: 1px solid #f1f1f1
+				+sm
+					margin-left: 10px
 			&-icons
 				flex: 0 0 32px
 				line-height: 0

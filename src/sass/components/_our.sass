@@ -104,6 +104,8 @@
 	 =================================== */
 .clients
 	padding: 73px 0 77px
+	+md
+		padding: 60px 0
 	&__container
 		text-align: center
 	&__block
@@ -113,6 +115,16 @@
 		margin: 20px 0 0
 		padding: 10px 0
 		background: url("../img/bg/clients_bg.png") no-repeat 50% 50%
+		+lg
+			background-size: 100%
+		+md
+			padding: 0 20px
+			background: 0 0
+		.slider-btn
+			&_prev
+				left: 0
+			&_next
+				right: 0
 	&__item
 		display: flex
 		flex-direction: column
@@ -121,11 +133,17 @@
 		align-items: center
 		flex: 1 1 (100%/6)
 		height: 80px
+		+md
+			min-width: 185px
+			+vertical
 		&-link
 			position: relative
 			display: flex
 			justify-content: center
 			flex: 0 1 auto
+			+md
+				display: inline-block
+				vertical-align: middle
 			.no-touch &:hover .clients__item-img
 				opacity: 0
 			.no-touch &:hover .clients__item-img_hidden

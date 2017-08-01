@@ -14,6 +14,8 @@
 		max-width: 1060px
 		margin: 27px auto 0
 		padding: 0 60px
+		+sm
+			padding: 0 0 20px
 		&.slick-initialized
 			display: block
 		&-item
@@ -22,10 +24,14 @@
 				align-items: center
 				max-width: 710px
 				margin: 0 auto
+				+sm
+					flex-wrap: wrap
 		&-img
 			position: relative
 			flex: 1 0 240px
 			height: 290px
+			+sm
+				height: auto
 		&-text
 			position: relative
 			flex: 1 1 auto
@@ -46,6 +52,10 @@
 			font-size: 0
 			line-height: 1
 			text-transform: uppercase
+			+lg
+				left: -31%
+			+md
+				left: 0
 			&-text
 				display: inline-block
 				background: transparentize(#78c698, .1)
@@ -75,7 +85,13 @@
 				right: 0
 		.slider-btn
 			top: calc(46% - 20px)
+			+sm
+				top: 100%
 		.slider-btn_prev
 			left: 0
+			+sm
+				left: calc(50% - 45px)
 		.slider-btn_next
 			right: 0
+			+sm
+				right: calc(50% - 45px)

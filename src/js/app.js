@@ -7,3 +7,4 @@ import './components/blockToggling';
 import './components/popups';
 import './components/nav';
 import './components/particles-canvas';
+import './components/datepicker';

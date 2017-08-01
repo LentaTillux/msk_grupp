@@ -94,6 +94,8 @@
 	&__actions
 		display: flex
 		align-items: center
+		+md
+			justify-content: center
 		&-btn
 			margin-right: 9px
 			padding: 6px 25px
@@ -112,6 +114,8 @@
 	 =================================== */
 .news
 	padding: 80px 0
+	+lg
+		padding: 40px 0
 	&__search
 		&-field
 			position: relative
@@ -139,12 +143,30 @@
 		margin: 0 -15px
 		padding: 32px 0 40px
 		border-bottom: 1px solid #eee
+		+lg
+			padding: 20px 0 40px
+		+sm
+			margin: 0
 		+clr
 		&.is-hidden
 			display: none
 	&__article
 		float: left
-		width: percentage(350 / 1140)
+		width: calc(33.33333% - 30px)
 		margin: 0 15px
+		+md
+			width: calc(50% - 30px)
+			margin-bottom: 40px
+			text-align: center
+			&:last-child
+				float: none
+				margin: 0 auto
+				clear: both
+		+sm
+			float: none
+			width: 100%
+			margin: 0 0 30px
 	&__more-btn
 		margin: 40px 0 0
+		+sm
+			margin: 20px 0 0
