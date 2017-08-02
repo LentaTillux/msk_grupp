@@ -30,6 +30,12 @@ const detectMob = detectDevice(767);
   const $glowParallax = $('.js-glow-parallax');
   const $screenParallax = $('.js-screen-parallax');
 
-  $glowParallax.each(function() { new Parallax($(this).get(0)); });
-  $screenParallax.each(function() { new Parallax($(this).get(0)); });
+  if (!detectMob) {
+    $glowParallax.each(function () {
+      new Parallax($(this).get(0));
+    });
+    $screenParallax.each(function () {
+      new Parallax($(this).get(0));
+    });
+  }
 })();

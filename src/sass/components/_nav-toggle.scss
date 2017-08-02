@@ -9,7 +9,7 @@
 .line {
   width: 48px;
   height: 4px;
-  background-color: #fff;
+  background-color: $aqua-dark;
   margin: 8px auto;
   -webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
@@ -20,9 +20,9 @@
   -webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  -webkit-transition-delay: 0.6s;
-  -o-transition-delay: 0.6s;
-  transition-delay: 0.6s;
+  -webkit-transition-delay: 0.5s;
+  -o-transition-delay: 0.5s;
+  transition-delay: 0.5s;
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   -o-transform: rotate(45deg);
@@ -30,9 +30,12 @@
 }
 
 .nav-toggle.is-active .line:nth-child(2){
-  width: 0px;
+  width: 0;
 }
 
+.nav-toggle.is-active .line {
+  background-color: #fff;
+}
 .nav-toggle.is-active .line:nth-child(1),
 .nav-toggle.is-active .line:nth-child(3){
   -webkit-transition-delay: 0.3s;
