@@ -2,8 +2,9 @@ import svg4everybody from 'svg4everybody';
 import objectFitImages from 'object-fit-images';
 import dotdotdot from 'dotdotdot';
 import selectric from 'selectric';
-import flatpickr from 'flatpickr';
 import './lib/fancybox.min';
+const Flatpickr = require('flatpickr');
+const Russian = require('flatpickr/dist/l10n/ru.js').ru;
 
 // SVG for all
 svg4everybody();
@@ -24,5 +25,7 @@ zoomImg.fancybox();
 const $select = $('.js-select');
 $select.selectric();
 
-// date picker
-flatpickr('.js-date', {});
+const dateInput = '.js-date';
+new Flatpickr(dateInput, {
+  locale: Russian
+});
