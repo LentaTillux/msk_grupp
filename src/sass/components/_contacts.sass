@@ -33,15 +33,19 @@
 			
 		&-icon
 			position: relative
+			display: flex
+			justify-content: center
+			align-items: center
 			margin-bottom: 10px
+			height: 68px
 			&::after
+				+vcenter
 				display: block
 				margin: 0 auto
 				content: ''
 				+s('logo-circle_lg')
 				opacity: .3
 			svg
-				+vcenter
 				fill: #2ab1b4
 			.icon-tel
 				font-size: 28px

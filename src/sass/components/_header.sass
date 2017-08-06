@@ -186,6 +186,9 @@
 		+md
 			flex: 1 1 60%
 			padding-right: 10px
+		> svg
+			+sm
+				width: 21px!important
 		
 		&:first-child
 			margin-right: 10px
@@ -194,7 +197,7 @@
 		&:not(:first-child)
 			margin-left: 43px
 			+lg
-				margin-left: 15px
+				margin-left: 14px
 			+md
 				margin-left: 0
 		&:nth-child(2n)
@@ -206,9 +209,13 @@
 			fill: $aqua
 			font-size: 20px
 			&.icon-balloon
+				width: 14px
+				height: 21px
 				font-size: 21px
 			&.icon-mail
-				font-size: 16px
+					font-size: 16px
+			&.icon-time
+				width: 21px
 		&-text
 			display: inline-block
 			vertical-align: middle
@@ -227,6 +234,10 @@
 		text-align: center
 		line-height: 32px
 		transition: background .3s
+		+sm
+			height: 35px
+			width: 35px
+			line-height: 40px
 		&:not(:first-child)
 			margin-left: 5px
 			+md
@@ -244,6 +255,10 @@
 			transition:  fill .3s
 			&.icon-search
 				font-size: 12px
+				+sm
+					font-size: 15px
 			&.icon-mail
 				position: relative
 				font-size: 11px
+				+sm
+					font-size: 14px

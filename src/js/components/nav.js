@@ -10,7 +10,7 @@ import { BODY, WINDOW } from '../dev/helpers';
     $this.toggleClass('is-active');
     $navLogo.toggleClass('active');
     BODY.toggleClass('is-locked');
-    $nav.slideToggle().css('display', 'flex');
+    $nav.fadeToggle(150).css('display', 'flex');
   });
 
   WINDOW.on('resize', () => {

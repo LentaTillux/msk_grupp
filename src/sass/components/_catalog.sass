@@ -58,12 +58,15 @@
 					fill: $white
 			svg
 				position: absolute
-				top: calc(50% - 4px)
-				left: 10px
+				left: 12px
+				top: 50%
+				width: 7px
+				height: 9px
+				margin-top: -4px
 				fill: $blue-dark
-				font-size: 9px
+				font-size: 11px
 				transition: .3s
-				transform: scaleX(-1) translate3d(0, 0, 0)
+				
 /* accordion-menu
 	----------------------------------- */
 .accordion-menu
@@ -77,7 +80,7 @@
 			background: #f2fafd
 	&__item.is-active .icon-minus
 		height: 16px
-		width: 16px
+		width: 17px
 	&__item.is-active .icon-plus
 		height: 0
 		width: 0
@@ -98,8 +101,12 @@
 			flex: 0 0 16px
 			line-height: 0
 		svg
+			display: inline-block
+			vertical-align: top
 			font-size: 16px
 			fill: #2ab1b4
+		.icon-plus
+			width: 17px
 		.icon-minus
 			height: 0
 			width: 0
@@ -246,7 +253,7 @@
 			border-bottom-color: #eee
 		&.is-active .icon-minus
 			height: 32px
-			width: 32px
+			width: 33px
 		&.is-active .icon-plus
 			height: 0
 			width: 0
@@ -263,14 +270,19 @@
 			+sm
 				padding: 10px
 			svg
+				display: inline-block
+				vertical-align: top
 				font-size: 32px
 				fill: #2ab1b4
 				transition: opacity .5s
+			.icon-plus
+				width: 33px
+				height: 32px
 			.icon-minus
 				height: 0
 				width: 0
 			&-in
-				margin-left: 39px
+				margin-left: 37px
 				padding: 13px 0 10px 17px
 				border-left: 1px solid #f1f1f1
 				+sm
