@@ -76,9 +76,11 @@
 					+b.INPUT.input._popup._radius(type='text' placeholder='Фамилия, Имя, Отчество' required name='')
 					+e.P.form-example Например: Иванов Иван Иванович
 			+e.form-row
-				+e.form-field
-					+b.INPUT.input._popup#js-date(type='text' placeholder='Дата рождения' required name='')
-					+e.P.form-example В формате: ДД.ММ.ГГГГ
+				+e.form-field._date
+					+icon('icon-date')
+					+b.INPUT.input._popup.js-date(type='text' placeholder='Дата рождения' required name='')
+					+e.P.form-example._hidden-mob В формате: ДД.ММ.ГГГГ
+					+e.P.form-example._visible-mob Дата рождения
 				+e.form-field
 					+b.INPUT.input._popup(type='text' placeholder='E-mail*' required name='')
 					+e.P.form-example Для получения ответа

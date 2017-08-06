@@ -85,6 +85,7 @@
 		transform: translate3d(0, -50px, 0)
 		will-change: transform, opacity
 		+sm
+			margin: 15px 0
 			padding: 15px
 	
 	&__top
@@ -132,9 +133,8 @@
 		margin-bottom: 8px
 		&-link
 			color: #2ab1b4
+			display: inline-block
 			text-decoration: underline
-			+sm
-				display: inline-block
 	&__descr
 		font-size: 20px
 		color: $blue-dark
@@ -168,6 +168,21 @@
 				margin: 0
 				&:not(:first-child)
 					margin-top: 10px
+			input
+				+sm
+					padding: 0 20px
+			&_date
+				position: relative
+				font-size: 16px
+				input
+					padding: 0 40px 0 30px
+				.icon-date
+					position: absolute
+					top: 14px
+					right: 20px
+					pointer-events: none
+					+sm
+						display: none
 			&_full
 				flex: 1 1 100%
 		&-descr
@@ -183,6 +198,12 @@
 			+f('pn-300', 13)
 			color: #9a9a9a
 			text-align: left
+			&_hidden-mob
+				+sm
+					display: none
+			&_visible-mob
+				+sm
+					display: block
 		&-actions
 			margin-top: 10px
 			padding-top: 10px
