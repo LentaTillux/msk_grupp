@@ -29,3 +29,20 @@ const dateInput = '.js-date';
 new Flatpickr(dateInput, {
   locale: Russian
 });
+
+$(function () {
+  var location = window.location.href;
+  var cur_url = '/' + location.split('/').pop();
+
+  $('.nav__list li').each(function () {
+    var link = $(this).find('a').attr('href');
+
+    if (cur_url == link)
+    {
+      $(this).addClass('is-active');
+    }
+  });
+});
+$('.projects__nav-btn:first-child').addClass('is-active');
+$('.projects__content-item:first-child').addClass('is-active');
+$('.projects__content-item:first-child').css({ height: 'auto', transform: 'matrix(1, 0, 0, 1, 0, 0)'});

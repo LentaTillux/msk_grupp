@@ -29,6 +29,9 @@ function createConfig(env) {
         devtool: isProduction ?
             '#source-map' :
             '#cheap-module-eval-source-map',
+          externals: {
+            'jquery': "jQuery"
+          },
         plugins: [
             // new webpack.optimize.CommonsChunkPlugin({
             //     name: 'vendor',
@@ -40,11 +43,11 @@ function createConfig(env) {
             //     printWidth: 80,
             //     tabWidth: 4
             // }),
-            new webpack.ProvidePlugin({
-                $: "jquery",
-                jQuery: "jquery",
-                'window.jQuery': "jquery"
-            }),
+            // new webpack.ProvidePlugin({
+            //     $: "jquery",
+            //     jQuery: "jquery",
+            //     'window.jQuery': "jquery"
+            // }),
             new webpack.NoEmitOnErrorsPlugin(),
 
             new BundleAnalyzerPlugin({

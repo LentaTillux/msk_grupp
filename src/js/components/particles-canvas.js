@@ -8,6 +8,7 @@ const detectMob = detectDevice(767);
 (function () {
   const aquaParticles = $('#js-aqua-particles').length;
   const blueParticles = $('#js-blue-particles').length;
+  const whiteParticles = $('#js-white-particles').length;
   const grayParticles = $('#js-gray-particles').length;
   const grayParticlesSecond = $('#js-gray-particles-2').length;
 
@@ -19,6 +20,12 @@ const detectMob = detectDevice(767);
   }
   if (grayParticles) {
     particlesJS.load('js-gray-particles', 'assets/gray-particles.json');
+  }
+  if (whiteParticles) {
+    particlesJS.load('js-white-particles', 'assets/white-particles.json');
+  }
+  if (grayParticlesSecond) {
+    particlesJS.load('js-gray-particles-2', 'assets/gray-particles.json');
   }
   if (grayParticlesSecond) {
     particlesJS.load('js-gray-particles-2', 'assets/gray-particles.json');
