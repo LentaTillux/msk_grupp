@@ -70,6 +70,8 @@
 				top: 14.5%
 				right: 38%
 				width: percentage(126 / 1125)
+				height: 22.5%
+				animation: flyMove 4s infinite
 				+sm
 					top: 18%
 					right: 63%
@@ -77,6 +79,7 @@
 			&_el-2
 				top: 13%
 				right: 48%
+				height: 47%
 				width: percentage(294 / 1125)
 				+sm
 					width: 31.9%
@@ -84,6 +87,7 @@
 					right: 77%
 			&_el-3
 				width: percentage(322 / 1125)
+				height: 61%
 				top: 14.2%
 				right: 0.7%
 				+sm
@@ -121,6 +125,8 @@
 				height: 10px
 				background: #b7e4e7
 				border-radius: 50%
+		.slick-slide img
+			opacity: .7
 			
 	&_home
 		padding-top: 200px
@@ -132,3 +138,29 @@
 			background: linear-gradient(to bottom, #008b9b, #5cbfc6)
 		+sm
 			padding-top: 205px
+			
+@keyframes flyMove
+	0%
+		transform: translate(0, 0)
+	10%
+		transform: translate(0, 20px)
+	20%
+		transform: translate(0, -20px)
+	30%
+		transform: translate(20px, 0)
+	40%
+		transform: translate(-20px, 0)
+	50%
+		transform: translate(-15px, -20px)
+	60%
+		transform: translate(-20px, 0)
+	60%
+		transform: translate(20px, 0)
+	70%
+		transform: translate(-10px, 20px)
+	80%
+		transform: translate(-20px, 20px)
+	90%
+		transform: translate(-20px, 0)
+	100%
+		transform: translate(0, 0)

@@ -34,8 +34,8 @@ $teaserSld.slick({
   slidesToScroll: 1,
   speed: 1000,
   infinite: true,
-  prevArrow: '<button type="button" class="teaser__slider-arr teaser__slider-arr_prev"><svg class="teaser__slider-arr-icon icon-arr"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-arr"></use></svg></button>',
-  nextArrow: '<button type="button" class="teaser__slider-arr teaser__slider-arr_next"><svg class="teaser__slider-arr-icon icon-arr"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-arr"></use></svg></button>'
+  prevArrow: '<button type="button" class="teaser__slider-arr teaser__slider-arr_prev"><svg class="teaser__slider-arr-icon icon-arr"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="../img/sprite.svg#icon-arr"></use></svg></button>',
+  nextArrow: '<button type="button" class="teaser__slider-arr teaser__slider-arr_next"><svg class="teaser__slider-arr-icon icon-arr"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="../img/sprite.svg#icon-arr"></use></svg></button>'
 });
 
 const $newsBlockSld = $('.js-news-block-slider');

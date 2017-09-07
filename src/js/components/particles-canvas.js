@@ -12,24 +12,27 @@ const detectMob = detectDevice(767);
   const grayParticles = $('#js-gray-particles').length;
   const grayParticlesSecond = $('#js-gray-particles-2').length;
 
+  const path = $('.main').attr('data-particles');
   if (aquaParticles) {
-    particlesJS.load('js-aqua-particles', 'assets/aqua-particles.json');
+    particlesJS.load('js-aqua-particles', `${path}assets/aqua-particles.json`);
   }
   if (blueParticles) {
-    particlesJS.load('js-blue-particles', 'assets/blue-particles.json');
+    particlesJS.load('js-blue-particles', `${path}assets/blue-particles.json`);
   }
   if (grayParticles) {
-    particlesJS.load('js-gray-particles', 'assets/gray-particles.json');
+    particlesJS.load('js-gray-particles', `${path}assets/gray-particles.json`);
   }
   if (whiteParticles) {
-    particlesJS.load('js-white-particles', 'assets/white-particles.json');
+    particlesJS.load('js-white-particles', `${path}assets/white-particles.json`);
   }
   if (grayParticlesSecond) {
-    particlesJS.load('js-gray-particles-2', 'assets/gray-particles.json');
+    particlesJS.load('js-gray-particles-2', `${path}assets/gray-particles.json`);
   }
   if (grayParticlesSecond) {
-    particlesJS.load('js-gray-particles-2', 'assets/gray-particles.json');
+    particlesJS.load('js-gray-particles-2', `${path}assets/gray-particles.json`);
   }
+
+  // console.log($('.main').attr('data-particles'));
 })();
 
 // parallax init
@@ -46,3 +49,4 @@ const detectMob = detectDevice(767);
     });
   }
 })();
+
