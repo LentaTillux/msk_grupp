@@ -100,14 +100,28 @@
                   </div>
                 </div>
               </div><a href="#!" class="contacts__info-btn btn btn_white-bordered">реквизиты компании</a></div>
-            <div class="contacts__form">
-              <form action="#!">
-                <div class="contacts__title title-sm">напишите нам</div>
-                <div class="contacts__form-field"><input type="text" placeholder="Ваше имя" name="" class="contacts__input input input_gray" /></div>
-                <div class="contacts__form-field"><input type="text" placeholder="E-mail адрес" name="" class="contacts__input input input_gray" /></div>
-                <div class="contacts__form-field"><textarea placeholder="Текст вашего сообщения" class="contacts__textarea textarea textarea_popup"></textarea></div><button type="submit" class="contacts__form-btn btn btn_aqua">оставить заявку</button></form>
-            </div>
           </div>
+        </section>
+        <!--begin contact-block-->
+        <section class="contact-block contact-block_partners">
+          <div class="contact-block__container container">
+            <h3 class="title-lg">Напишите нам</h3>
+            <form action="#!" class="contact-block__form">
+              <div class="contact-block__form-row">
+                <div class="contact-block__form-field"><input type="text" placeholder="Имя*" class="contact-block__input input input_gray" /></div>
+                <div class="contact-block__form-field"><input type="text" placeholder="Отчество*" class="contact-block__input input input_gray" /></div>
+                <div class="contact-block__form-field"><input type="text" placeholder="Фамилия*" class="contact-block__input input input_gray" /></div>
+              </div>
+              <div class="contact-block__form-row">
+                <div class="contact-block__form-field"><input type="text" placeholder="Телефон" class="contact-block__input input input_gray" /></div>
+                <div class="contact-block__form-field"><input type="text" placeholder="E-mail" class="contact-block__input input input_gray" /></div>
+                <div class="contact-block__form-field"><input type="text" placeholder="Название организации" class="contact-block__input input input_gray" /></div>
+              </div>
+              <div class="contact-block__form-row"><textarea placeholder="Текст вашего сообщения" class="contact-block__textarea textarea textarea_popup"></textarea></div>
+              <p class="contact-block__form-descr">* Оставляя свои данные вы соглашаетесь с политикой конфедециальности</p><button type="submit" class="contact-block__form-btn btn btn_aqua">оставить заявку</button><label class="contact-block__form-btn btn btn_file">прикрепить файл<svg class="icon-file"><use xlink:href="img/sprite.svg#icon-file"></use></svg><input type="file" accept=""/></label></form>
+          </div>
+          <div id="js-gray-particles" class="particles"></div>
+          <!--end contact-block-->
         </section>
         <!--begin contact-block-->
         <section style="background-image: url(&quot;img/bg/contact-block_bg.jpg&quot;)" class="contact-block contact-block_has-address">

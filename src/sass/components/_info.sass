@@ -39,89 +39,36 @@
 		padding: 50px 0 20px
 	&__inner
 		text-align: center
+		margin: 0 -15px
 		+clr
-		+md
-			display: flex
-			flex-wrap: wrap
-			margin: 0 -10px
 	&__item
 		float: left
 		position: relative
-		margin-right: 31px
-		width: percentage(254 / 1110)
-		margin-bottom: 30px
+		width: 33.333333%
+		padding: 0 15px 30px
 		text-align: left
-		+lg
-			width: 25%
-			margin-bottom: 15px
-			margin-right: 14px
 		+md
-			flex: 1 1 auto
-			margin: 0 5px 15px
+			width: 50%
 		+sm
-			flex: 1 1 100%
-		&.is-hidden
-			display: none
-		&:nth-child(3n)
-			margin-right: 0
-			+md
-				margin: 0 5px 15px
-		&_md
-			margin-right: 30px
-			width: percentage(540 / 1110)
-			+lg
-				width: 47%
-				margin-right: 15px
-			+md
-				margin: 0 5px 15px
-			&.is-hidden
-				+md
-				    flex: 1 1 100%
-		&_md &-text
-			align-items: flex-start
-			flex-wrap: wrap
-			flex-direction: row
-			padding: 14px 18px 17px
-			background: rgba(#fff, .9)
-			border: 2px solid #e0e0e0
-			min-height: 0
-		&_md &-row
-			margin-top: 2px
-			align-items: center
-		&_md &-title
-			margin: 0 7px 0 0
-		&_md &-date
-			line-height: 25px
-		&_md &-descr
-			padding-right: 2px
-			height: 85px
-			margin: 0
-		&_md &-img
 			width: 100%
-		&_md &-img-wrap
-			height: 241px
-			+sm
-				height: auto
 		&-img-wrap
-			height: 153px
+			height: 210px
 			overflow: hidden
 			border-radius: 3px 3px 0 0
 			+sm
 				height: auto
-		&-img
 		&-text
 			display: flex
 			flex-direction: column
 			padding: 16px 18px 13px
 			border: 2px solid #e0e0e0
 			border-top: 0
-			min-height: 212px
 		&-title
 			margin-bottom: 2px
 			font-size: 18px
 			line-height: 25px
 		&-descr
-			height: 140px
+			height: 120px
 			margin-bottom: 7px
 			color: #000
 			opacity: .8

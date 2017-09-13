@@ -74,16 +74,43 @@ block content
 
 					+e.A.info-btn.btn._white-bordered(href='#!') реквизиты компании
 
-				+e.form
-					+e.FORM(action='#!')
-						+e.title.title-sm напишите нам
+		//-contact-block
+		-contactBlockClass = '_partners'
+		-contactFormLgTitle = 'Напишите нам'
+
+		//begin contact-block
+		+b.SECTION.contact-block(class= contactBlockClass ? contactBlockClass : '')
+			+e.container.container
+				if contactFormLgTitle
+					+b.H3.title-lg= contactFormLgTitle
+				if contactFormSmTitle
+					+b.H3.title-sm-white= contactFormSmTitle
+				+e.FORM.form(action='#!')
+					+e.form-row
 						+e.form-field
-							+e.INPUT.input.input._gray(type='text' placeholder='Ваше имя' name='')
+							+e.INPUT.input.input._gray(type='text' placeholder='Имя*')
 						+e.form-field
-							+e.INPUT.input.input._gray(type='text' placeholder='E-mail адрес' name='')
+							+e.INPUT.input.input._gray(type='text' placeholder='Отчество*')
 						+e.form-field
-							+e.TEXTAREA.textarea.textarea._popup(placeholder='Текст вашего сообщения')
-						+e.BUTTON.form-btn.btn._aqua(type='submit') оставить заявку
+							+e.INPUT.input.input._gray(type='text' placeholder='Фамилия*')
+					+e.form-row
+						+e.form-field
+							+e.INPUT.input.input._gray(type='text' placeholder='Телефон')
+						+e.form-field
+							+e.INPUT.input.input._gray(type='text' placeholder='E-mail')
+						+e.form-field
+							+e.INPUT.input.input._gray(type='text' placeholder='Название организации')
+					+e.form-row
+						+e.TEXTAREA.textarea.textarea._popup(placeholder='Текст вашего сообщения')
+
+					+e.P.form-descr * Оставляя свои данные вы соглашаетесь с политикой конфедециальности
+					+e.BUTTON.form-btn.btn._aqua(type='submit') оставить заявку
+					+e.LABEL.form-btn.btn_file прикрепить файл
+						+icon('icon-file')
+						+b.INPUT(type='file' accept='')
+
+			+b.particles#js-gray-particles
+			//end contact-block
 
 		//-contact-block
 		-contactBlockClass = '_has-address'
